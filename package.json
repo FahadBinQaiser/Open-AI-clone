@@ -2,6 +2,7 @@
   "name": "open-ai-clone",
   "version": "1.0.0",
   "main": "script.js",
+   "type": "module",
   "dependencies": {
     "acorn": "^8.14.0",
     "acorn-jsx": "^5.3.2",
