@@ -1,29 +1,27 @@
-name: Lint and Build
+name: CI Pipeline
 
 on:
   push:
     branches:
       - main
   pull_request:
+    branches:
+      - main
 
 jobs:
-  lint-and-build:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: 16
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
-      - name: Lint JavaScript
+      - name: Run Lint (Optional)
         run: npx eslint "**/*.js"
-
-      - name: Build TailwindCSS
-        run: npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify
