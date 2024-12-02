@@ -4,9 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open AI clone</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav>
+      <div
+        class="navbar flex justify-between items-center h-16 bg-black border-b border-b-gray-50 px-40"
+      >
+        <!-- Left Side -->
+        <div class="leftside flex items-center space-x-2">
+          <img src="images/logo.png" alt="Open AI logo" class="w-8 h-8" />
+          <h1 class="leftHeading text-white text-lg font-medium">OpenAI</h1>
+        </div>
+        <!-- Mid side-->
+        <div class="midLinks flex text-white">
+          <ul class="flex space-x-8">
+            <li class="cursor-pointer">Research</li>
+            <li class="cursor-pointer">Products</li>
+            <li class="cursor-pointer">Safety</li>
+            <li class="cursor-pointer">Company</li>
+          </ul>
+        </div>
+        <!-- Right Side -->
+        <div class="rightLinks cursor-pointer">
+          <img src="images/searchIcon.png" class="w-4 h-4" alt="Search Icon" />
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
     <script src="script.js"></script>
   </body>
 </html>
