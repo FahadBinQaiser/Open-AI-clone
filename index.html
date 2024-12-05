@@ -16,23 +16,38 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <div class="navbar flex justify-between items-center h-12 bg-black px-36">
-        <!-- Left Side -->
+      <div class="navbar flex justify-between items-center h-12 bg-black px-4 sm:px-4 md:px-16 lg:px-36">
+        <!-- Left Side with responsiveness -->
+
         <div class="leftside flex items-center space-x-2">
           <img src="images/logo.png" alt="Open AI logo" class="w-8 h-8" />
           <h1 class="leftHeading text-white text-lg font-medium">OpenAI</h1>
         </div>
-        <!-- Mid side-->
-        <div class="midLinks text-white">
-          <ul class="flex space-x-8 pr-24">
-            <li class="cursor-pointer">Research</li>
-            <li class="cursor-pointer">Products</li>
-            <li class="cursor-pointer">Safety</li>
-            <li class="cursor-pointer">Company</li>
-          </ul>
+
+        <div class="flex items-center">
+          <button id="menuToggle" class="block sm:hidden text-white focus:outline-none">
+            <span class="block w-6 h-0.5 bg-white mb-1 transition-transform duration-300"></span>
+            <span class="block w-6 h-0.5 bg-white mb-1 transition-transform duration-300"></span>
+            <span class="block w-6 h-0.5 bg-white transition-transform duration-300"></span>
+          </button>
+
+          <div
+            id="menuItems"
+            class="hidden h-[90vh] duration-200 transition-opacity sm:flex flex-col sm:flex-row items-center backdrop-blur-2xl sm:backdrop-blur-0 sm:bg-transparent w-full sm:w-full space-y-4 sm:space-y-0 sm:space-x-8 pr-4 sm:pr-0 absolute sm:static top-12 left-0 sm:top-0"
+          >
+            <ul
+              class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-white justify-start items-start w-full p-12 text-4xl sm:text-[15px] font-semibold pr-40 transition-all ease-linear sm:translate-y-0 duration-700"
+            >
+              <li class="nav-item cursor-pointer">Research</li>
+              <li class="nav-item cursor-pointer">Products</li>
+              <li class="nav-item cursor-pointer">Safety</li>
+              <li class="nav-item cursor-pointer">Company</li>
+            </ul>
+          </div>
         </div>
-        <!-- Right Side -->
-        <div class="rightLinks cursor-pointer">
+
+        <!-- Right Side (Search Icon) -->
+        <div class="rightLinks cursor-pointer hidden sm:block">
           <img src="images/searchIcon.png" class="w-4 h-4" alt="Search Icon" />
         </div>
       </div>
