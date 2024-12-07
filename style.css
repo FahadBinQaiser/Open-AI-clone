@@ -1,0 +1,27 @@
+@keyframes slide-right {
+  0% {
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.animate-slide-right {
+  animation: slide-right 200s linear infinite;
+  animation-play-state: running;
+}
+.animate-slide-left {
+  animation: slide-left 200s linear infinite;
+  animation-play-state: running;
+}
+.pause-animation:hover {
+  animation-play-state: paused !important;
+}

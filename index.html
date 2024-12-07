@@ -11,7 +11,50 @@
       href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @layer utilities {
+        /* Animation to slide row to the right and reappear from the left */
+        @keyframes slide-right {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(0%);
+          }
+        }
+
+        /* Animation to slide row to the left and reappear from the right */
+        @keyframes slide-left {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        .animate-slide-right {
+          animation: slide-right 40s linear infinite;
+        }
+
+        .animate-slide-left {
+          animation: slide-left 40s linear infinite;
+        }
+
+        .row {
+          display: flex;
+          flex-shrink: 0;
+          width: max-content;
+        }
+
+        /* Prevent the boxes from shrinking */
+        .box {
+          flex-shrink: 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar -->
@@ -79,6 +122,14 @@
         </div>
       </div>
     </main>
+    <!-- box section -->
+    <section class="h-[60vh] bg-black overflow-hidden flex flex-col gap-4 group">
+      <div id="row1" class="relative flex justify-start items-center w-max animate-slide-right pause-animation"></div>
+      <div id="row2" class="relative flex justify-start items-center w-max animate-slide-left pause-animation"></div>
+      <div id="row3" class="relative flex justify-start items-center w-max animate-slide-right pause-animation"></div>
+    </section>
+
+    <!-- box section -->
     <script src="script.js"></script>
   </body>
 </html>
