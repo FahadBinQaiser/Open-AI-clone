@@ -134,7 +134,7 @@
     "string-width": "^5.1.2",
     "string-width-cjs": "^5.1.1",
     "strip-ansi": "^7.1.0",
-    "strip-ansi-cjs": "^6.0.1",
+    "strip-ansi-cjs": "^8.0.0",
     "strip-json-comments": "^3.1.1",
     "sucrase": "^3.35.0",
     "supports-color": "^7.2.0",
