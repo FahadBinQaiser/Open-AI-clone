@@ -132,7 +132,7 @@
     "signal-exit": "^4.1.0",
     "source-map-js": "^1.2.1",
     "string-width": "^5.1.2",
-    "string-width-cjs": "^4.2.3",
+    "string-width-cjs": "^5.1.1",
     "strip-ansi": "^7.1.0",
     "strip-ansi-cjs": "^6.0.1",
     "strip-json-comments": "^3.1.1",
