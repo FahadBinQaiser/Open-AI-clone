@@ -13,48 +13,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @layer utilities {
-        /* Animation to slide row to the right and reappear from the left */
-        @keyframes slide-right {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(0%);
-          }
-        }
-
-        /* Animation to slide row to the left and reappear from the right */
-        @keyframes slide-left {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-
-        .animate-slide-right {
-          animation: slide-right 40s linear infinite;
-        }
-
-        .animate-slide-left {
-          animation: slide-left 40s linear infinite;
-        }
-
-        .row {
-          display: flex;
-          flex-shrink: 0;
-          width: max-content;
-        }
-
-        /* Prevent the boxes from shrinking */
-        .box {
-          flex-shrink: 0;
-        }
-      }
-    </style>
   </head>
   <body>
     <!-- Navbar -->
