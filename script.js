@@ -3,24 +3,41 @@ const boxData = [
     {
       title: "Writes, brainstorms, edits,",
       subtitle: "and explores ideas with you",
-      imageSrc: "images/boxes/box1.webp"
+      imageSrc: "images/boxes/box1.webp",
+      SmallImageSrc:"images/boxes/Box1-mobile.webp"
     },
     {
       title: "Summarize meetings. Find new",
       subtitle: "insights. Increase productivity.",
-      imageSrc: "images/boxes/box2.webp"
+      imageSrc: "images/boxes/box2.webp",
+      SmallImageSrc:"images/boxes/Box2-mobile.webp"
     },
     {
       title: "Generate and debug code. Automate",
       subtitle: "repetitive tasks. Learn new APIs.",
-      imageSrc: "images/boxes/box3.webp"
+      imageSrc: "images/boxes/box3.webp",
+      SmallImageSrc:"images/boxes/Box3-mobile.webp"
     },
     {
       title: "Learn something new. Dive into a.",
       subtitle: "hobby. Answer complex questions",
-      imageSrc: "images/boxes/box4.webp"
+      imageSrc: "images/boxes/box4.webp",
+      SmallImageSrc:"images/boxes/Box4-mobile.webp"
     }
   ];
+  function screenRes(){
+    const isMobile = window.matchMedia("(max-width:786px)").matches;
+    const images = document.querySelectorAll(".box-img img");
+    images.forEach((img,index)=>{
+      if (isMobile && boxData[index].SmallImageSrc) {
+        img.src = boxData[index].SmallImageSrc; 
+      } else {
+        img.src = boxData[index].imageSrc; 
+      }
+    })
+  }
+  window.addEventListener("load", screenRes);
+  window.addEventListener("resize", screenRes);
 
   const containerIdeas = document.querySelector('.IdeasContainer');
 
@@ -29,15 +46,15 @@ const boxData = [
     boxElement.classList.add(`box${index + 1}`, 'bg-black');
     
     boxElement.innerHTML = `
-      <div class="content text-center ${index > 0 ? 'mt-32' : ''}">
-        <h1 class="text-4xl mb-8 font-[inter] font-medium">
+      <div class="content text-center ${index > 0 ? 'mt-0 sm:mt-24' : ''}">
+        <h1 class="text-3xl md:text-3xl px-2 pt-4 text-balance mb-8 font-[inter] font-medium  ">
           ${box.title}
           <span class="block">${box.subtitle}</span>
         </h1>
         <p class="hover:border-b inline">Learn more about writing with ChatGPT ></p>
       </div>
-      <div class="image flex justify-center items-center w-full p-32 mt-14 border-white h-[718px]">
-        <img src="${box.imageSrc}" class="w-[1096px] rounded-lg" alt="" />
+      <div class="box-img flex justify-center items-center w-full sm:px-16 lg:px-32 mt-6 p-10  ">
+        <img src="${box.imageSrc}" class="w-full max-w-4xl h-[450px] object-cover rounded-lg" alt="" />
       </div>
     `;
 
@@ -48,9 +65,7 @@ const boxData = [
     {
       title: "Type, talk, and use it your way",
       description: [
-        "With ChatGPT, you can type or start a real-time",
-        "voice conversation by tapping the soundwave icon",
-        "in the mobile app.",
+        "With ChatGPT, you can type or start a real-time voice conversation by tapping the soundwave icon in the mobile app"
       ],
       imageSrc: "images/boxes/bxo7.webp",
       link: null,
@@ -58,8 +73,7 @@ const boxData = [
     {
       title: "Search the web",
       description: [
-        "Click the web search icon to get fast, timely",
-        "answers with links to relevant web sources.",
+        "Click the web search icon to get fast, timely answers with links to relevant web sources."
       ],
       imageSrc: "images/boxes/box11.webp",
       link: { text: "Learn more", url: "#" },
@@ -67,8 +81,7 @@ const boxData = [
     {
       title: "Analyze data and create charts",
       description: [
-        "Upload a file and ask ChatGPT to help analyze",
-        "data, summarize information or create a chart.",
+        "Upload a file and ask ChatGPT to help analyze data, summarize information or create a chart."
       ],
       imageSrc: "images/boxes/bxo7.webp",
       link: null,
@@ -107,9 +120,9 @@ const boxData = [
   
   const remainingBoxesContainer = document.querySelector('.remainingBoxes');
   
-  remainingBoxesData.forEach((box) => {
+  remainingBoxesData.forEach((box, index) => {
     const boxElement = document.createElement('div');
-    boxElement.classList.add('leftRightbox', 'w-full', 'h-auto', 'bg-black', 'grid','grid-cols-2', 'rounded-lg', 'overflow-hidden',"mb-28");
+    boxElement.classList.add('leftRightbox', 'w-full', 'bg-black', 'grid', 'grid-cols-1', 'sm:grid-cols-2', 'rounded-lg', 'overflow-hidden', 'mb-28');
   
     const descriptionHTML = box.description
       .map((line) => `<span class="block">${line}</span>`)
@@ -120,9 +133,9 @@ const boxData = [
       : "";
   
     boxElement.innerHTML = `
-      <div class="leftBox bg-[#161616] flex justify-center flex-col text-left items-start px-14 text-white">
-        <h1 class="text-3xl pb-6 font-semibold">${box.title}</h1>
-        <p class="text-lg">${descriptionHTML}</p>
+      <div class="leftBox bg-[#161616] h-[300px] sm:h-auto pb-20 flex justify-center pt-14 flex-col text-left items-start px-6 sm:px-14 text-white">
+        <h1 class="text-xl sm:text-3xl pb-8 font-semibold">${box.title}</h1>
+        <p class="text-lg font-medium">${descriptionHTML}</p>
         ${linkHTML}
       </div>
       <div class="rightBox flex justify-center items-center text-white">
@@ -130,6 +143,12 @@ const boxData = [
       </div>
     `;
   
+    if (index === 4 || index === 6) {
+      const leftBox = boxElement.querySelector(".leftBox"); 
+      if (leftBox) {
+        leftBox.classList.add("h-[350px]"); 
+      }
+    }
     remainingBoxesContainer.appendChild(boxElement);
   });
   
