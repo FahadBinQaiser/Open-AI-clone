@@ -122,7 +122,7 @@ const boxData = [
   
   remainingBoxesData.forEach((box, index) => {
     const boxElement = document.createElement('div');
-    boxElement.classList.add('leftRightbox', 'w-full', 'bg-black', 'grid', 'grid-cols-1', 'sm:grid-cols-2', 'rounded-lg', 'overflow-hidden', 'mb-28');
+    boxElement.classList.add('leftRightbox', 'w-full', 'bg-black','grid','sm:grid-cols-1','md:grid-cols-2', 'rounded-lg', 'overflow-hidden', 'mb-28');
   
     const descriptionHTML = box.description
       .map((line) => `<span class="block">${line}</span>`)
@@ -133,13 +133,13 @@ const boxData = [
       : "";
   
     boxElement.innerHTML = `
-      <div class="leftBox bg-[#161616] h-[300px] sm:h-auto pb-20 flex justify-center pt-14 flex-col text-left items-start px-6 sm:px-14 text-white">
+      <div class="leftBox bg-[#161616] sm:h-auto pb-20 flex justify-center pt-14 flex-col text-left items-start px-6 sm:px-14 text-white">
         <h1 class="text-xl sm:text-3xl pb-8 font-semibold">${box.title}</h1>
         <p class="text-lg font-medium">${descriptionHTML}</p>
         ${linkHTML}
       </div>
       <div class="rightBox flex justify-center items-center text-white">
-        <img src="${box.imageSrc}" alt="" class="h-full object-contain" />
+        <img src="${box.imageSrc}" alt="" class="h-full object-cover" />
       </div>
     `;
   
