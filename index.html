@@ -12,6 +12,11 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hover-gray {
+        color: gray !important;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar -->
@@ -36,19 +41,23 @@
             class="hidden h-[90vh] duration-200 transition-opacity sm:flex flex-col sm:flex-row items-center backdrop-blur-2xl sm:backdrop-blur-0 sm:bg-transparent w-full sm:w-full space-y-4 sm:space-y-0 sm:space-x-8 pr-4 sm:pr-0 absolute sm:static top-12 left-0 sm:top-0"
           >
             <ul
-              class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-white justify-start items-start w-full p-12 text-4xl sm:text-[15px] font-semibold pr-40 transition-all ease-linear sm:translate-y-0 duration-700"
+              class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-white justify-start items-start w-full p-12 text-4xl sm:text-[15px] font-semibold pr-40 transition-all ease-linear sm:translate-y-0 duration-700 group"
             >
-              <li class="nav-item cursor-pointer">Research</li>
-              <li class="nav-item cursor-pointer">Products</li>
-              <li class="nav-item cursor-pointer">Safety</li>
-              <li class="nav-item cursor-pointer">Company</li>
+              <li id="link1" class="nav-item cursor-pointer transition-colors duration-500 text-white">Research</li>
+              <li id="link2" class="nav-item cursor-pointer transition-colors duration-500 text-white">Products</li>
+              <li id="link3" class="nav-item cursor-pointer transition-colors duration-500 text-white">Safety</li>
+              <li id="link4" class="nav-item cursor-pointer transition-colors duration-500 text-white">Company</li>
             </ul>
           </div>
         </div>
 
         <!-- Right Side (Search Icon) -->
         <div class="rightLinks cursor-pointer hidden sm:block">
-          <img src="images/searchIcon.png" class="w-4 h-4" alt="Search Icon" />
+          <img
+            src="images/searchIcon.png"
+            class="w-4 h-4 hover:scale-110 hover:rotate-90 transition-transform duration-300 ease-out"
+            alt="Search Icon"
+          />
         </div>
       </div>
     </nav>
