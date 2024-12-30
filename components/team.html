@@ -41,7 +41,7 @@
           <li>
             <a href="#" class="hover:text-white text-white transition-colors duration-300 ease-in-out" aria-label="Overview">Overview</a>
           </li>
-          <li><a href="components/team.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Team">Team</a></li>
+          <li><a href="team.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Team">Team</a></li>
           <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Enterprise">Enterprise</a></li>
           <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Education">Education</a></li>
           <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Pricing">Pricing</a></li>
@@ -74,5 +74,53 @@
         </div>
       </div>
     </main>
+    <div class="Box flex h-screen items-center justify-center text-white">
+      <div class="w-[500px] h-[550px] border-2 ml-36 relative">
+        <img id="image-box" src="componentImages/01_team_workspace.webp" class="w-full h-full object-cover" alt="Team Workspace" />
+      </div>
+      <div class="w-[500px] h-[550px] border-white border-2 mr-36 p-6 bg-[#1a1a1a] bg-opacity-80 flex justify-center items-start px-14 flex-col">
+        <div class="rowPrimary border-b border-[#333] py-2">
+          <div class="flex flex-row justify-between items-center">
+            <h2 class="text-md text-left justify-start font-semibold">Secured for your workspace</h2>
+            <span class="text-xl cursor-pointer justify-end" data-target="rowTextPrimary">+</span>
+          </div>
+          <p class="rowTextPrimary text-sm text-[#777] flex">
+            Get a dedicated workspace for your team with admin controls, team management, and stringent security. We never train on your data or conversations.
+          </p>
+        </div>
+
+        <div class="rowSecondary border-b border-[#333] py-2">
+          <div class="flex flex-row justify-between items-center">
+            <h2 class="text-md text-left font-semibold inline-block">Advanced models & capabilities</h2>
+            <span class="text-xl cursor-pointer" data-target="rowTextSecondary">+</span>
+          </div>
+          <p class="rowTextSecondary text-sm text-[#777] hidden">
+            Consistent access to the most powerful OpenAI models and advanced capabilities like DALL·E for image generation, web browsing, data analysis, and more.
+          </p>
+        </div>
+
+        <div class="rowTernary border-b border-[#333] py-2">
+          <div class="flex flex-row justify-between items-center">
+            <h2 class="text-md text-left font-semibold inline-block">Customized for your team</h2>
+            <span class="text-xl cursor-pointer" data-target="rowTextTernary">+</span>
+          </div>
+          <p class="rowTextTernary text-sm text-[#777] hidden">
+            Collaborate by creating and sharing GPTs — custom versions of ChatGPT for specific use cases, departments, or proprietary datasets.
+          </p>
+        </div>
+
+        <div class="rowExternary border-b border-[#333] py-2">
+          <div class="flex flex-row justify-between items-center">
+            <h2 class="text-md text-left font-semibold">Designed to support any task or project</h2>
+            <span class="text-lg cursor-pointer" data-target="rowTextExternary">+</span>
+          </div>
+          <p class="rowTextExternary text-sm text-[#777] hidden">
+            From writing to coding, ChatGPT can help with quick tasks and ongoing projects. With projects, keep files, chats, and instructions in one place to maintain context as
+            you work.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="components.js"></script>
   </body>
 </html>
