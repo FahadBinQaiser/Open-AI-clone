@@ -13,7 +13,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-black">
+  <body class="bg-black font-[inter]">
     <nav>
       <div class="navbar flex justify-between items-center h-12 bg-black px-36">
         <div class="leftside flex items-center space-x-2">
@@ -121,6 +121,34 @@
         </div>
       </div>
     </div>
+    <div class="rowBoxesContainer h-screen mt-20">
+      <div class="flex justify-center items-center flex-col text-white">
+        <h1 class="text-4xl font-semibold mb-6">Supercharge your team's performance</h1>
+        <div class="rowBoxes flex justify-center px-2 max-w-3xl w-full h-14 rounded-xl">
+          <ul class="flex flex-row items-center justify-center gap-4">
+            <button class="bg-white text-black px-6 py-2 rounded-2xl text-sm initial-button transition duration-300" id="analyzeData">
+              <a href="#">Analyze Data</a>
+            </button>
+
+            <button class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300" id="accelerateCoding">
+              <a href="#">Accelerate Coding</a>
+            </button>
+
+            <button class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300" id="generateContent">
+              <a href="#">Generate Content</a>
+            </button>
+
+            <button class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300" id="brainstormIdeas">
+              <a href="#">Brainstorm Ideas</a>
+            </button>
+          </ul>
+        </div>
+        <div class="mt-6">
+          <img id="displayImage" src="componentImages/rowBoxes/analyze_data_team_link.webp" alt="Dynamic Image" class="w-full max-w-5xl rounded-xl" />
+        </div>
+      </div>
+    </div>
+
     <script src="components.js"></script>
   </body>
 </html>
