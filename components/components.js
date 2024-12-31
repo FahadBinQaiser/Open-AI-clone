@@ -48,12 +48,12 @@ document.getElementById("brainstormIdeas").addEventListener("click", function(e)
   e.preventDefault();
   document.getElementById("displayImage").src = "componentImages/rowBoxes/brainstorm_ideas_team_link.webp";
 });
-const buttons = document.querySelectorAll('button');
+const performanceButtons = document.querySelectorAll('.rowBoxes button');
 const initialButton = document.querySelector('#analyzeData');
 
-buttons.forEach((button) => {
+performanceButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    buttons.forEach((b) => {
+    performanceButtons.forEach((b) => {
       if (b !== button) {
         b.classList.remove("bg-white", "text-[#333]");
       }
@@ -62,6 +62,30 @@ buttons.forEach((button) => {
     if (button !== initialButton) {
       initialButton.classList.add("text-white");
     }
+  });
+
+  button.addEventListener('mouseover', () => {
+    if (button.classList.contains("bg-white") && button.classList.contains("text-[#333]")) {
+      button.classList.remove("hover:bg-[#333]");
+    }
+  });
+
+  button.addEventListener('mouseout', () => {
+    if (button.classList.contains("bg-white") && button.classList.contains("text-[#333]")) {
+      button.classList.add("hover:bg-[#333]");
+    }
+  });
+});
+const sixBoxesButtons = document.querySelectorAll('.sixBoxesRow button');
+
+sixBoxesButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    sixBoxesButtons.forEach((b) => {
+      if (b !== button) {
+        b.classList.remove("bg-white", "text-[#333]");
+      }
+    });
+    button.classList.add("bg-white", "text-[#333]");
   });
 
   button.addEventListener('mouseover', () => {

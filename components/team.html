@@ -13,7 +13,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-black font-[inter]">
+  <body class="bg-black font-[inter] selection:bg-white selection:text-black">
     <nav>
       <div class="navbar flex justify-between items-center h-12 bg-black px-36">
         <div class="leftside flex items-center space-x-2">
@@ -74,11 +74,11 @@
         </div>
       </div>
     </main>
-    <div class="Box flex h-screen items-center justify-center text-white">
-      <div class="w-[500px] h-[550px] border-2 ml-36 relative">
-        <img id="image-box" src="componentImages/01_team_workspace.webp" class="w-full h-full object-cover" alt="Team Workspace" />
+    <div class="Box flex h-screen items-center mx-auto justify-center text-white">
+      <div class="w-[500px] h-[550px]">
+        <img id="image-box" src="componentImages/01_team_workspace.webp" class="rounded-xl rounded-tr-none rounded-br-none w-full h-full object-cover" alt="Team Workspace" />
       </div>
-      <div class="w-[500px] h-[550px] border-white border-2 mr-36 p-6 bg-[#1a1a1a] bg-opacity-80 flex justify-center items-start px-14 flex-col">
+      <div class="w-[500px] h-[550px] p-6 bg-[#1a1a1a] rounded-xl rounded-tl-none rounded-bl-none bg-opacity-80 flex justify-center items-start px-14 flex-col">
         <div class="rowPrimary border-b border-[#333] py-2">
           <div class="flex flex-row justify-between items-center">
             <h2 class="text-md text-left justify-start font-semibold">Secured for your workspace</h2>
@@ -121,7 +121,7 @@
         </div>
       </div>
     </div>
-    <div class="rowBoxesContainer h-screen mt-20">
+    <div class="rowBoxesContainer h-auto mt-20">
       <div class="flex justify-center items-center flex-col text-white">
         <h1 class="text-4xl font-semibold mb-6">Supercharge your team's performance</h1>
         <div class="rowBoxes flex justify-center px-2 max-w-3xl w-full h-14 rounded-xl">
@@ -145,6 +145,55 @@
         </div>
         <div class="mt-6">
           <img id="displayImage" src="componentImages/rowBoxes/analyze_data_team_link.webp" alt="Dynamic Image" class="w-full max-w-5xl rounded-xl" />
+        </div>
+      </div>
+    </div>
+
+    <div class="sixBoxesTextContainer min-h-[100vh] mt-20">
+      <div class="sixBoxes flex justify-center items-center flex-col text-white text-4xl font-medium">
+        <h1 class="sixBoxesHeading">Trusted by professionals <span class="block">at companies of all sizes</span></h1>
+        <div class="sixBoxesRow flex justify-center px-2 max-w-3xl w-full h-14 rounded-xl">
+          <ul class="flex flex-row items-center justify-center gap-4 mt-14">
+            <button class="bg-white text-black px-6 py-2 rounded-2xl text-sm transition duration-300">
+              <a href="#">Marketing</a>
+            </button>
+
+            <button class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300">
+              <a href="#">Sales</a>
+            </button>
+
+            <button class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300">
+              <a href="#">Finance</a>
+            </button>
+
+            <button class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300">
+              <a href="#">Operations</a>
+            </button>
+
+            <button class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300">
+              <a href="#">Engineering</a>
+            </button>
+
+            <button class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300">
+              <a href="#">HR</a>
+            </button>
+          </ul>
+        </div>
+        <div class="Box flex h-screen items-center justify-center mx-auto text-white">
+          <div class="w-[500px] h-[550px]">
+            <img id="image-box" src="componentImages/01_team_workspace.webp" class="rounded-xl rounded-tr-none rounded-br-none w-full h-full object-cover" alt="Team Workspace" />
+          </div>
+          <div class="w-[500px] h-[550px] p-6 bg-[#1a1a1a] rounded-xl rounded-tl-none rounded-bl-none bg-opacity-80 flex justify-center items-center px-14 flex-col">
+            <div class="sixRowsPrimaryBox text-xl">
+              <h1>ChatGPT simplifies financial analyses, improves forecasting accuracy, and automates routine accounting tasks, ensuring compliance while reducing errors.</h1>
+              <div class="sixRowsLink inline-block hover:border-b-2 border-b-2 border-transparent hover:border-gray-200 transition-all duration-500 ease-out">
+                <a href="#" class="flex text-sm mt-4 flex-row items-center"
+                  >Start now
+                  <img src="componentImages/rightUpIcon.png" class="h-4 w-4 ml-2" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
