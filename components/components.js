@@ -77,6 +77,7 @@ performanceButtons.forEach((button) => {
   });
 });
 const sixBoxesButtons = document.querySelectorAll('.sixBoxesRow button');
+const dynamicHeading = document.getElementById('dynamic-heading');
 
 sixBoxesButtons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -86,6 +87,11 @@ sixBoxesButtons.forEach((button) => {
       }
     });
     button.classList.add("bg-white", "text-[#333]");
+    const newHeader = button.getAttribute('data-header');
+    dynamicHeading.textContent = newHeader;
+
+    sixBoxesButtons.forEach((b) => b.classList.remove('bg-white', 'text-black'));
+    button.classList.add('bg-white', 'text-black');
   });
 
   button.addEventListener('mouseover', () => {
