@@ -111,7 +111,7 @@ const nextButton = document.querySelector('.nextButton');
 const carousel = document.querySelector('.carousel');
 
 let currentIndex = 0;
-const boxWidth = 350 + 16;
+const boxWidth = 315 + 16;
 const visibleBoxes = 4;
 const totalBoxes = document.querySelectorAll('.carousel-box').length;
 
