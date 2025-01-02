@@ -106,3 +106,41 @@ sixBoxesButtons.forEach((button) => {
     }
   });
 });
+const prevButton = document.querySelector('.prevButton');
+const nextButton = document.querySelector('.nextButton');
+const carousel = document.querySelector('.carousel');
+
+let currentIndex = 0;
+const boxWidth = 350 + 16;
+const visibleBoxes = 4;
+const totalBoxes = document.querySelectorAll('.carousel-box').length;
+
+function initializeCarousel() {
+  const initialOffset = (boxWidth / 2) - (window.innerWidth - (boxWidth * visibleBoxes)) / 2;
+  carousel.style.transform = `translateX(${initialOffset}px)`;
+}
+
+initializeCarousel();
+
+function updateCarousel() {
+  const maxIndex = totalBoxes - visibleBoxes + 1;
+  currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+  const offset = -(currentIndex * boxWidth);
+  carousel.style.transform = `translateX(${offset}px)`;
+}
+
+nextButton.addEventListener('click', () => {
+  if (currentIndex < totalBoxes ) {
+    currentIndex++;
+    updateCarousel();
+  }
+});
+
+prevButton.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
+});
+
+window.addEventListener('resize', initializeCarousel);
