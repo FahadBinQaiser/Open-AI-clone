@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-black font-[inter] selection:bg-white selection:text-black">
@@ -56,7 +57,7 @@
             <span class="block text-center">for every member of your team</span>
           </h1>
 
-          <p class="font-[inter] text-md sm:text-sm lg:text-xl mt-6 w-full sm:w-7/12 mx-auto leading-relaxed sm:leading-relaxed lg:leading-tight">
+          <p class="font-[inter] text-md sm:text-md lg:text-xl mt-6 w-full sm:w-7/12 mx-auto leading-relaxed sm:leading-relaxed lg:leading-tight">
             Generate better code, craft emails, analyze data, and supercharge any type of work in a collaborative team workspace.
           </p>
         </div>
@@ -119,28 +120,29 @@
     </div>
     <div class="rowBoxesContainer h-auto mt-20">
       <div class="flex justify-center items-center flex-col text-white">
-        <h1 class="text-4xl font-semibold mb-6">Supercharge your team's performance</h1>
-        <div class="rowBoxes flex justify-center px-2 max-w-3xl w-full h-14 rounded-xl">
-          <ul class="flex flex-row items-center justify-center gap-4">
-            <button class="bg-white text-black px-6 py-2 rounded-2xl text-sm initial-button transition duration-300" id="analyzeData">
+        <h1 class="text-2xl sm:text-4xl text-balance text-center font-semibold mb-6"> Supercharge your team's performance </h1>
+        <div class="rowBoxes flex justify-center px-4 sm:px-6 max-w-3xl w-full h-auto rounded-xl">
+          <ul class="flex flex-row items-center justify-start sm:justify-center pb-2 overflow-x-auto w-full gap-4">
+            <button class="bg-white text-black px-6 py-2 rounded-2xl text-sm initial-button transition duration-300 shrink-0" id="analyzeData">
               <a href="#">Analyze Data</a>
             </button>
-
-            <button class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300" id="accelerateCoding">
+            <button class="text-white hover:bg-none sm:hover:bg-[#333] px-4 py-2 rounded-2xl text-sm transition duration-300 shrink-0" id="accelerateCoding">
               <a href="#">Accelerate Coding</a>
             </button>
-
-            <button class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300" id="generateContent">
+            <button class="text-white hover:bg-none sm:hover:bg-[#333] px-4 py-2 rounded-2xl text-sm transition duration-300 shrink-0" id="generateContent">
               <a href="#">Generate Content</a>
             </button>
-
-            <button class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300" id="brainstormIdeas">
+            <button class="text-white hover:bg-none sm:hover:bg-[#333] px-4 py-2 rounded-2xl text-sm transition duration-300 shrink-0" id="brainstormIdeas">
               <a href="#">Brainstorm Ideas</a>
             </button>
           </ul>
         </div>
-        <div class="mt-6">
-          <img id="displayImage" src="componentImages/rowBoxes/analyze_data_team_link.webp" alt="Dynamic Image" class="w-full max-w-5xl rounded-xl" />
+        <div class="mt-6 px-6">
+          <picture>
+            <source srcset="componentImages/rowBoxes/analyze-data-mobile.webp" media="(max-width: 768px)" />
+            <source srcset="componentImages/rowBoxes/analyze_data_team_link.webp" media="(min-width: 769px)" />
+            <img id="displayImage" src="componentImages/rowBoxes/analyze_data_team_link.webp" alt="Dynamic Image" class="w-full h-[500px] rounded-xl" />
+          </picture>
         </div>
       </div>
     </div>
@@ -358,12 +360,9 @@
       </div>
     </section>
     <section>
-      <div class="joinGPTSection h-[60vh]">
+      <div class="joinGPTSection h-[50vh] mb-32 m-3">
         <div class="joinGPT flex justify-center flex-col space-y-4 items-center flex-wrap h-80 rounded-lg bg-[#1a1a1a] mx-auto max-w-5xl">
-          <h1 class="text-white text-3xl text-center"
-            >Join thousands of teams redefining
-            <span class="block">how they work with ChatGPT</span>
-          </h1>
+          <h1 class="text-white text-3xl text-center inline-block w-full sm:w-full md:w-[50%]">Join thousands of teams redefining how they work with ChatGPT </h1>
           <div class="button rounded-3xl bg-white px-6 py-2">
             <button class="flex flex-row space-x-4"> Start now </button>
           </div>
@@ -398,7 +397,7 @@
             <li><a href="">For Everyone</a></li>
             <li><a href="">For Teams</a></li>
             <li><a href="">For Enterprises</a></li>
-            <li class="flex flex-row items-center"> <a href="">ChatGPT Login</a><img src="images/rightUpIcon.png" class="w-4 h-4" alt="" /> </li>
+            <li class="flex flex-row items-center"> <a href="">ChatGPT Login</a></li>
             <li><a href="">Download</a></li>
           </ul>
           <div class="flex flex-col pt-10 space-y-4">
@@ -406,8 +405,8 @@
             <ul class="space-y-2 text-[12px]">
               <li><a href="">Platform Overview</a></li>
               <li><a href="">Pricing</a></li>
-              <li class="flex flex-row items-center"> <a href="">Documentation</a> <img src="images/rightUpIcon.png" class="w-4 h-4" alt="" /> </li>
-              <li class="flex flex-row items-center"> <a href="">API login</a> <img src="images/rightUpIcon.png" class="w-4 h-4" alt="" /> </li>
+              <li class="flex flex-row items-center"> <a href="">Documentation</a> </li>
+              <li class="flex flex-row items-center"> <a href="">API login</a> </li>
             </ul>
           </div>
           <div class="flex flex-col pt-10 space-y-4">

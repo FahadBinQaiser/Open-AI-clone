@@ -72,7 +72,7 @@ performanceButtons.forEach((button) => {
 
   button.addEventListener('mouseout', () => {
     if (button.classList.contains("bg-white") && button.classList.contains("text-[#333]")) {
-      button.classList.add("hover:bg-[#333]");
+      button.classList.remove("hover:bg-[#333]");
     }
   });
 });
