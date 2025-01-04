@@ -139,7 +139,7 @@
         </div>
         <div class="mt-6 px-6">
           <picture>
-            <source srcset="componentImages/rowBoxes/analyze-data-mobile.webp" media="(max-width: 768px)" />
+            <source srcset="componentImages/rowBoxes/analyze-data-mobile.webp" media="(max-width: 700px)" />
             <source srcset="componentImages/rowBoxes/analyze_data_team_link.webp" media="(min-width: 769px)" />
             <img id="displayImage" src="componentImages/rowBoxes/analyze_data_team_link.webp" alt="Dynamic Image" class="w-full h-[500px] rounded-xl" />
           </picture>
@@ -148,10 +148,10 @@
     </div>
     <section>
       <div class="sixBoxesTextContainer min-h-[100vh] mt-20">
-        <div class="sixBoxes flex justify-center items-center flex-col text-white text-4xl font-medium">
-          <h1 class="sixBoxesHeading">Trusted by professionals <span class="block">at companies of all sizes</span></h1>
-          <div class="sixBoxesRow flex justify-center px-2 max-w-3xl w-full h-20 rounded-xl">
-            <ul class="flex flex-row items-center justify-center gap-4 mt-14">
+        <div class="sixBoxes flex justify-center items-center px-2 flex-col text-white text-4xl font-medium">
+          <h1 class="sixBoxesHeading text-center text-2xl">Trusted by professionals <span class="block">at companies of all sizes</span></h1>
+          <div class="sixBoxesRow flex justify-start sm:justify-center px-2 max-w-3xl w-full h-auto rounded-xl">
+            <ul class="flex flex-row items-center overflow-auto justify-start sm:justify-center pb-4 gap-4 mt-14">
               <button
                 class="bg-white text-black px-6 py-2 rounded-2xl text-sm transition duration-300"
                 data-header="ChatGPT creates personalized content, translates materials, and analyzes campaign performance, helping drive lead volume."
@@ -160,54 +160,56 @@
               </button>
 
               <button
-                class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300"
+                class="text-white hover:bg-none origin-right px-4 py-2 rounded-2xl text-sm transition duration-300"
                 data-header="ChatGPT simplifies lead qualification and forecasting, and helps reps with account research and outreach for better sales efficiency."
               >
                 Sales
               </button>
 
               <button
-                class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300"
+                class="text-white hover:bg-none origin-right px-4 py-2 rounded-2xl text-sm transition duration-300"
                 data-header="ChatGPT simplifies financial analyses, improves forecasting accuracy, and automates routine accounting tasks, ensuring compliance while reducing errors."
               >
                 Finance
               </button>
 
               <button
-                class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300"
+                class="text-white hover:bg-none origin-right px-4 py-2 rounded-2xl text-sm transition duration-300"
                 data-header="ChatGPT handles admin tasks and suggests ways to improve processes, increasing operational efficiency."
               >
                 Operations
               </button>
 
               <button
-                class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300"
+                class="text-white hover:bg-none origin-right px-4 py-2 rounded-2xl text-sm transition duration-300"
                 data-header="ChatGPT writes code, fixes bugs, and creates documentation to improve code integrity and help teams ship faster."
               >
                 Engineering
               </button>
 
               <button
-                class="text-white hover:bg-[#333] origin-right px-4 py-2 rounded-2xl text-sm transition duration-300"
+                class="text-white hover:bg-none origin-right px-4 py-2 rounded-2xl text-sm transition duration-300"
                 data-header="ChatGPT creates resources for candidates and employees and helps answer new hire questions."
               >
                 HR
               </button>
             </ul>
           </div>
-          <div class="Box flex h-screen items-center box-border justify-center mx-auto text-white">
-            <div class="w-[500px] h-[500px]">
+          <div class="Box flex flex-col sm:flex-row mt-20 sm:mt-0 h-screen items-center box-border justify-center mx-auto text-white">
+            <div class="w-80 sm:w-[500px] h-[500px] order-1 sm:order-none">
               <img
                 id="image-box2"
                 src="componentImages/01_team_workspace.webp"
-                class="rounded-xl rounded-tr-none rounded-br-none w-full h-auto object-cover"
+                class="rounded-xl rounded-tr-none sm:rounded-tl-xl rounded-br-xl sm:rounded-br-none rounded-tl-none w-full h-auto object-cover"
                 alt="Team Workspace"
               />
             </div>
 
-            <div class="w-[500px] h-[500px] p-6 bg-[#1a1a1a] rounded-xl rounded-tl-none rounded-bl-none bg-opacity-80 flex justify-center items-center px-14 flex-col">
+            <div
+              class="w-80 sm:w-[40%] h-[350px] sm:h-[500px] p-6 bg-[#1a1a1a] rounded-xl rounded-bl-none rounded-br-none sm:rounded-tl-none sm:rounded-br-xl bg-opacity-80 flex justify-center items-center px-14 flex-col"
+            >
               <div class="sixRowsPrimaryBox text-xl">
-                <h1 id="dynamic-heading">
+                <h1 id="dynamic-heading" class="text-md">
                   ChatGPT simplifies financial analyses, improves forecasting accuracy, and automates routine accounting tasks, ensuring compliance while reducing errors.
                 </h1>
                 <div class="sixRowsLink inline-block hover:border-b-2 border-b-2 border-transparent hover:border-gray-200 transition-all duration-500 ease-out">

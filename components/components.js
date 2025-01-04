@@ -79,33 +79,45 @@ performanceButtons.forEach((button) => {
 const sixBoxesButtons = document.querySelectorAll('.sixBoxesRow button');
 const dynamicHeading = document.getElementById('dynamic-heading');
 
-sixBoxesButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    sixBoxesButtons.forEach((b) => {
-      if (b !== button) {
-        b.classList.remove("bg-white", "text-[#333]");
+if (dynamicHeading) {
+    const defaultButton = sixBoxesButtons[0];
+
+    defaultButton.classList.add('bg-white', 'text-[#333]');
+    defaultButton.classList.remove('hover:bg-[#333]');
+    sixBoxesButtons.forEach((boxesInside) => {
+      if (boxesInside !== defaultButton) {
+        boxesInside.classList.remove('hover:bg-[#333]', 'text-white');
+      }
+    })
+    dynamicHeading.textContent = defaultButton.getAttribute('data-header');
+
+    sixBoxesButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+
+      sixBoxesButtons.forEach((b) => { b.classList.remove("bg-white", "text-[#333]");
+        b.classList.add("hover:bg-[#333]", "text-white");
+      });
+      button.classList.add("bg-white", "text-[#333]");
+      button.classList.remove("hover:bg-[#333]");
+      
+      const newHeader = button.getAttribute('data-header');
+      dynamicHeading.textContent = newHeader;
+    });
+
+    button.addEventListener('mouseover', () => {
+      if (button.classList.contains('bg-white')) {
+        button.classList.remove('hover:bg-[#333]');
       }
     });
-    button.classList.add("bg-white", "text-[#333]");
-    const newHeader = button.getAttribute('data-header');
-    dynamicHeading.textContent = newHeader;
 
-    sixBoxesButtons.forEach((b) => b.classList.remove('bg-white', 'text-black'));
-    button.classList.add('bg-white', 'text-black');
+    button.addEventListener('mouseout', () => {
+      if (!button.classList.contains('bg-white')) {
+        button.classList.add('hover:bg-[#333]');
+      }
+    });
   });
+}
 
-  button.addEventListener('mouseover', () => {
-    if (button.classList.contains("bg-white") && button.classList.contains("text-[#333]")) {
-      button.classList.remove("hover:bg-[#333]");
-    }
-  });
-
-  button.addEventListener('mouseout', () => {
-    if (button.classList.contains("bg-white") && button.classList.contains("text-[#333]")) {
-      button.classList.add("hover:bg-[#333]");
-    }
-  });
-});
 const prevButton = document.querySelector('.prevButton');
 const nextButton = document.querySelector('.nextButton');
 const carousel = document.querySelector('.carousel');
