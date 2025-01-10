@@ -71,53 +71,17 @@
         </div>
       </div>
     </main>
-    <div class="Box flex h-screen items-center mx-auto justify-center text-white">
-      <div class="w-[500px] h-[500px]">
+    <div class="Box flex flex-col md:flex-col lg:flex-row overflow-hidden items-center mx-auto justify-center text-white">
+      <div class="w-[200px] h-[200px] md:w-[500px] md:h-[500px] hidden sm:flex order-2 sm:order-none">
         <img id="image-box" src="componentImages/01_team_workspace.webp" class="rounded-xl rounded-tr-none rounded-br-none w-full h-full object-cover" alt="Team Workspace" />
       </div>
-      <div class="w-[500px] h-[500px] p-6 bg-[#1a1a1a] rounded-xl rounded-tl-none rounded-bl-none bg-opacity-80 flex justify-center items-start px-14 flex-col">
-        <div class="rowPrimary border-b border-[#333] py-2">
-          <div class="flex flex-row justify-between items-center">
-            <h2 class="text-md text-left justify-start font-semibold">Secured for your workspace</h2>
-            <span class="text-xl cursor-pointer justify-end" data-target="rowTextPrimary">+</span>
-          </div>
-          <p class="rowTextPrimary text-sm text-[#777] flex">
-            Get a dedicated workspace for your team with admin controls, team management, and stringent security. We never train on your data or conversations.
-          </p>
-        </div>
-
-        <div class="rowSecondary border-b border-[#333] py-2">
-          <div class="flex flex-row justify-between items-center">
-            <h2 class="text-md text-left font-semibold inline-block">Advanced models & capabilities</h2>
-            <span class="text-xl cursor-pointer" data-target="rowTextSecondary">+</span>
-          </div>
-          <p class="rowTextSecondary text-sm text-[#777] hidden">
-            Consistent access to the most powerful OpenAI models and advanced capabilities like DALL·E for image generation, web browsing, data analysis, and more.
-          </p>
-        </div>
-
-        <div class="rowTernary border-b border-[#333] py-2">
-          <div class="flex flex-row justify-between items-center">
-            <h2 class="text-md text-left font-semibold inline-block">Customized for your team</h2>
-            <span class="text-xl cursor-pointer" data-target="rowTextTernary">+</span>
-          </div>
-          <p class="rowTextTernary text-sm text-[#777] hidden">
-            Collaborate by creating and sharing GPTs — custom versions of ChatGPT for specific use cases, departments, or proprietary datasets.
-          </p>
-        </div>
-
-        <div class="rowExternary border-b border-[#333] py-2">
-          <div class="flex flex-row justify-between items-center">
-            <h2 class="text-md text-left font-semibold">Designed to support any task or project</h2>
-            <span class="text-lg cursor-pointer" data-target="rowTextExternary">+</span>
-          </div>
-          <p class="rowTextExternary text-sm text-[#777] hidden">
-            From writing to coding, ChatGPT can help with quick tasks and ongoing projects. With projects, keep files, chats, and instructions in one place to maintain context as
-            you work.
-          </p>
-        </div>
+      <div
+        class="mx-6 sm:mx-0 h-[570px] sm:w-[500px] sm:h-[500px] mt-0 bg-[#1a1a1a] rounded-xl sm:rounded-tl-none sm:rounded-bl-none bg-opacity-80 flex justify-center items-start px-6 sm:px-20 flex-col sm:order-1 order-3"
+        id="content-container"
+      >
       </div>
     </div>
+
     <div class="rowBoxesContainer h-auto mt-20">
       <div class="flex justify-center items-center flex-col text-white">
         <h1 class="text-2xl sm:text-4xl text-balance text-center font-semibold mb-6"> Supercharge your team's performance </h1>
@@ -147,9 +111,9 @@
       </div>
     </div>
     <section>
-      <div class="sixBoxesTextContainer min-h-[100vh] mt-20">
+      <div class="sixBoxesTextContainer mt-20">
         <div class="sixBoxes flex justify-center items-center px-2 flex-col text-white text-4xl font-medium">
-          <h1 class="sixBoxesHeading text-center text-2xl">Trusted by professionals <span class="block">at companies of all sizes</span></h1>
+          <h1 class="sixBoxesHeading text-center text-2xl sm:text-4xl">Trusted by professionals <span class="block">at companies of all sizes</span></h1>
           <div class="sixBoxesRow flex justify-start sm:justify-center px-2 max-w-3xl w-full h-auto rounded-xl">
             <ul class="flex flex-row items-center overflow-auto justify-start sm:justify-center pb-4 gap-4 mt-14">
               <button
@@ -195,12 +159,12 @@
               </button>
             </ul>
           </div>
-          <div class="Box flex flex-col sm:flex-row mt-20 sm:mt-0 h-screen items-center box-border justify-center mx-auto text-white">
+          <div class="Box flex flex-col flex-wrap sm:flex-row mt-20 sm:mt-0 items-center box-border justify-center mx-auto text-white">
             <div class="w-80 sm:w-[500px] h-[500px] order-1 sm:order-none">
               <img
                 id="image-box2"
                 src="componentImages/01_team_workspace.webp"
-                class="rounded-xl rounded-tr-none sm:rounded-tl-xl rounded-br-xl sm:rounded-br-none rounded-tl-none w-full h-auto object-cover"
+                class="rounded-xl rounded-tr-none sm:rounded-tl-xl rounded-br-xl sm:rounded-br-none rounded-tl-none w-full object-cover"
                 alt="Team Workspace"
               />
             </div>
@@ -225,33 +189,33 @@
       </div>
     </section>
     <section>
-      <div class="teamWorkWithGPT h-auto mb-28">
-        <div class="teamWork text-white flex justify-center items-center flex-col mt-20">
-          <h1 class="font-semibold text-4xl Teams do more, faster with ChatGPT">Secured for your workspace</h1>
-          <div class="teamWorkCards flex flex-row max-w-5xl gap-4 h-52 w-full mt-16">
+      <div class="teamWorkWithGPT mt-0 sm:mt-20">
+        <div class="teamWork text-white flex justify-center items-center flex-col">
+          <h1 class="font-semibold text-3xl sm:text-4xl text-center text-balance">Teams do more, faster with ChatGPT</h1>
+          <div class="teamWorkCards flex flex-col sm:flex-row max-w-5xl gap-4 px-6 w-full mt-10">
             <div class="cardPrimary flex-1 h-auto rounded-lg bg-[#1a1a1a] p-8">
               <h2 class="text-4xl font-medium">12.2%</h2>
-              <div class="cardParagraph flex justify-start items-end h-full pb-8">
-                <p class="text-center text-white font-semibold">more tasks completed</p>
+              <div class="cardParagraph flex relative justify-start items-end h-full pb-8">
+                <p class="text-center text-white absolute -bottom-3 sm:static font-semibold">more tasks completed</p>
               </div>
             </div>
 
             <div class="cardSecondary flex-1 rounded-lg bg-[#1a1a1a] p-8">
               <h2 class="text-4xl font-medium">25.1%</h2>
-              <div class="cardParagraph flex justify-start items-end h-full pb-8">
-                <p class="text-center text-white font-semibold">faster task completion</p>
+              <div class="cardParagraph flex relative justify-start items-end h-full pb-8">
+                <p class="text-center text-white absolute -bottom-3 sm:static font-semibold">faster task completion</p>
               </div>
             </div>
 
             <div class="cardTernary flex-1 h-auto rounded-lg bg-[#1a1a1a] p-8">
               <h2 class="text-4xl font-medium">40%</h2>
-              <div class="cardParagraph flex justify-start items-end h-full pb-8">
-                <p class="text-center text-white font-semibold">higher quality work</p>
+              <div class="cardParagraph flex relative justify-start items-end h-full pb-8">
+                <p class="text-center text-white absolute -bottom-3 sm:static font-semibold">higher quality work</p>
               </div>
             </div>
           </div>
 
-          <div class="teamWorklinkHeading max-w-5xl w-full flex justify-start mt-8">
+          <div class="teamWorklinkHeading max-w-5xl w-full flex justify-start mt-8 gap-4 px-6">
             <h1 class="text-[#666]">
               <span>↑ </span>
               <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=64700" target="_blank" class="underline">Harvard Business School.</a>
@@ -262,25 +226,25 @@
       </div>
     </section>
     <section>
-      <div class="usingChatGPT h-auto">
-        <div class="usingChatGPTStyling text-white max-w-7xl mx-auto h-full">
-          <div class="usingChatGPTWidth text-center w-full flex justify-center flex-col items-center">
-            <h1 class="text-white text-3xl leading-tight">
-              <span class="block text-3xl">“We use ChatGPT in almost every part of our business, from financial modeling</span>
-              <span class="block text-[41px]">and communications to recruiting and note taking, and it’s</span>
-              <span class="block text-5xl">accelerated everything we do.”</span>
+      <div class="usingChatGPT">
+        <div class="usingChatGPTStyling text-white max-w-6xl mx-auto">
+          <div class="usingChatGPTWidth text-center w-full flexflex-col items-center">
+            <h1 class="text-white text-xl text-balance sm:text-3xl text-center mt-10 sm:leading-tight">
+              “We use ChatGPT in almost every part of our business, from financial <br />
+              modeling and communications to recruiting and note-taking, and it’s <br />
+              accelerated everything we do.”
             </h1>
-            <p class="mt-4 text-sm">Connor O’Brien, VP of GTM Strategy & Operations, Sourcegraph</p>
+            <p class="mt-4 text-sm"> Connor O’Brien, VP of GTM Strategy & Operations, Sourcegraph </p>
           </div>
         </div>
       </div>
     </section>
 
     <section>
-      <div class="joinUsAIFrontier h-auto my-32">
+      <div class="joinUsAIFrontier my-32">
         <div class="joinUsAI text-white max-w-7xl mx-auto h-full">
           <div class="text-center w-full flex justify-center flex-col items-center">
-            <h1 class="text-4xl">Join us at the AI frontier</h1>
+            <h1 class="text-2xl sm:text-4xl">Join us at the AI frontier</h1>
             <div class="icons select-none text-xl flex flex-row gap-8 mt-4">
               <p class="cursor-pointer prevButton">&#60;</p>
               <p class="cursor-pointer nextButton">&#62;</p>
@@ -362,7 +326,7 @@
       </div>
     </section>
     <section>
-      <div class="joinGPTSection h-[50vh] mb-32 m-3">
+      <div class="joinGPTSection h-[50vh] mb-12 m-3">
         <div class="joinGPT flex justify-center flex-col space-y-4 items-center flex-wrap h-80 rounded-lg bg-[#1a1a1a] mx-auto max-w-5xl">
           <h1 class="text-white text-3xl text-center inline-block w-full sm:w-full md:w-[50%]">Join thousands of teams redefining how they work with ChatGPT </h1>
           <div class="button rounded-3xl bg-white px-6 py-2">
@@ -374,7 +338,7 @@
 
     <!-- Footer section -->
     <footer>
-      <div class="footerFiveRows grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-6 px-6 sm:px-4 xl:px-32 pt-4 bg-black text-white text-sm font-[inter] h-auto">
+      <div class="footerFiveRows grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-6 px-6 sm:px-4 xl:px-32 bg-black text-white text-sm font-[inter]">
         <div class="flex flex-col space-y-4">
           <h1 class="text-[#999]">Our Research</h1>
           <ul>
