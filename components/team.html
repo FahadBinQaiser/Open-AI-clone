@@ -87,25 +87,22 @@
         <h1 class="text-2xl sm:text-4xl text-balance text-center font-semibold mb-6"> Supercharge your team's performance </h1>
         <div class="rowBoxes flex justify-center px-4 sm:px-6 max-w-3xl w-full h-auto rounded-xl">
           <ul class="flex flex-row items-center justify-start sm:justify-center pb-2 overflow-x-auto w-full gap-4">
-            <button class="bg-white text-black px-6 py-2 rounded-2xl text-sm initial-button transition duration-300 shrink-0" id="analyzeData">
-              <a href="#">Analyze Data</a>
-            </button>
-            <button class="text-white hover:bg-none sm:hover:bg-[#333] px-4 py-2 rounded-2xl text-sm transition duration-300 shrink-0" id="accelerateCoding">
-              <a href="#">Accelerate Coding</a>
-            </button>
-            <button class="text-white hover:bg-none sm:hover:bg-[#333] px-4 py-2 rounded-2xl text-sm transition duration-300 shrink-0" id="generateContent">
-              <a href="#">Generate Content</a>
-            </button>
-            <button class="text-white hover:bg-none sm:hover:bg-[#333] px-4 py-2 rounded-2xl text-sm transition duration-300 shrink-0" id="brainstormIdeas">
-              <a href="#">Brainstorm Ideas</a>
-            </button>
+            <button class="bg-white text-black px-6 py-2 rounded-2xl text-sm initial-button transition duration-300 shrink-0" id="analyzeData">Analyze Data</button>
+            <button class="text-white hover:bg-none px-4 py-2 rounded-2xl text-sm transition duration-300 shrink-0" id="accelerateCoding">Accelerate Coding</button>
+            <button class="text-white hover:bg-none px-4 py-2 rounded-2xl text-sm transition duration-300 shrink-0" id="generateContent">Generate Content</button>
+            <button class="text-white hover:bg-none px-4 py-2 rounded-2xl text-sm transition duration-300 shrink-0" id="brainstormIdeas">Brainstorm Ideas</button>
           </ul>
         </div>
         <div class="mt-6 px-6">
-          <picture>
-            <source srcset="componentImages/rowBoxes/analyze-data-mobile.webp" media="(max-width: 700px)" />
+          <picture id="displayPicture">
+            <source id="analyzeDataSrc" srcset="componentImages/rowBoxes/analyze-data-mobile.webp" media="(max-width: 768px)" />
             <source srcset="componentImages/rowBoxes/analyze_data_team_link.webp" media="(min-width: 769px)" />
-            <img id="displayImage" src="componentImages/rowBoxes/analyze_data_team_link.webp" alt="Dynamic Image" class="w-full h-[500px] rounded-xl" />
+            <img
+              id="displayImage"
+              src="componentImages/rowBoxes/analyze_data_team_link.webp"
+              alt="Dynamic Image"
+              class="w-full h-[500px] sm:h-[1000px] object-cover md:h-[600px] rounded-xl"
+            />
           </picture>
         </div>
       </div>
@@ -114,7 +111,7 @@
       <div class="sixBoxesTextContainer mt-20">
         <div class="sixBoxes flex justify-center items-center px-2 flex-col text-white text-4xl font-medium">
           <h1 class="sixBoxesHeading text-center text-2xl sm:text-4xl">Trusted by professionals <span class="block">at companies of all sizes</span></h1>
-          <div class="sixBoxesRow flex justify-start sm:justify-center px-2 max-w-3xl w-full h-auto rounded-xl">
+          <div class="sixBoxesRow flex justify-start sm:justify-center px-2 max-w-3xl w-full rounded-xl">
             <ul class="flex flex-row items-center overflow-auto justify-start sm:justify-center pb-4 gap-4 mt-14">
               <button
                 class="bg-white text-black px-6 py-2 rounded-2xl text-sm transition duration-300"
