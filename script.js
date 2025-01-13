@@ -101,8 +101,8 @@ boxData.forEach((box, index) => {
       </h1>
       <p class="hover:border-b inline">Learn more about writing with ChatGPT ></p>
     </div>
-    <div class="box-img flex justify-center items-center w-full sm:px-16 lg:px-32 mt-6 p-10  ">
-      <img src="${box.imageSrc}" class="w-full max-w-5xl h-[600px] object-cover rounded-lg" alt="" />
+    <div class="box-img flex justify-center items-center w-full px-6 sm:px-16 lg:px-32 mt-6 p-10  ">
+      <img src="${box.imageSrc}" class="w-full max-w-5xl h-full object-cover rounded-lg" alt="" />
     </div>
   `;
 
@@ -170,7 +170,8 @@ const remainingBoxesContainer = document.querySelector('.remainingBoxes');
 
 remainingBoxesData.forEach((box, index) => {
   const boxElement = document.createElement('div');
-  boxElement.classList.add('leftRightbox','max-w-5xl','mx-auto', 'w-full', 'bg-black','grid','sm:grid-cols-1','md:grid-cols-2','lg:grid-cols-2', 'rounded-lg', 'overflow-hidden', 'pb-28');
+  boxElement.classList.add('leftRightbox','max-w-5xl','mx-auto', 'w-full', 'bg-black','grid','sm:grid-cols-2','md:grid-cols-2','lg:grid-cols-2', 'rounded-lg', 'overflow-hidden', 'pb-20');
+
 
   const descriptionHTML = box.description
     .map((line) => `<span class="block">${line}</span>`)
@@ -181,7 +182,7 @@ remainingBoxesData.forEach((box, index) => {
     : "";
 
   boxElement.innerHTML = `
-    <div class="leftBox bg-[#161616]  flex justify-center  flex-col text-left items-start px-6 sm:px-14 text-white">
+    <div class="leftBox bg-[#161616]  flex justify-center  flex-col text-left items-start py-8 px-6 sm:px-14 text-white">
       <h1 class="text-xl sm:text-3xl pb-8 font-semibold">${box.title}</h1>
       <p class="text-lg font-medium">${descriptionHTML}</p>
       ${linkHTML}
@@ -192,11 +193,23 @@ remainingBoxesData.forEach((box, index) => {
   `;
 
   if (index === 4 || index === 6) {
-    const leftBox = boxElement.querySelector(".leftBox"); 
+    const leftBox = boxElement.querySelector(".leftBox");
     if (leftBox) {
-      leftBox.classList.add("h-[660px]"); 
+      const screenWidth = window.innerWidth;
+  
+      leftBox.classList.remove("h-[600px]", "h-[350px]", "h-[450px]");
+  
+      if (screenWidth <= 700) {
+        leftBox.classList.add("h-[350px]");
+      } else if (screenWidth <= 1024) {
+        leftBox.classList.add("h-[450px]");
+      } else {
+        leftBox.classList.add("h-[600px]");
+      }
     }
   }
+  
+  
   remainingBoxesContainer.appendChild(boxElement);
 });
 
