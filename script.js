@@ -47,6 +47,7 @@ function createBoxes(rowId) {
 createBoxes("row1");
 createBoxes("row2");
 createBoxes("row3");
+
 const plans = [
     {
       name: "Free",
@@ -128,6 +129,7 @@ const plans = [
     container.appendChild(planElement.firstElementChild);
   });
 
+
 const menuToggle = document.getElementById("menuToggle");
   const menuItems = document.getElementById("menuItems");
   const spans = menuToggle.querySelectorAll("span");
@@ -164,4 +166,6 @@ const menuToggle = document.getElementById("menuToggle");
       });
     });
   });
+
+
 
