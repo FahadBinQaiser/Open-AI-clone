@@ -161,7 +161,7 @@ const boxData = [
   
   remainingBoxesData.forEach((box, index) => {
     const boxElement = document.createElement('div');
-    boxElement.classList.add('leftRightbox','max-w-7xl','mx-auto', 'w-full', 'bg-black','grid','sm:grid-cols-1','md:grid-cols-2','lg:grid-cols-2', 'rounded-lg', 'overflow-hidden', 'pb-28');
+    boxElement.classList.add('leftRightbox','max-w-6xl','mx-auto', 'w-full', 'bg-black','grid','sm:grid-cols-1','md:grid-cols-2','lg:grid-cols-2', 'rounded-xl', 'overflow-hidden', 'pb-28');
   
     const descriptionHTML = box.description
       .map((line) => `<span class="block">${line}</span>`)
@@ -185,7 +185,7 @@ const boxData = [
     if (index === 4 || index === 6) {
       const leftBox = boxElement.querySelector(".leftBox"); 
       if (leftBox) {
-        leftBox.classList.add("h-[660px]"); 
+        leftBox.classList.add("h-[650px]"); 
       }
     }
     remainingBoxesContainer.appendChild(boxElement);
