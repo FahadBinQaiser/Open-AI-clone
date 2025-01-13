@@ -150,5 +150,7 @@
     "which": "^2.0.2",
     "word-wrap": "^1.2.5",
     "write-file-atomic": "^3.0.0"
+  "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.3.1"
   }
 }
