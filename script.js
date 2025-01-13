@@ -172,6 +172,7 @@ remainingBoxesData.forEach((box, index) => {
   const boxElement = document.createElement('div');
   boxElement.classList.add('leftRightbox','max-w-5xl','mx-auto', 'w-full', 'bg-black','grid','sm:grid-cols-2','md:grid-cols-2','lg:grid-cols-2', 'rounded-lg', 'overflow-hidden', 'pb-20');
 
+
   const descriptionHTML = box.description
     .map((line) => `<span class="block">${line}</span>`)
     .join("");
