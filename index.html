@@ -11,7 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
+
     <link rel="stylesheet" href="style.css" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       .hover-gray {
@@ -186,60 +190,47 @@
     <!-- Navbar -->
     <!-- Hero Section -->
     <main class="bg-black h-[calc(100vh-3rem)] pt-4 border-t border-t-gray-700">
-      <div class="heroSection flex justify-between items-center text-white px-36">
+      <div class="heroSection flex justify-between items-center text-white overflow-x-scroll sm:overflow-hidden pb-4 px-4 sm:px-4 md:px-16 lg:px-36">
         <div class="leftHeading">
-          <h1>ChatGPT</h1>
+          <h1 class="mr-8 lg:mr-0 font-bold text-[14px] pr-8 border-r border-r-white sm:border-0 lg:text-sm">ChatGPT</h1>
         </div>
-        <ul class="items text-sm font-[inter] text-gray-600 flex space-x-6">
-          <li><a href="#" class="text-white transition-colors duration-300 ease-in-out">Overview</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out">Team</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out">Enterprise</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out">Education</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out">Pricing</a></li>
+        <ul class="items text-[12px] lg:text-sm font-[inter] text-gray-400 flex space-x-6">
+          <li>
+            <a href="#" class="hover:text-white text-white transition-colors duration-300 ease-in-out" aria-label="Overview">Overview</a>
+          </li>
+          <li><a href="components/team.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Team">Team</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Enterprise">Enterprise</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Education">Education</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Pricing">Pricing</a></li>
         </ul>
       </div>
 
-      <div class="midAlign text-white flex justify-center items-center flex-col h-[80vh]">
+      <div class="midAlign text-white flex justify-center items-center flex-col h-[60vh] lg:h-[80vh]">
         <h3 class="font-semibold">ChatGPT</h3>
         <div class="components font-medium text-center m-4">
-          <h1 class="text-h2 text-5xl font-[inter] font-semibold text-balance">
+          <h1 class="text-3xl lg:text-5xl font-[inter] font-semibold">
             Get answers. Find inspiration.
             <span class="block text-center">Be more productive.</span>
           </h1>
 
-          <p class="font-[inter] mt-6">
+          <p class="font-[inter] text-sm lg:text-xl mt-6">
             Free to use. Easy to try. Just ask and ChatGPT can
             <span class="block"> help with writing, learning, brainstorming, and more. </span>
           </p>
         </div>
-        <div class="flex flex-row items-center mt-6 space-x-6">
+        <div class="flex justify-center items-center flex-col gap-4 lg:flex-row mt-6 space-x-6">
           <div class="button border-2 border-white px-6 p-2 bg-white text-black rounded-full">
             <button class="flex flex-row space-x-4">
               Start now
               <img src="images/rightUpIcon.png" class="w-6 h-6" alt="" />
             </button>
           </div>
-          <div class="text cursor-pointer transition duration-1000 ease-out">
-            <p class="hover:border-b">Download the app ></p>
+          <div class="text cursor-pointer">
+            <p class="hover:border-b-2 border-b-2 border-transparent hover:border-gray-200 transition-all duration-500 ease-out"> Download the app > </p>
           </div>
         </div>
       </div>
     </main>
-
-    <!-- Pricing section -->
-    <section>
-      <div class="bg-black h-auto">
-        <div class="pricingUpperContent flex justify-center text-center flex-col">
-          <h1 class="text-center text-2xl sm:text-3xl text-balance mb-8 font-[inter] font-medium text-white pt-24"> Get started with Chat GPT today</h1>
-          <p>
-            <a href="#" class="text-white text-lg hover:border-b">View pricing Plans ></a>
-          </p>
-        </div>
-        <div id="pricingBoxes" class="pricingBoxes px-6 sm:px-6 lg:px-36 flex flex-col sm:flex-col lg:flex-row gap-4 w-full mt-14 p-6"></div>
-      </div>
-    </section>
-    <!-- Pricing section -->
-
     <script src="script.js"></script>
   </body>
 </html>
