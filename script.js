@@ -170,7 +170,7 @@ const remainingBoxesContainer = document.querySelector('.remainingBoxes');
 
 remainingBoxesData.forEach((box, index) => {
   const boxElement = document.createElement('div');
-  boxElement.classList.add('leftRightbox','max-w-7xl','mx-auto', 'w-full', 'bg-black','grid','sm:grid-cols-1','md:grid-cols-2','lg:grid-cols-2', 'rounded-lg', 'overflow-hidden', 'pb-28');
+  boxElement.classList.add('leftRightbox','max-w-5xl','mx-auto', 'w-full', 'bg-black','grid','sm:grid-cols-1','md:grid-cols-2','lg:grid-cols-2', 'rounded-lg', 'overflow-hidden', 'pb-28');
 
   const descriptionHTML = box.description
     .map((line) => `<span class="block">${line}</span>`)
