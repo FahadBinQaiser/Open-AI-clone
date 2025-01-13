@@ -1,4 +1,5 @@
 // Starting of the file!
+
 const plans = [
     {
       name: "Free",
@@ -80,6 +81,7 @@ const plans = [
     container.appendChild(planElement.firstElementChild);
   });
 
+
 const menuToggle = document.getElementById("menuToggle");
   const menuItems = document.getElementById("menuItems");
   const spans = menuToggle.querySelectorAll("span");
@@ -116,4 +118,6 @@ const menuToggle = document.getElementById("menuToggle");
       });
     });
   });
+
+
 
