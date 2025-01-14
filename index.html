@@ -52,7 +52,7 @@
                 Research
                 <div
                   id="dropDownLinkPrimary"
-                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 left-0 sm:-left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen flex flex-col"
+                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 left-0 sm:-left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen overflow-x-hidden flex flex-col"
                 >
                   <section>
                     <div class="flex flex-row justify-between gap-6 pt-4 text-white text-sm font-[inter] h-auto">
@@ -88,7 +88,7 @@
                 Products
                 <div
                   id="dropDownLinkSecondary"
-                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 rounded-lg -left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen flex flex-col"
+                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 rounded-lg -left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen overflow-x-hidden flex flex-col"
                 >
                   <section>
                     <div class="flex flex-row justify-between gap-6 pt-4 text-white text-sm font-[inter] h-auto">
@@ -98,9 +98,7 @@
                           <li><a href="">For Everyone</a></li>
                           <li><a href="">For Teams</a></li>
                           <li><a href="">For Enterprises</a></li>
-                          <li class="flex flex-row items-center">
-                            <a href="">ChatGPT Login</a><img src="images/rightUpIcon.png" class="w-4 h-4" alt="Icon" />
-                          </li>
+                          <li class="flex flex-row items-center"> <a href="">ChatGPT Login</a><img src="images/rightUpIcon.png" class="w-4 h-4" alt="Icon" /> </li>
                           <li><a href="">Download</a></li>
                         </ul>
                       </div>
@@ -151,7 +149,7 @@
                 Company
                 <div
                   id="dropDownLinkExternal"
-                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 rounded-lg -left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen flex flex-col"
+                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 rounded-lg -left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen overflow-x-hidden flex flex-col"
                 >
                   <section>
                     <div class="flex flex-row justify-between gap-6 pt-4 text-white text-sm font-[inter] h-auto">
@@ -190,46 +188,48 @@
     <!-- Navbar -->
     <!-- Hero Section -->
     <main class="bg-black h-[calc(100vh-3rem)] pt-4 border-t border-t-gray-700">
-      <div class="heroSection flex justify-between items-center text-white px-36">
+      <div class="heroSection relative flex justify-between items-center text-white overflow-x-scroll sm:overflow-hidden pb-4 px-4 sm:px-4 md:px-16 lg:px-36">
         <div class="leftHeading">
-          <h1>ChatGPT</h1>
+          <h1 class="mr-8 lg:mr-0 font-bold text-[14px] pr-8 border-r border-r-white sm:border-0 lg:text-sm">ChatGPT</h1>
         </div>
-        <ul class="items text-sm font-[inter] text-gray-600 flex space-x-6">
-          <li><a href="#" class="text-white transition-colors duration-300 ease-in-out">Overview</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out">Team</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out">Enterprise</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out">Education</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out">Pricing</a></li>
+        <ul class="items text-[12px] lg:text-sm font-[inter] text-gray-400 flex space-x-6 z-10">
+          <li>
+            <a href="#" class="hover:text-white text-white transition-colors duration-300 ease-in-out" aria-label="Overview">Overview</a>
+          </li>
+          <li><a href="components/team.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Team">Team</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Enterprise">Enterprise</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Education">Education</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Pricing">Pricing</a></li>
         </ul>
       </div>
 
-      <div class="midAlign text-white flex justify-center items-center flex-col h-[80vh]">
+      <div class="midAlign text-white flex justify-center items-center flex-col h-[60vh] lg:h-[80vh]">
         <h3 class="font-semibold">ChatGPT</h3>
         <div class="components font-medium text-center m-4">
-          <h1 class="text-h2 text-5xl font-[inter] font-semibold text-balance">
+          <h1 class="text-3xl lg:text-5xl font-[inter] font-semibold">
             Get answers. Find inspiration.
             <span class="block text-center">Be more productive.</span>
           </h1>
 
-          <p class="font-[inter] mt-6">
+          <p class="font-[inter] text-sm lg:text-xl mt-6">
             Free to use. Easy to try. Just ask and ChatGPT can
             <span class="block"> help with writing, learning, brainstorming, and more. </span>
           </p>
         </div>
-        <div class="flex flex-row items-center mt-6 space-x-6">
+        <div class="flex justify-center items-center flex-col gap-4 lg:flex-row mt-6 space-x-6">
           <div class="button border-2 border-white px-6 p-2 bg-white text-black rounded-full">
             <button class="flex flex-row space-x-4">
               Start now
               <img src="images/rightUpIcon.png" class="w-6 h-6" alt="" />
             </button>
           </div>
-          <div class="text cursor-pointer transition duration-1000 ease-out">
-            <p class="hover:border-b">Download the app ></p>
+          <div class="text cursor-pointer">
+            <p class="hover:border-b-2 border-b-2 border-transparent hover:border-gray-200 transition-all duration-500 ease-out"> Download the app > </p>
           </div>
         </div>
       </div>
     </main>
-
+    <!-- Hero Section -->
     <!-- box section -->
     <section class="h-[60vh] bg-black overflow-hidden flex flex-col gap-4 group">
       <div id="row1" class="relative flex justify-start items-center w-max animate-slide-right pause-animation"></div>
@@ -238,10 +238,17 @@
     </section>
 
     <!-- box section -->
-
+    <!-- Ideas section -->
+    <section>
+      <div class="IdeasContainer bg-black text-white"></div>
+      <div class="remainingBoxes px-4 sm:px-4 md:px-6 bg-black">
+        <h1 class="text-center text-3xl text-balance sm:text-4xl font-[inter] font-medium text-white pt-24 pb-16"> Explore more features in ChatGPT </h1>
+      </div>
+    </section>
+    <!-- Ideas section -->
     <!-- Pricing section -->
     <section>
-      <div class="bg-black h-auto">
+      <div class="bg-black pb-28">
         <div class="pricingUpperContent flex justify-center text-center flex-col">
           <h1 class="text-center text-2xl sm:text-3xl text-balance mb-8 font-[inter] font-medium text-white pt-24"> Get started with Chat GPT today</h1>
           <p>
@@ -252,7 +259,21 @@
       </div>
     </section>
     <!-- Pricing section -->
-
+    <!-- JoinGPT section -->
+    <div class="joinGPTContainer bg-black w-full px-10 text-white h-[60vh] pb-36 flex justify-center items-center">
+      <div class="joinGPTBox w-full sm:w-11/12 lg:w-11/12 max-w-5xl bg-[#1a1a1a] rounded-lg h-80 flex justify-center items-center">
+        <div class="joinGPTContent flex justify-center items-center flex-col font-[inter] text-center">
+          <h1 class="text-3xl mb-4 font-medium text-balance">Join hundreds of millions of <span class="block">users and try ChatGPT today.</span></h1>
+          <div class="button border-2 border-white px-6 p-2 bg-white text-black rounded-full">
+            <button class="flex flex-row space-x-4 text-sm font-medium">
+              Try ChatGPT
+              <img src="images/rightUpIcon.png" class="w-4 h-4" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JoinGPT section -->
     <!-- Footer section -->
     <footer>
       <div
@@ -351,7 +372,6 @@
       </div>
     </footer>
     <!-- Footer section -->
-
     <script src="script.js"></script>
   </body>
 </html>
