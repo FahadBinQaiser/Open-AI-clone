@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -71,12 +71,17 @@
         </div>
       </div>
     </main>
-    <div class="Box flex flex-col md:flex-col lg:flex-row overflow-hidden items-center mx-auto justify-center text-white">
-      <div class="w-[200px] h-[200px] md:w-[500px] md:h-[500px] hidden sm:flex order-2 sm:order-none">
-        <img id="image-box" src="componentImages/01_team_workspace.webp" class="rounded-xl rounded-tr-none rounded-br-none w-full h-full object-cover" alt="Team Workspace" />
+    <div class="Box flex flex-row sm:flex-row md:flex-row px-8 lg:flex-row overflow-hidden items-center max-w-5xl mx-auto justify-center text-white">
+      <div class="w-[200px] h-[200px] sm:w-[500px] sm:h-[500px] md:w-[500px] md:h-[500px] hidden sm:flex order-2 sm:order-none">
+        <img
+          id="image-box"
+          src="componentImages/01_team_workspace.webp"
+          class="rounded-xl rounded-tr-none rounded-br-none w-full h-full object-cover sm:object-fill"
+          alt="Team Workspace"
+        />
       </div>
       <div
-        class="mx-6 sm:mx-0 h-[570px] sm:w-[500px] sm:h-[500px] mt-0 bg-[#1a1a1a] rounded-xl sm:rounded-tl-none sm:rounded-bl-none bg-opacity-80 flex justify-center items-start px-6 sm:px-20 flex-col sm:order-1 order-3"
+        class="mx-6 sm:mx-0 h-[600px] sm:w-[500px] sm:h-[500px] relative mt-0 bg-[#1a1a1a] rounded-xl sm:rounded-tl-none sm:rounded-bl-none bg-opacity-80 flex justify-center items-start px-6 sm:px-14 flex-col sm:order-1 order-3"
         id="content-container"
       >
       </div>
@@ -156,18 +161,18 @@
               </button>
             </ul>
           </div>
-          <div class="Box flex flex-col flex-wrap sm:flex-col md:flex-row mt-20 sm:mt-0 items-center box-border justify-center mx-auto text-white">
-            <div class="w-80 sm:w-[500px] h-[500px] order-1 sm:order-1 md:order-none">
+          <div class="Box flex flex-col sm:flex-col md:flex-row mt-20 mb-20 items-center sm:mt-4 box-border justify-center mx-auto text-white">
+            <div class="w-80 sm:w-[500px] sm:h-[500px] md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[500px] order-1 sm:order-1 md:order-none">
               <img
                 id="image-box2"
                 src="componentImages/01_team_workspace.webp"
-                class="rounded-xl rounded-tr-none sm:rounded-tl-none md:rounded-tl-xl rounded-br-xl sm:rounded-br-xl md:rounded-br-none rounded-tl-none w-full object-cover"
+                class="rounded-xl rounded-tr-none sm:rounded-tl-none md:rounded-tl-xl lg:rounded-tl-xl rounded-br-xl sm:rounded-br-xl md:rounded-br-none lg:rounded-br-none rounded-tl-none w-full object-cover"
                 alt="Team Workspace"
               />
             </div>
 
             <div
-              class="w-80 sm:w-[500px] h-[350px] sm:h-[250px] md:h-[500px] p-6 bg-[#1a1a1a] rounded-xl rounded-bl-none rounded-br-none sm:rounded-tl-xl md:rounded-tl-none sm:rounded-br-none md:rounded-br-xl bg-opacity-80 flex justify-center items-center px-14 flex-col"
+              class="w-80 sm:w-[500px] h-[350px] sm:h-[250px] md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[500px] p-6 bg-[#1a1a1a] rounded-xl rounded-bl-none rounded-br-none sm:rounded-tl-xl md:rounded-tl-none lg:rounded-tl-none sm:rounded-br-none md:rounded-br-xl bg-opacity-80 flex justify-center items-center px-14 flex-col"
             >
               <div class="sixRowsPrimaryBox text-xl">
                 <h1 id="dynamic-heading" class="text-md">
