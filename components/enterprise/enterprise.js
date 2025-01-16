@@ -174,12 +174,16 @@ let visibleBoxes = 1;
 const totalBoxes = document.querySelectorAll('.carousel-box').length;
 
 function setCarouselProperties() {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 640) {
     boxWidth = 120 + 16;
     visibleBoxes = 2;
-  } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+  }else if(window.innerWidth > 640 && window.innerWidth < 768){
+      boxWidth = 160 + 16;
+      visibleBoxes = 2;
+  } 
+  else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
     boxWidth = 220 + 16;
-    visibleBoxes = 2;
+    visibleBoxes = 3;
   } else {
     boxWidth = 250 + 16;
     visibleBoxes = 6;
