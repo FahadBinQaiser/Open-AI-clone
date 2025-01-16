@@ -29,46 +29,6 @@ spans.forEach((span) => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  function updatePictureSources(baseImage, mobileImage) {
-    const picture = document.getElementById("displayPicture");
-    const sources = picture.querySelectorAll("source");
-
-    sources[0].srcset = mobileImage;
-    sources[1].srcset = baseImage;
-
-    picture.querySelector("img").src = baseImage;
-  }
-
-  document.getElementById("analyzeData").addEventListener("click", () => {
-    updatePictureSources(
-      "/components/componentImages/rowBoxes/analyze_data_team_link.webp",
-      "/components/componentImages/rowBoxes/analyze-data-mobile.webp"
-    );
-  });
-
-  document.getElementById("accelerateCoding").addEventListener("click", () => {
-    updatePictureSources(
-      "/components/componentImages/rowBoxes/Accelerate_coding_team_link.webp",
-      "/components/componentImages/rowBoxes/Accelerate_coding_mobile.webp"
-    );
-  });
-
-  document.getElementById("generateContent").addEventListener("click", () => {
-    updatePictureSources(
-      "/components/componentImages/rowBoxes/generate_content_team_link.webp",
-      "/components/componentImages/rowBoxes/Generate_content_mobile.webp"
-    );
-  });
-
-  document.getElementById("brainstormIdeas").addEventListener("click", () => {
-    updatePictureSources(
-      "/components/componentImages/rowBoxes/brainstorm_ideas_team_link.webp",
-      "/components/componentImages/rowBoxes/brainstorm_ideas_mobile.webp"
-    );
-  });
-});
-
 const performanceButtons = document.querySelectorAll('.rowBoxes button');
 const initialButton = document.querySelector('#analyzeData');
 
@@ -168,10 +128,10 @@ function setCarouselProperties() {
     boxWidth = 200 + 16;
     visibleBoxes = 2;
   } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
-    boxWidth = 300 + 16;
+    boxWidth = 220 + 16;
     visibleBoxes = 2;
   } else {
-    boxWidth = 260 + 16;
+    boxWidth = 250 + 16;
     visibleBoxes = 6;
   }
 }
@@ -237,25 +197,24 @@ const contentData = [
     id: 'item1',
     title: 'High speed access to GPT-4o, our flagship model',
     description: 'GPT-4o can hear, see, and speak, with improved language capabilities across quality and speed.',
-    imgSrc: 'componentImages/01_team_workspace.webp',
+
   },
   {
     id: 'item2',
     title: 'Access to OpenAI, o1 new series of reasoning models',
     description: 'The o1 series reason through complex tasks in domains like mathematics, coding, science, strategy, and logistics. ',
-    imgSrc: 'enterprise/01_Thinking_Updated__1_.webp',
+
   },
   {
     id: 'item3',
     title: 'Advanced capabilities fully integrated with frontier models',
     description: 'Native tools like advanced voice, data analysis, memory, browsing, retrieval, and image generation are built into one platform.',
-    imgSrc: 'enterprise/01_Thinking_Updated__1_.webp',
+
   },
   {
     id: 'item4',
     title: 'Custom AI templates for your organization',
     description: 'Create custom versions of ChatGPT that follow specific instructions, tap into uploaded knowledge, and can take actions in other tools. Share them with your workspace to get employees started with AI faster. ',
-    imgSrc: 'enterprise/03_team_customize_desktop.webp',
   },
 ];
 
@@ -271,10 +230,7 @@ if (contentContainer) {
         </label>
         <div class="content overflow-hidden max-h-0 transition-all duration-500 peer-checked:max-h-[300px] peer-checked:mt-4">
           <p class="text-sm text-[#777]">${item.description}</p>
-          <div class="w-[200px] h-[200px] flex sm:hidden justify-center items-center mx-auto sm:w-[500px] sm:h-[500px] sm:order-none">
-              <img src="${item.imgSrc}" class="rounded-none sm:rounded-xl mt-2 rounded-tr-none rounded-br-none w-full h-full object-cover" alt="${item.title}" />
-          
-          </div>
+         
         </div>
       </div>
     `;
