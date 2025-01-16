@@ -175,7 +175,7 @@ const totalBoxes = document.querySelectorAll('.carousel-box').length;
 
 function setCarouselProperties() {
   if (window.innerWidth < 768) {
-    boxWidth = 240 + 16;
+    boxWidth = 120 + 16;
     visibleBoxes = 2;
   } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
     boxWidth = 220 + 16;
