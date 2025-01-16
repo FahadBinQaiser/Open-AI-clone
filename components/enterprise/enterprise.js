@@ -71,7 +71,7 @@ const imgBox = document.getElementById("image-box2")
     
         pictures.querySelector("img").src = baseImage;
       }
-      
+
       document.getElementById("engineering").addEventListener("click", () => {
         updatePictureSources(
           "enterpriseImages/01_enterprise_workflow_engineering_desktop_dark.webp",
@@ -122,6 +122,16 @@ const imgBox = document.getElementById("image-box2")
         );
       });
     });
+    function updateImage() {
+      const svgImage = document.getElementById("svgImage")
+      if (window.innerWidth <= 768) {
+        svgImage.src = "enterpriseImages/marketecture_mobile_dark.svg";
+      } else {
+        svgImage.src = "enterpriseImages/marketecture_dark.svg";
+      }
+    }
+    window.addEventListener("load", updateImage);
+    window.addEventListener("resize", updateImage);
 
     defaultButton.classList.add('bg-white', 'text-[#333]');
     defaultButton.classList.remove('hover:bg-[#333]');
