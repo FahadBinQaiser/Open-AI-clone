@@ -61,27 +61,67 @@ const sixBoxesButtons = document.querySelectorAll('.sixBoxesRow button');
 const imgBox = document.getElementById("image-box2")
     const defaultButton = sixBoxesButtons[0];
 
-    document.getElementById("engineering").addEventListener("click", () =>{
+    document.addEventListener("DOMContentLoaded", () => {
+      function updatePictureSources(baseImage, mobileImage) {
+        const pictures = document.getElementById("displayingPictures");
+        const sources = pictures.querySelectorAll("source");
+    
+        sources[0].srcset = mobileImage;
+        sources[1].srcset = baseImage;
+    
+        pictures.querySelector("img").src = baseImage;
+      }
+      
+      document.getElementById("engineering").addEventListener("click", () => {
+        updatePictureSources(
+          "enterpriseImages/01_enterprise_workflow_engineering_desktop_dark.webp",
+          "enterpriseImages/01_enterprise_workflow_engineering_mobile_dark.webp"
+        );
       imgBox.src = "enterpriseImages/01_enterprise_workflow_engineering_desktop_dark.webp"
-    })
-    document.getElementById("marketing").addEventListener("click", () =>{
-      imgBox.src = "enterpriseImages/02_enterprise_workflow_marketing_desktop_dark.webp"
-    })
-    document.getElementById("sales").addEventListener("click", () =>{
-      imgBox.src = "enterpriseImages/03_enterprise_workflow_sales_desktop_dark.webp"
-    })
-    document.getElementById("finance").addEventListener("click", () =>{
-      imgBox.src = "enterpriseImages/04_enterprise_workflow_finance_desktop_dark.webp"
-    })
-    document.getElementById("IT").addEventListener("click", () =>{
-      imgBox.src = "enterpriseImages/05_enterprise_workflow_IT_desktop_dark.webp"
-    })
-    document.getElementById("operations").addEventListener("click", () =>{
-      imgBox.src = "enterpriseImages/06_enterprise_workflow_operations_desktop_dark.webp"
-    })
-    document.getElementById("hr").addEventListener("click", () =>{
-      imgBox.src = "enterpriseImages/07_enterprise_workflow_hr_desktop_dark.webp"
-    })
+      });
+
+      document.getElementById("marketing").addEventListener("click", () => {
+        updatePictureSources(
+          "enterpriseImages/02_enterprise_workflow_marketing_desktop_dark.webp",
+          "enterpriseImages/02_enterprise_workflow_marketing_mobile_dark.webp"
+        );
+      });
+
+      document.getElementById("sales").addEventListener("click", () => {
+        updatePictureSources(
+          "enterpriseImages/03_enterprise_workflow_sales_desktop_dark.webp",
+          "enterpriseImages/03_enterprise_workflow_sales_mobile_dark.webp"
+        );
+      });
+
+      document.getElementById("finance").addEventListener("click", () => {
+        updatePictureSources(
+          "enterpriseImages/04_enterprise_workflow_finance_desktop_dark.webp",
+          "enterpriseImages/04_enterprise_workflow_finance_mobile_dark.webp"
+        );
+      });
+
+      document.getElementById("IT").addEventListener("click", () => {
+        updatePictureSources(
+          "enterpriseImages/05_enterprise_workflow_IT_desktop_dark.webp",
+          "enterpriseImages/05_enterprise_workflow_IT_mobile_dark.webp"
+        );
+      });
+
+      document.getElementById("operations").addEventListener("click", () => {
+        updatePictureSources(
+          "enterpriseImages/06_enterprise_workflow_operations_desktop_dark.webp",
+          "enterpriseImages/06_enterprise_workflow_operations_mobile_dark.webp"
+        );
+      });
+
+      document.getElementById("hr").addEventListener("click", () => {
+        updatePictureSources(
+          "enterpriseImages/07_enterprise_workflow_hr_desktop_dark.webp",
+          "enterpriseImages/07_enterprise_workflow_hr_mobile_dark.webp"
+        );
+      });
+    });
 
     defaultButton.classList.add('bg-white', 'text-[#333]');
     defaultButton.classList.remove('hover:bg-[#333]');
@@ -125,7 +165,7 @@ const totalBoxes = document.querySelectorAll('.carousel-box').length;
 
 function setCarouselProperties() {
   if (window.innerWidth < 768) {
-    boxWidth = 200 + 16;
+    boxWidth = 240 + 16;
     visibleBoxes = 2;
   } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
     boxWidth = 220 + 16;

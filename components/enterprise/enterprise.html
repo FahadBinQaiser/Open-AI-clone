@@ -218,7 +218,7 @@
         <div class="joinUsAI text-white max-w-7xl mx-auto h-full">
           <div class="text-center w-full flex justify-center flex-col items-center">
             <h1 class="text-2xl sm:text-5xl">A new way of working</h1>
-            <p class="pt-6 text-md">92% of the Fortune 500 already use OpenAI in their business</p>
+            <p class="pt-6 text-balance text-md">92% of the Fortune 500 already use OpenAI in their business</p>
             <div class="icons select-none text-xl flex flex-row gap-8 mt-4">
               <p class="cursor-pointer prevButton">&#60;</p>
               <p class="cursor-pointer nextButton">&#62;</p>
@@ -270,11 +270,11 @@
     <section>
       <div class="sixBoxesTextContainer mt-20">
         <div class="sixBoxes flex justify-center items-center px-2 flex-col text-white text-4xl font-medium">
-          <h1 class="sixBoxesHeading text-center text-2xl sm:text-4xl"
-            >Customize ChatGPT to any workflow <span class="block">and collaborate across teams</span></h1
+          <h1 class="sixBoxesHeading text-center text-2xl sm:text-4xl text-balance"
+            >Customize ChatGPT to any workflow <span class="sm:block">and collaborate across teams</span></h1
           >
           <div class="sixBoxesRow flex justify-start sm:justify-center px-2 max-w-5xl w-full rounded-xl">
-            <ul class="flex flex-row items-center justify-start sm:justify-center pb-4 gap-4 mt-14">
+            <ul class="flex flex-row whitespace-nowrap overflow-auto items-center justify-start sm:justify-center pb-4 gap-4 mt-14">
               <button id="engineering" class="bg-white text-black px-6 py-2 rounded-2xl text-sm transition duration-300"> Engineering </button>
               <button id="marketing" class="text-white hover:bg-none origin-right px-4 py-2 rounded-2xl text-sm transition duration-300"> Marketing </button>
               <button id="sales" class="text-white hover:bg-none origin-right px-4 py-2 rounded-2xl text-sm transition duration-300"> Sales & Success </button>
@@ -290,12 +290,16 @@
             </ul>
           </div>
           <div class="Box flex justify-center max-w-5xl mx-auto text-white">
-            <img
-              id="image-box2"
-              src="enterpriseImages/01_enterprise_workflow_engineering_desktop_dark.webp"
-              class="rounded-xl w-full object-cover"
-              alt="Team Workspace"
-            />
+            <picture id="displayingPictures">
+              <source srcset="enterpriseImages/01_enterprise_workflow_engineering_dark_mobile.webp" media="(max-width: 768px)" />
+              <source srcset="enterpriseImages/01_enterprise_workflow_engineering_desktop_dark.webp" media="(min-width: 769px)" />
+              <img
+                id="image-box2"
+                src="enterpriseImages/01_enterprise_workflow_engineering_desktop_dark.webp"
+                class="rounded-xl w-full object-cover"
+                alt="Team Workspace"
+              />
+            </picture>
           </div>
         </div>
       </div>
