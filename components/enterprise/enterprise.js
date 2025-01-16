@@ -292,4 +292,49 @@ if (contentContainer) {
   });
 } 
 
+const prevButton1 = document.querySelector('.prevButton-1');
+const nextButton1 = document.querySelector('.nextButton-1');
+const carousel1 = document.querySelector('.carousel-1');
+let currentIndex1 = 0;
+let boxWidth1 = 200 + 16; 
+let visibleBoxes1 = 1;    
 
+function setCarouselProperties1() {
+  if (window.innerWidth < 640) {
+    boxWidth1 = 350 + 16;
+    visibleBoxes1 = 1;
+  } else if (window.innerWidth >= 640 && window.innerWidth < 768) {
+    boxWidth1 = 350 + 16;
+    visibleBoxes1 = 1;
+  } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+    boxWidth1 = 350 + 16;
+    visibleBoxes1 = 2; 
+  } else {
+    boxWidth1 = 250 + 16;
+    visibleBoxes1 = 2;  
+  }
+
+  carousel1.style.transition = 'transform 0.2s ease-in-out';  
+}
+
+function updateCarousel1() {
+  const totalBoxes1 = carousel1.querySelectorAll('.carousel-box').length;
+  const maxIndex1 = totalBoxes1 - visibleBoxes1;
+  currentIndex1 = Math.max(0, Math.min(currentIndex1, maxIndex1));
+
+  const offset1 = -(currentIndex1 * boxWidth1);
+  carousel1.style.transform = `translateX(${offset1}px)`;
+}
+
+nextButton1.addEventListener('click', () => {
+  currentIndex1++;
+  updateCarousel1();
+});
+
+prevButton1.addEventListener('click', () => {
+  currentIndex1--;
+  updateCarousel1();
+});
+
+setCarouselProperties1();
+window.addEventListener('resize', setCarouselProperties1);
