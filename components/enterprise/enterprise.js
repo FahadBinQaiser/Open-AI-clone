@@ -62,69 +62,69 @@ const imgBox = document.getElementById("image-box2")
     const defaultButton = sixBoxesButtons[0];
 
     document.addEventListener("DOMContentLoaded", () => {
-      function updatePictureSources(baseImage, mobileImage) {
-        const pictures = document.getElementById("displayingPictures");
-        const sources = pictures.querySelectorAll("source");
+      const sixBoxesButtons = document.querySelectorAll(".sixBoxesRow button");
+      const pictures = document.getElementById("displayingPictures");
+      const imgTag = pictures.querySelector("img");
+      const sources = pictures.querySelectorAll("source");
     
-        sources[0].srcset = mobileImage;
-        sources[1].srcset = baseImage;
-    
-        pictures.querySelector("img").src = baseImage;
+      function updatePictureSources(desktopImage, mobileImage) {
+        sources[0].srcset = mobileImage; 
+        sources[1].srcset = desktopImage; 
+        imgTag.src = window.innerWidth <= 768 ? mobileImage : desktopImage;
       }
-
-      document.getElementById("engineering").addEventListener("click", () => {
-        updatePictureSources(
-          "enterpriseImages/01_enterprise_workflow_engineering_desktop_dark.webp",
-          "enterpriseImages/01_enterprise_workflow_engineering_mobile_dark.webp"
-        );
-      imgBox.src = "enterpriseImages/01_enterprise_workflow_engineering_desktop_dark.webp"
-      });
-
-      document.getElementById("marketing").addEventListener("click", () => {
-        updatePictureSources(
-          "enterpriseImages/02_enterprise_workflow_marketing_desktop_dark.webp",
-          "enterpriseImages/02_enterprise_workflow_marketing_mobile_dark.webp"
-        );
-      });
-
-      document.getElementById("sales").addEventListener("click", () => {
-        updatePictureSources(
-          "enterpriseImages/03_enterprise_workflow_sales_desktop_dark.webp",
-          "enterpriseImages/03_enterprise_workflow_sales_mobile_dark.webp"
-        );
-      });
-
-      document.getElementById("finance").addEventListener("click", () => {
-        updatePictureSources(
-          "enterpriseImages/04_enterprise_workflow_finance_desktop_dark.webp",
-          "enterpriseImages/04_enterprise_workflow_finance_mobile_dark.webp"
-        );
-      });
-
-      document.getElementById("IT").addEventListener("click", () => {
-        updatePictureSources(
-          "enterpriseImages/05_enterprise_workflow_IT_desktop_dark.webp",
-          "enterpriseImages/05_enterprise_workflow_IT_mobile_dark.webp"
-        );
-      });
-
-      document.getElementById("operations").addEventListener("click", () => {
-        updatePictureSources(
-          "enterpriseImages/06_enterprise_workflow_operations_desktop_dark.webp",
-          "enterpriseImages/06_enterprise_workflow_operations_mobile_dark.webp"
-        );
-      });
-
-      document.getElementById("hr").addEventListener("click", () => {
-        updatePictureSources(
-          "enterpriseImages/07_enterprise_workflow_hr_desktop_dark.webp",
-          "enterpriseImages/07_enterprise_workflow_hr_mobile_dark.webp"
-        );
+    
+      sixBoxesButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          switch (button.id) {
+            case "engineering":
+              updatePictureSources(
+                "enterpriseImages/01_enterprise_workflow_engineering_desktop_dark.webp",
+                "enterpriseImages/01_enterprise_workflow_engineering_dark_mobile.webp"
+              );
+              break;
+            case "marketing":
+              updatePictureSources(
+                "enterpriseImages/02_enterprise_workflow_marketing_desktop_dark.webp",
+                "enterpriseImages/02_enterprise_workflow_marketing_mobile_dark.webp"
+              );
+              break;
+            case "sales":
+              updatePictureSources(
+                "enterpriseImages/03_enterprise_workflow_sales_desktop_dark.webp",
+                "enterpriseImages/03_enterprise_workflow_sales_mobile_dark.webp"
+              );
+              break;
+            case "finance":
+              updatePictureSources(
+                "enterpriseImages/04_enterprise_workflow_finance_desktop_dark.webp",
+                "enterpriseImages/04_enterprise_workflow_finance_mobile_dark.webp"
+              );
+              break;
+            case "IT":
+              updatePictureSources(
+                "enterpriseImages/05_enterprise_workflow_IT_desktop_dark.webp",
+                "enterpriseImages/05_enterprise_workflow_IT_mobile_dark.webp"
+              );
+              break;
+            case "operations":
+              updatePictureSources(
+                "enterpriseImages/06_enterprise_workflow_operations_desktop_dark.webp",
+                "enterpriseImages/06_enterprise_workflow_operations_mobile_dark.webp"
+              );
+              break;
+            case "hr":
+              updatePictureSources(
+                "enterpriseImages/07_enterprise_workflow_hr_desktop_dark.webp",
+                "enterpriseImages/07_enterprise_workflow_hr_mobile_dark.webp"
+              );
+              break;
+          }
+        });
       });
     });
-    function updateImage() {
+        function updateImage() {
       const svgImage = document.getElementById("svgImage")
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 640) {
         svgImage.src = "enterpriseImages/marketecture_mobile_dark.svg";
       } else {
         svgImage.src = "enterpriseImages/marketecture_dark.svg";
