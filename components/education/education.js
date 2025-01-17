@@ -54,3 +54,82 @@ const contentData = [
       contentContainer.insertAdjacentHTML('beforeend', sectionHTML);
     });
   } 
+
+
+  const sixBoxesButtons = document.querySelectorAll('.sixBoxesRow button');
+  const imgBox = document.getElementById("image-box2")
+      const defaultButton = sixBoxesButtons[0];
+  
+      document.addEventListener("DOMContentLoaded", () => {
+        const sixBoxesButtons = document.querySelectorAll(".sixBoxesRow button");
+        const pictures = document.getElementById("displayingPictures");
+        const imgTag = pictures.querySelector("img");
+        const sources = pictures.querySelectorAll("source");
+      
+        function updatePictureSources(desktopImage, mobileImage) {
+          sources[0].srcset = mobileImage; 
+          sources[1].srcset = desktopImage; 
+          imgTag.src = window.innerWidth <= 768 ? mobileImage : desktopImage;
+        }
+      
+        sixBoxesButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            switch (button.id) {
+              case "students":
+                updatePictureSources(
+                  "educationImages/studentsDesktop.webp",
+                  "educationImages/studentsMobile.webp"
+                );
+                break;
+              case "faculty":
+                updatePictureSources(
+                  "educationImages/facultyDesktop.webp",
+                  "educationImages/facultyMobile.webp",
+                );
+                break;
+              case "research":
+                updatePictureSources(
+                  "educationImages/researchDesktop.webp",
+                  "educationImages/researchMobile.webp"
+                );
+                break;
+              case "campus":
+                updatePictureSources(
+                  "educationImages/campusDesktop.webp",
+                  "educationImages/campusMobile.webp"
+                );
+                break;
+            }
+          });
+        });
+      });  
+      defaultButton.classList.add('bg-white', 'text-[#333]');
+      defaultButton.classList.remove('hover:bg-[#333]');
+      sixBoxesButtons.forEach((boxesInside) => {
+        if (boxesInside !== defaultButton) {
+          boxesInside.classList.remove('hover:bg-[#333]', 'text-white');
+        }
+      })
+  
+      sixBoxesButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+  
+        sixBoxesButtons.forEach((b) => { b.classList.remove("bg-white", "text-[#333]");
+          b.classList.add("hover:bg-[#333]", "text-white");
+        });
+        button.classList.add("bg-white", "text-[#333]");
+        button.classList.remove("hover:bg-[#333]");
+      });
+  
+      button.addEventListener('mouseover', () => {
+        if (button.classList.contains('bg-white')) {
+          button.classList.remove('hover:bg-[#333]');
+        }
+      });
+  
+      button.addEventListener('mouseout', () => {
+        if (!button.classList.contains('bg-white')) {
+          button.classList.add('hover:bg-[#333]');
+        }
+      });
+    });  
