@@ -87,8 +87,8 @@
                       <div class="flex flex-col space-y-4">
                         <h1 class="text-[#999]">ChatGPT</h1>
                         <ul class="space-y-4 text-md">
-                          <li><a href="">For Everyone</a></li>
-                          <li><a href="">For Teams</a></li>
+                          <li><a href="/index.html">For Everyone</a></li>
+                          <li><a href="/components/team.html">For Teams</a></li>
                           <li><a href="components/enterprise/enterprise.html">For Enterprises</a></li>
                           <li class="flex flex-row items-center">
                             <a href="">ChatGPT Login</a><img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" />
@@ -181,6 +181,7 @@
       </div>
     </nav>
     <!-- Navbar -->
+    <!-- Hero section -->
     <main class="bg-black h-[calc(100vh-3rem)] pt-4 border-t border-t-gray-700">
       <div class="heroSection flex justify-between items-center text-white overflow-x-scroll sm:overflow-hidden pb-4 px-4 sm:px-4 md:px-16 lg:px-36">
         <div class="leftHeading">
@@ -188,11 +189,15 @@
         </div>
         <ul class="items text-[12px] lg:text-sm font-[inter] text-gray-400 flex space-x-6">
           <li>
-            <a href="#" class="hover:text-white text-white transition-colors duration-300 ease-in-out" aria-label="Overview">Overview</a>
+            <a href="/index.html" class="hover:text-white text-white transition-colors duration-300 ease-in-out" aria-label="Overview">Overview</a>
           </li>
           <li><a href="/components/team.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Team">Team</a></li>
-          <li><a href="enterprise.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Enterprise">Enterprise</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Education">Education</a></li>
+          <li
+            ><a href="/components/enterprise/enterprise.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Enterprise"
+              >Enterprise</a
+            ></li
+          >
+          <li><a href="education.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Education">Education</a></li>
           <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Pricing">Pricing</a></li>
         </ul>
       </div>
@@ -213,6 +218,26 @@
         </div>
       </div>
     </main>
+    <!-- Hero section -->
+
+    <!-- boxes section -->
+    <section>
+      <div class="h-full pb-10">
+        <h1 class="text-white text-center text-balance py-10 text-4xl">ChatGPT, built for education</h1>
+        <div class="flex flex-col sm:flex-row px-4 justify-center items-center gap-6 pt-4 max-w-5xl mx-auto">
+          <div class="privacyPrimaryBox bg-[#1a1a1a] w-full h-56 font-medium flex flex-col p-6 text-white rounded-lg">
+            <h1 class="headingPrimary text-lg md:text-2xl">Powered by our newest flagship model, GPT-4o</h1>
+          </div>
+          <div class="privacySecondaryBox bg-[#1a1a1a] w-full h-56 font-medium flex flex-col p-6 text-white rounded-lg">
+            <h1 class="headingSecondary text-lg md:text-2xl">Access to advanced tools and capabilities</h1>
+          </div>
+          <div class="privacyTernaryBox bg-[#1a1a1a] w-full h-56 font-medium flex flex-col p-6 text-white rounded-lg">
+            <h1 class="headingTernary text-lg md:text-2xl">Enterprise-grade security and admin controls</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- boxes section -->
     <script src="education.js"></script>
   </body>
 </html>
