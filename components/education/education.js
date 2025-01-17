@@ -133,3 +133,13 @@ const contentData = [
         }
       });
     });  
+
+const imageUniversity = document.getElementById("imageGPTsrc");
+function conversion(){
+    if(window.innerWidth <= 640){
+        imageUniversity.src = 'educationImages/campusMobile.webp'
+    }else{
+        imageUniversity.src = 'educationImages/campusDesktop.webp'   
+    }
+}
+window.addEventListener('resize', conversion);
