@@ -181,5 +181,74 @@
       </div>
     </nav>
     <!-- Navbar -->
+    <!-- Hero section -->
+    <main class="bg-black h-full pt-4 border-t border-t-gray-700">
+      <div class="heroSection flex justify-between items-center text-white overflow-x-scroll sm:overflow-hidden pb-4 px-4 sm:px-4 md:px-16 lg:px-36">
+        <div class="leftHeading">
+          <h1 class="mr-8 lg:mr-0 font-bold text-[14px] pr-8 border-r border-r-white sm:border-0 lg:text-sm">ChatGPT</h1>
+        </div>
+        <ul class="items text-[12px] lg:text-sm font-[inter] text-gray-400 flex space-x-6">
+          <li>
+            <a href="#" class="hover:text-white text-white transition-colors duration-300 ease-in-out" aria-label="Overview">Overview</a>
+          </li>
+          <li><a href="/components/team.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Team">Team</a></li>
+          <li><a href="enterprise.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Enterprise">Enterprise</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Education">Education</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Pricing">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="midAlign text-white flex justify-center items-center flex-col">
+        <div class="components font-medium text-center m-4">
+          <h1 class="text-balance text-4xl lg:text-6xl pt-20 font-[inter] font-medium leading-tight"> Pricing </h1>
+        </div>
+        <!-- Pricing section -->
+        <section class="font-[inter]">
+          <div class="bg-black">
+            <div id="pricingBoxes" class="pricingBoxes px-6 sm:px-6 lg:px-36 flex flex-col sm:flex-col lg:flex-row gap-4 w-full mt-14 p-4"></div>
+          </div>
+          <div class="max-w-5xl w-full h-[550px] mb-20 px-6 sm:px-0 mx-auto rounded-xl grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="box1 w-full bg-[#1a1a1a] space-y-4 p-8 rounded-xl">
+              <h1 class="text-lg">Team</h1>
+              <h3><span class="text-2xl">25$</span> per user / month billed annually</h3>
+              <h3><span class="text-2xl">30$</span> per user / month billed monthly</h3>
+              <p class="text-sm">Supercharge your team’s work with a secure, collaborative workspace</p>
+              <button class="border-none text-sm rounded-3xl text-md py-2 px-6 font-bold bg-white text-black">Get Team</button>
+              <ul class="space-y-4 text-sm pt-4">
+                <li
+                  ><span class="pr-4">✔</span>Higher message limits than Plus on GPT-4, GPT-4o, and tools like DALL·E, web browsing, data analysis, and more</li
+                >
+                <li><span class="pr-4">✔</span>Limited access to o1 and o1-mini </li>
+                <li><span class="pr-4">✔</span>Standard and advanced voice mode </li>
+                <li><span class="pr-4">✔</span>Create and share GPTs with your workspace </li>
+                <li><span class="pr-4">✔</span>Admin console for workspace management</li>
+                <li><span class="pr-4">✔</span>Team data excluded from training by default. <span class="underline">Learn more</span></li>
+              </ul>
+            </div>
+            <div class="box2 w-full bg-[#1a1a1a] space-y-4 p-8 rounded-xl">
+              <h1 class="text-lg">Team</h1>
+              <h3>Enable your workforce with enterprise-grade AI</h3>
+              <button class="border-none rounded-3xl text-md py-2 px-6 font-bold bg-white text-black">Contact Sales</button>
+              <ul class="space-y-4 text-sm pt-4">
+                <li><span class="pr-4">✔</span>Everything in Team</li>
+                <li>
+                  <span class="pr-4">✔</span>
+                  High speed access to GPT-4, GPT-4o, GPT-4o mini, and tools like DALL·E, web browsing, data analysis, and more
+                </li>
+                <li><span class="pr-4">✔</span>Expanded context window for longer inputs </li>
+                <li><span class="pr-4">✔</span>Enterprise data excluded from training by default & custom data retention windows. Learn more </li>
+                <li><span class="pr-4">✔</span>Admin controls, domain verification, and analytics</li>
+                <li><span class="pr-4">✔</span>Enhanced support & ongoing account management </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pricing section -->
+      </div>
+    </main>
+
+    <!-- Hero section -->
+    <script src="pricing.js"></script>
   </body>
 </html>
