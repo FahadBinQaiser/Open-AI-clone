@@ -180,3 +180,33 @@ const menuToggle = document.getElementById("menuToggle");
       });
     });
   });
+
+
+  const freeHeading = document.getElementById("freeHeading");
+  const freeButton = document.getElementById("freeButton");
+  const free = document.getElementById("free");
+  const plus  = document.getElementById("plus");
+  const pro = document.getElementById("pro");
+  const team = document.getElementById("team");
+  const enterprise = document.getElementById("enterprise");
+
+  free.onclick = () =>{
+    freeHeading.textContent = "Free"
+    freeButton.textContent = "Get Free"
+  }
+  plus.onclick = () =>{
+    freeHeading.textContent = "Plus"
+    freeButton.textContent = "Get Plus"
+  }
+  pro.onclick = () =>{
+    freeHeading.textContent = "Pro"
+    freeButton.textContent = "Get Pro"
+  }
+  team.onclick = () =>{
+    freeHeading.textContent = "Team"
+    freeButton.textContent = "Get Team"
+  }
+  enterprise.onclick = () =>{
+    freeHeading.textContent = "Enterprise"
+    freeButton.textContent = "Contact sales"
+  }

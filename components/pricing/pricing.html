@@ -205,9 +205,9 @@
         <!-- Pricing section -->
         <section class="font-[inter]">
           <div class="bg-black">
-            <div id="pricingBoxes" class="pricingBoxes px-6 sm:px-6 lg:px-36 flex flex-col sm:flex-col lg:flex-row gap-4 w-full mt-14 p-4"></div>
+            <div id="pricingBoxes" class="pricingBoxes sm:px-6 lg:px-36 flex flex-col px-4 sm:flex-col lg:flex-row gap-4 w-full mt-14 p-4"></div>
           </div>
-          <div class="max-w-5xl w-full h-[550px] mb-20 px-6 sm:px-0 mx-auto rounded-xl grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="max-w-5xl w-full h-full mb-20 px-6 sm:px-0 mx-auto rounded-xl grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="box1 w-full bg-[#1a1a1a] space-y-4 p-8 rounded-xl">
               <h1 class="text-lg">Team</h1>
               <h3><span class="text-2xl">25$</span> per user / month billed annually</h3>
@@ -249,9 +249,146 @@
     <!-- Hero section -->
     <section class="h-full font-[inter]">
       <div class="flex justify-center flex-col items-center">
-        <h1 class="text-2xl sm:text-4xl text-white font-medium">Compare features across plans</h1>
+        <h1 class="text-2xl sm:text-4xl text-balance text-center inline-block sm:block w-80 sm:w-full border-b sm:border-none pb-2 text-white font-medium">
+          Compare features <br />
+          <span class="sm:block">across plans</span>
+        </h1>
       </div>
-      <div class="mx-auto pt-6 max-w-5xl sticky top-0">
+      <!-- Mobile design -->
+      <div class="flex sm:hidden">
+        <ul class="text-white text-lg pt-4 flex flex-row mx-auto space-x-4">
+          <li id="free">Free</li>
+          <li id="plus">Plus</li>
+          <li id="pro">Pro</li>
+          <li id="team">Team</li>
+          <li id="enterprise">Enterprise</li>
+        </ul>
+      </div>
+      <div class="mx-auto pt-6 px-6 max-w-5xl sticky top-0 z-10 flex sm:hidden">
+        <div class="h-32 bg-[#1a1a1a] flex flex-1 flex-row gap-12 justify-end p-8 text-white">
+          <div class="Free space-y-2">
+            <h1 class="text-left" id="freeHeading">Free</h1>
+            <button class="border-none rounded-3xl text-md py-2 px-6 text-sm bg-white text-black" id="freeButton">Get Free</button>
+          </div>
+        </div>
+      </div>
+      <div class="essentialsMobile text-white flex p-6 mx-6 border-b border-b-[#333] sm:border-none mt-0 bg-[#1a1a1a] relative flex-col sm:hidden">
+        <h1 class="text-2xl">
+          Essentials
+          <label for="toggle" class="cursor-pointer w-10 h-10 text-center p-0 border-2 border-white rounded-3xl absolute right-4"> + </label>
+        </h1>
+        <input type="checkbox" id="toggle" class="peer hidden" />
+        <div class="grid grid-cols-2 pt-8 max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[300px]">
+          <label class="space-y-2 text-balance border-r border-r-[#333]">
+            <h1>Messages and interaction</h1>
+            <h1>Chat history</h1>
+            <h1>Access on web, Ios and Android</h1>
+          </label>
+          <ul class="space-y-8 text-center text-balance">
+            <li>Unlimited</li>
+            <li>Unlimited</li>
+            <li>✔</li>
+          </ul>
+        </div>
+      </div>
+      <div class="essentialsMobile text-white border-b border-b-[#333] sm:border-none p-6 mx-6 mt-0 bg-[#1a1a1a] relative flex flex-col sm:hidden">
+        <h1 class="text-2xl">
+          Model Quality
+          <label for="toggle2" class="cursor-pointer w-10 h-10 text-center p-0 border-2 border-white rounded-3xl absolute right-4"> + </label>
+        </h1>
+        <input type="checkbox" id="toggle2" class="peer hidden" />
+        <div class="grid grid-cols-2 max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[360px]">
+          <label class="flex flex-col justify-between space-y-4 py-4 text-balance border-r border-r-[#333]">
+            <h1>GPT 4o mini</h1>
+            <h1>GPT 4o</h1>
+            <h1>GPT-4 access</h1>
+            <h1>OpenAI o1</h1>
+            <h1>OpenAI o1-mini</h1>
+            <h1>OpenAI o1 pro </h1>
+            <h1>Response Times</h1>
+            <h1>Context window</h1>
+            <h1>Fast speed</h1>
+          </label>
+          <ul class="flex flex-col justify-between space-y-4 py-4 text-center text-balance">
+            <li>Unlimited</li>
+            <li>Limited</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>Limited</li>
+            <li>8k</li>
+            <li>✔</li>
+          </ul>
+        </div>
+      </div>
+      <div class="FeaturesMobile text-white p-6 mx-6 mt-0 bg-[#1a1a1a] relative flex flex-col sm:hidden">
+        <h1 class="text-2xl">
+          Features
+          <label for="toggle3" class="cursor-pointer w-10 h-10 text-center p-0 border-2 border-white rounded-3xl absolute right-4"> + </label>
+        </h1>
+        <input type="checkbox" id="toggle3" class="peer hidden" />
+        <div class="grid grid-cols-2 gap-6 text-sm max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[1000px]">
+          <div class="text-white h-full space-y-8 py-10 border-r border-[#333]">
+            <ul class="space-y-8">
+              <li>Advance Voice</li>
+              <li>Advanced voice with video</li>
+              <li>Standard voice</li>
+              <li>Memory</li>
+              <li>Browse</li>
+              <li>Data analysis</li>
+              <li>Vision</li>
+              <li>File uploads</li>
+              <li>Discover & use GPTs</li>
+              <li>Create & share GPTs</li>
+              <li>Share GPTs with your workspace</li>
+              <li>Opportunities to test new features</li>
+              <li>Image generation</li>
+              <li>Interactive tables and charts</li>
+              <li>Sora</li>
+            </ul>
+          </div>
+          <ul class="space-y-10 pl-4 text-center py-10">
+            <li>Limited</li>
+            <li>.</li>
+            <li>✔</li>
+            <li>.</li>
+            <li>Limited</li>
+            <li>Limited</li>
+            <li>Limited</li>
+            <li>Limited</li>
+            <li>Limited</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>Limited</li>
+            <li>.</li>
+            <li>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="PrivacyMobile text-white p-6 mx-6 mt-0 bg-[#1a1a1a] relative flex flex-col sm:hidden">
+        <h1 class="text-2xl">
+          Privacy
+          <label for="toggle4" class="cursor-pointer w-10 h-10 text-center p-0 border-2 border-white rounded-3xl absolute right-4"> + </label>
+        </h1>
+        <input type="checkbox" id="toggle4" class="peer hidden" />
+        <div class="grid grid-cols-2 gap-6 text-sm max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[1000px]">
+          <div class="contentLeft py-8 border-r-2 border-r-[#333]">
+            <h1 class="text-sm font-medium">Content is used to train our models</h1>
+          </div>
+          <div class="contentRight">
+            <h1
+              >Opt Out available <br /><a href=" https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance"
+                ><span class="underline"> Learn more</span></a
+              ></h1
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Mobile design -->
+      <!-- Desktop design -->
+      <div class="mx-auto pt-6 max-w-5xl sticky top-0 hidden sm:flex">
         <div class="h-32 bg-[#1a1a1a] flex flex-1 flex-row gap-12 justify-end p-8 text-white">
           <div class="Free space-y-2">
             <h1 class="text-left">Free</h1>
@@ -275,7 +412,7 @@
           </div>
         </div>
       </div>
-      <div id="essentials" class="mx-auto max-w-5xl pt-4">
+      <div id="essentials" class="mx-auto max-w-5xl pt-4 hidden sm:block">
         <div class="bg-[#1a1a1a] rounded-lg p-20">
           <h1 class="text-xl font-semibold text-white mb-6">Essentials</h1>
           <div class="flex flex-1 flex-row gap-16 justify-center py-6">
@@ -312,10 +449,10 @@
           </div>
         </div>
       </div>
-      <div class="mx-auto max-w-5xl pt-4">
+      <div class="mx-auto max-w-5xl pt-4 hidden sm:block">
         <div class="bg-[#1a1a1a] rounded-lg p-20">
-          <h1 class="text-xl font-semibold text-white mb-6">Model Quality</h1>
-          <div class="grid grid-cols-6 py-6 gap-1 text-sm">
+          <h1 class="text-xl font-semibold text-white mb-12">Model Quality</h1>
+          <div class="grid grid-cols-6 py-6 gap-4 text-sm">
             <div class="text-white h-full space-y-8 border-r border-[#333]">
               <p>GPT-4o mini</p>
               <p>GPT-4o</p>
@@ -385,12 +522,12 @@
           </div>
         </div>
       </div>
-      <div class="mx-auto max-w-5xl pt-4">
-        <div class="bg-[#1a1a1a] rounded-lg p-20">
+      <div class="mx-auto max-w-5xl pt-4 hidden sm:block">
+        <div class="bg-[#1a1a1a] rounded-lg p-20 text-white">
           <h1 class="text-xl font-semibold text-white mb-6">Features</h1>
-          <div class="grid grid-cols-6 py-6 gap-1 text-sm">
-            <div class="text-white h-full space-y-8 border-r border-[#333]">
-              <ul class="space-y-8">
+          <div class="grid grid-cols-6 py-6 gap-6 text-sm">
+            <div class="text-white h-full border-r border-[#333]">
+              <ul class="space-y-4">
                 <li>Advance Voice</li>
                 <li>Advanced voice with video</li>
                 <li>Standard voice</li>
@@ -408,8 +545,8 @@
                 <li>Sora</li>
               </ul>
             </div>
-            <div class="text-white text-center flex justify-between items-center flex-col border-r border-[#333]">
-              <ul class="space-y-9">
+            <div class="flex flex-col justify-center text-center items-center border-r border-[#333]">
+              <ul class="space-y-5">
                 <li>Limited</li>
                 <li>.</li>
                 <li>✔</li>
@@ -428,7 +565,7 @@
               </ul>
             </div>
             <div class="text-white text-center flex justify-between h-full items-center flex-col border-r border-[#333]">
-              <ul class="space-y-9 flex justify-end flex-col">
+              <ul class="flex justify-between flex-col space-y-5">
                 <li>✔</li>
                 <li>✔</li>
                 <li>✔</li>
@@ -447,7 +584,7 @@
               </ul>
             </div>
             <div class="text-white text-center flex justify-between h-full items-center flex-col space-y-8 border-r border-[#333]">
-              <ul class="space-y-9">
+              <ul class="flex justify-between flex-col space-y-5">
                 <li>Unlimited*</li>
                 <li>✔</li>
                 <li>✔</li>
@@ -466,8 +603,7 @@
               </ul>
             </div>
             <div class="text-white text-center flex justify-start h-full items-center flex-col space-y-8 border-r border-[#333]">
-              <ul class="space-y-8">
-                <li>✔</li>
+              <ul class="flex justify-between flex-col space-y-5">
                 <li>✔</li>
                 <li>✔</li>
                 <li>✔</li>
@@ -486,10 +622,9 @@
               </ul>
             </div>
             <div class="text-white text-center flex justify-start h-full items-center flex-col space-y-8">
-              <ul class="space-y-8">
+              <ul class="flex justify-between flex-col space-y-5">
                 <li>✔</li>
                 <li>Coming soon</li>
-                <li>✔</li>
                 <li>✔</li>
                 <li>✔</li>
                 <li>✔</li>
@@ -508,7 +643,7 @@
           </div>
         </div>
       </div>
-      <div class="mx-auto max-w-5xl pt-4 h-full pb-20">
+      <div class="mx-auto max-w-5xl pt-4 h-full pb-20 hidden sm:block">
         <div class="bg-[#1a1a1a] rounded-lg p-20">
           <h1 class="text-xl font-semibold text-white mb-6">Privacy</h1>
           <div class="flex flex-1 flex-row gap-10 justify-center py-6">
@@ -559,16 +694,20 @@
         </div>
       </div>
     </section>
+    <!-- Desktop design -->
+    <!-- FAQ -->
     <section>
-      <div class="faq h-full">
+      <div class="faq h-full px-4">
         <div class="flex justify-center items-center flex-col max-w-3xl mx-auto">
           <h1 class="text-2xl text-white font-bold py-8">FAQ</h1>
           <div class="faqContainer w-full text-white pb-20">
-            <div class="row flex flex-col space-y-6 bg-[#1a1a1a] h-[600px] relative rounded-xl p-16" id="faqContainer"> </div>
+            <div class="row flex flex-col space-y-6 bg-[#1a1a1a] relative rounded-xl p-16" id="faqContainer"> </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- FAQ -->
+
     <!-- Footer section -->
     <footer>
       <div
