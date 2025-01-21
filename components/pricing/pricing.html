@@ -413,9 +413,9 @@
         </div>
       </div>
       <div id="essentials" class="mx-auto max-w-5xl pt-4 hidden sm:block text-sm">
-        <div class="bg-[#1a1a1a] rounded-lg p-20">
+        <div class="bg-[#1a1a1a] rounded-lg p-10 md:p-20">
           <h1 class="text-xl font-semibold text-white mb-6">Essentials</h1>
-          <div class="flex flex-1 flex-row gap-16 justify-center py-6">
+          <div class="flex flex-1 flex-row gap-6 md:gap-16 justify-center py-6">
             <div class="text-white space-y-4 flex justify-between pr-4 flex-col items-center border-r border-[#333]">
               <p>Messages and interactions</p>
               <p>Chat history</p>
@@ -450,78 +450,112 @@
         </div>
       </div>
       <div class="mx-auto max-w-5xl pt-4 hidden sm:block">
-        <div class="bg-[#1a1a1a] rounded-lg p-20">
+        <div class="bg-[#1a1a1a] rounded-lg p-10 md:p-20">
           <h1 class="text-xl font-semibold text-white mb-12">Model Quality</h1>
-          <div class="grid grid-cols-6 py-6 gap-4 text-sm">
-            <div class="text-white h-full space-y-8 border-r border-[#333]">
-              <p>GPT-4o mini</p>
-              <p>GPT-4o</p>
-              <p>GPT-4 access</p>
-              <p>OpenAI o1</p>
-              <p>OpenAI o1-mini</p>
-              <p>OpenAI o1 pro mode</p>
-              <p>Response times</p>
-              <p>Context window</p>
-              <p>Regular quality & speed updates as models improve</p>
+
+          <div class="grid grid-rows-auto">
+            <!-- Main Row -->
+            <div class="flex justify-between text-white font-semibold border-r border-r-gray-700 h-20">
+              <p class="w-1/6 border-r border-gray-700">GPT-4o Mini</p>
+              <p class="w-1/6 border-r border-gray-700 text-center">Unlimited</p>
+              <p class="w-1/6 border-r border-gray-700 text-center">Unlimited</p>
+              <p class="w-1/6 border-r border-gray-700 text-center">Unlimited</p>
+              <p class="w-1/6 border-r border-gray-700 text-center">Unlimited</p>
+              <p class="w-1/6 text-center">Unlimited</p>
             </div>
-            <div class="text-white text-center flex justify-start h-full items-center flex-col space-y-8 border-r border-[#333]">
-              <p>Unlimited</p>
-              <p>Limited</p>
-              <p>.</p>
-              <p>.</p>
-              <p>.</p>
-              <p>.</p>
-              <p>Limited</p>
-              <p>8K</p>
-              <p>✔</p>
-            </div>
-            <div class="text-white text-center flex justify-start h-full items-center flex-col space-y-8 border-r border-[#333]">
-              <p>Unlimited</p>
-              <p>Upto 5x free</p>
-              <p>Standard</p>
-              <p>Standard</p>
-              <p>Standard</p>
-              <p>.</p>
-              <p>Fast</p>
-              <p>32k</p>
-              <p>✔</p>
-            </div>
-            <div class="text-white text-center flex justify-start h-full items-center flex-col space-y-8 border-r border-[#333]">
-              <p>Unlimited</p>
-              <p>Unlimited*</p>
-              <p>Unlimited</p>
-              <p>Unlimited*</p>
-              <p>Unlimited</p>
-              <p>✔</p>
-              <p>Fast</p>
-              <p>128k</p>
-              <p>✔</p>
-            </div>
-            <div class="text-white text-center flex justify-start h-full items-center flex-col space-y-8 border-r border-[#333]">
-              <p>Unlimited</p>
-              <p>Expanded</p>
-              <p>Expanded</p>
-              <p>Standard</p>
-              <p>Standard</p>
-              <p>.</p>
-              <p>32k</p>
-              <p>✔</p>
-              <p>✔</p>
-            </div>
-            <div class="text-white text-center flex justify-start h-full items-center flex-col space-y-8">
-              <p>Unlimited</p>
-              <p>Expanded</p>
-              <p>Expanded</p>
-              <p>Standard</p>
-              <p>Standard</p>
-              <p>.</p>
-              <p>Fastest</p>
-              <p>128k</p>
-              <p>✔</p>
-            </div>
+
+            <ul class="grid grid-rows-auto text-white">
+              <!-- First Row -->
+              <div class="firstRow">
+                <li class="flex justify-between border-r border-r-gray-700 h-20">
+                  <p class="w-1/6 border-r border-gray-700">GPT-4o</p>
+                  <p class="w-1/6 border-r border-gray-700 text-center">Limited</p>
+                  <p class="w-1/6 border-r border-gray-700 text-center">Up to 5x free</p>
+                  <p class="w-1/6 border-r border-gray-700 text-center">Unlimited*</p>
+                  <p class="w-1/6 border-r border-gray-700 text-center">Expanded</p>
+                  <p class="w-1/6 text-center">Expanded</p>
+                </li>
+              </div>
+
+              <!-- Second Row -->
+              <li class="flex justify-between border-r border-r-gray-700 h-20">
+                <p class="w-1/6 border-r border-gray-700">Gpt-4 access</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">.</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Standard</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Unlimited</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Expanded</p>
+                <p class="w-1/6 text-center">Expanded</p>
+              </li>
+              <!-- Third row -->
+              <li class="flex justify-between border-r border-r-gray-700 h-20">
+                <p class="w-1/6 border-r border-gray-700">Open AI 01</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">.</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Standard</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Unlimited*</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Expanded</p>
+                <p class="w-1/6 text-center">Expanded</p>
+              </li>
+              <!-- Fourth row -->
+              <li class="flex justify-between border-r border-r-gray-700 h-20">
+                <p class="w-1/6 border-r border-gray-700">Open AI 01-mini</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">.</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Standard</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Unlimited</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Expanded</p>
+                <p class="w-1/6 text-center">Expanded</p>
+              </li>
+              <!-- Fifth row -->
+              <li class="flex justify-between border-r border-r-gray-700 h-20">
+                <p class="w-1/6 border-r border-gray-700">Open AI o1 pro mode</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">.</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">.</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">✔</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">.</p>
+                <p class="w-1/6 text-center">.</p>
+              </li>
+              <!-- Sixth row -->
+              <li class="flex justify-between border-r border-r-gray-700 h-20">
+                <p class="w-1/6 border-r border-gray-700">Open AI o1 pro mode</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">.</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">.</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">✔</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">.</p>
+                <p class="w-1/6 text-center">.</p>
+              </li>
+              <!-- Seventh row -->
+              <li class="flex justify-between border-r border-r-gray-700 h-20">
+                <p class="w-1/6 border-r border-gray-700">Response times</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Limited on bandwidth * availablity</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Fast</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Fast</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">Fast</p>
+                <p class="w-1/6 text-center">Fastest</p>
+              </li>
+
+              <!-- Eight Row -->
+              <li class="flex justify-between border-r border-r-gray-700 h-20">
+                <p class="w-1/6 border-r border-gray-700">Context Window</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">8K</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">32K</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">128K</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">32K</p>
+                <p class="w-1/6 text-center">128K</p>
+              </li>
+
+              <!-- Ninth Row -->
+              <li class="flex justify-between border-r border-r-gray-700 h-20">
+                <p class="w-1/6 border-r border-r-gray-700">Regular quality & speed updates as models improve</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">✔</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">✔</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">✔</p>
+                <p class="w-1/6 border-r border-gray-700 text-center">✔</p>
+                <p class="w-1/6 text-center">✔</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+
       <div class="mx-auto max-w-5xl pt-4 hidden sm:block">
         <div class="bg-[#1a1a1a] rounded-lg p-20 text-white">
           <h1 class="text-xl font-semibold text-white mb-6">Features</h1>
