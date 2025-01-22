@@ -210,3 +210,71 @@ const menuToggle = document.getElementById("menuToggle");
     freeHeading.textContent = "Enterprise"
     freeButton.textContent = "Contact sales"
   }
+
+
+const rowsData = [
+  ["GPT-4o", "Limited", "Up to 5x free", "Unlimited*", "Expanded", "Expanded"],
+  ["Gpt-4 access", ".", "Standard", "Unlimited", "Expanded", "Expanded"],
+  ["Open AI 01", ".", "Standard", "Unlimited*", "Expanded", "Expanded"],
+  ["Open AI 01-mini", ".", "Standard", "Unlimited", "Expanded", "Expanded"],
+  ["Open AI 01 pro mode", ".", ".", "✔", ".", "."],
+  ["Open AI 01 pro mode", ".", ".", "✔", ".", "."],
+  ["Response times", "Limited on bandwidth * availablity", "Fast", "Fast", "Fast", "Fastest"],
+  ["Context Window", "8K", "32K", "128K", "32K", "128K"],
+  ["Regular quality & speed updates as models improve", "✔", "✔", "✔", "✔", "✔"],
+];
+
+const dynamicRowsContainer = document.getElementById("dynamic-rows");
+rowsData.forEach(row => {
+  const rowElement = document.createElement("li");
+  rowElement.className = "flex justify-between border-r border-r-gray-700 h-20";
+  row.forEach((value, index) => {
+    const cellElement = document.createElement("p");
+    cellElement.className = `w-1/6  ${index === 0 ? "text-left" : "text-center"} ${index < row.length - 1 ? "border-r border-gray-700" : ""}  `;
+    cellElement.textContent = value;
+    rowElement.appendChild(cellElement);
+  });
+  dynamicRowsContainer.appendChild(rowElement);
+});
+
+
+
+  const rowsData2 = [
+    ["Advanced voice", "Limited", "✔", "Unlimited*", "✔", "✔"],
+    ["Advanced voice with video", ".", "✔", "✔", "✔", "Coming soon"],
+    ["Standard voice", "✔", "✔", "✔", "✔", "✔"],
+    ["Memory", ".", "✔", "✔", "✔", "✔"],
+    ["Browse", "Limited", "✔", "✔", "✔", "✔"],
+    ["Data analysis", "Limited", "✔", "✔", "✔", "✔"],
+    ["Vision", "Limited", "✔", "✔", "✔", "✔"],
+    ["File uploads", "Limited", "✔", "✔", "✔", "✔"],
+    ["Discover & use GPTs", "Limited", "✔", "✔", "✔", "✔"],
+    ["Create & share GPTs", ".", "✔", "✔", "✔", "✔"],
+    ["Share GPTs with your workspace", ".", ".", ".", ".", "✔"],
+    ["Opportunities to test new features", ".", "✔", "✔", "✔", "✔"],
+    ["Interactive tables and charts", ".", "✔", "✔", "✔", "✔"],
+    [
+      "Sora",
+      ".",
+      "Limited <br /><span class='underline'>Learn more</span>",
+      "Expanded <br /><span class='underline'>Learn more</span>",
+      "Limited <br /><span class='underline'>Learn more</span>",
+      ".",
+    ],
+  ];
+
+  const containerSecondary = document.getElementById("dynamicRowsSecondary");
+
+  rowsData2.forEach((row) => {
+    const rowElement = document.createElement("div");
+    rowElement.className = "flex justify-between border-r border-r-gray-700 h-20";
+    row.forEach((value, index) => {
+      const cell = document.createElement("p");
+      cell.className = `w-1/6 ${index < row.length - 1 ? "border-r border-gray-700" : ""} ${
+        index === 0 ? "text-left" : "text-center"
+      }`;
+      cell.innerHTML = value; 
+      rowElement.appendChild(cell);
+    });
+    containerSecondary.appendChild(rowElement);
+  });
