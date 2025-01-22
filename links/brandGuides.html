@@ -11,17 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
-
-    <link rel="stylesheet" href="style.css" />
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      .hover-gray {
-        color: gray !important;
-      }
-    </style>
   </head>
   <body class="selection:bg-white selection:text-black">
     <!-- Navbar -->
@@ -30,7 +21,7 @@
         <!-- Left Side with responsiveness -->
 
         <div class="leftside flex items-center space-x-2">
-          <img src="images/logo.png" alt="Open AI logo" class="w-8 h-8" />
+          <img src="/images/logo.png" alt="Open AI logo" class="w-8 h-8" />
           <h1 class="leftHeading text-white text-lg font-medium">OpenAI</h1>
         </div>
 
@@ -76,7 +67,6 @@
                         </ul>
                       </div>
                       <div class="flex flex-col space-y-4 w-52 h-24">
-                        <img src="images/o1-research.webp" class="rounded-lg object-cover size-full" alt="OpenAI o1 Research Image" />
                         <h3>OpenAI o1 Hub</h3>
                       </div>
                     </div>
@@ -99,7 +89,7 @@
                           <li><a href="">For Teams</a></li>
                           <li><a href="components/enterprise/enterprise.html">For Enterprises</a></li>
                           <li class="flex flex-row items-center">
-                            <a href="">ChatGPT Login</a><img src="images/rightUpIcon.png" class="w-4 h-4" alt="Icon" />
+                            <a href="">ChatGPT Login</a>
                           </li>
                           <li><a href="">Download</a></li>
                         </ul>
@@ -111,9 +101,8 @@
                           <li><a href="">Pricing</a></li>
                           <li class="flex flex-row items-center">
                             <a href="">Documentation</a>
-                            <img src="images/rightUpIcon.png" class="w-4 h-4" alt="Icon" />
                           </li>
-                          <li class="flex flex-row items-center"> <a href="">API login</a> <img src="images/rightUpIcon.png" class="w-4 h-4" alt="Icon" /> </li>
+                          <li class="flex flex-row items-center"> <a href="">API login</a></li>
                         </ul>
                       </div>
                       <div class="flex flex-col space-y-4">
@@ -123,9 +112,8 @@
                           <li><a href="">Features</a></li>
                           <li><a href="">Pricing</a></li>
                           <li class="flex flex-row items-center">
-                            <a href="">Help center</a><img src="images/rightUpIcon.png" class="w-4 h-4" alt="Icon" />
+                            <a href="">Help center</a>
                           </li>
-                          <li class="flex flex-row items-center"><a href="">Sora login</a><img src="images/rightUpIcon.png" class="w-4 h-4" alt="Icon" /> </li>
                         </ul>
                       </div>
                       <div class="flex flex-col space-y-4">
@@ -170,7 +158,6 @@
                         </ul>
                       </div>
                       <div class="flex flex-col space-y-4 w-52 h-24">
-                        <img src="images/o1-research.webp" class="rounded-lg object-cover size-full" alt="" />
                         <h3>OpenAI o1 Hub</h3>
                       </div>
                     </div>
@@ -183,103 +170,158 @@
 
         <!-- Right Side (Search Icon) -->
         <div class="rightLinks cursor-pointer hidden sm:block">
-          <img src="images/searchIcon.png" class="w-4 h-4 hover:scale-110 hover:rotate-90 transition-transform duration-300 ease-out" alt="Search Icon" />
+          <img src="/images/searchIcon.png" class="w-4 h-4 hover:scale-110 hover:rotate-90 transition-transform duration-300 ease-out" alt="Search Icon" />
         </div>
       </div>
     </nav>
     <!-- Navbar -->
     <!-- Hero Section -->
-    <main class="bg-black h-[calc(100vh-3rem)] pt-4 border-t border-t-gray-700">
-      <div class="heroSection relative flex justify-between items-center text-white overflow-x-scroll sm:overflow-hidden pb-4 px-4 sm:px-4 md:px-16 lg:px-36">
-        <div class="leftHeading">
-          <h1 class="mr-8 lg:mr-0 font-bold text-[14px] pr-8 border-r border-r-white sm:border-0 lg:text-sm">ChatGPT</h1>
-        </div>
-        <ul class="items text-[12px] lg:text-sm font-[inter] text-gray-400 flex space-x-6 z-10">
-          <li>
-            <a href="#" class="hover:text-white text-white transition-colors duration-300 ease-in-out" aria-label="Overview">Overview</a>
-          </li>
-          <li><a href="components/team.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Team">Team</a></li>
-          <li
-            ><a href="components/enterprise/enterprise.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Enterprise"
-              >Enterprise</a
-            ></li
-          >
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Education">Education</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Pricing">Pricing</a></li>
-        </ul>
-      </div>
-
-      <div class="midAlign text-white flex justify-center items-center flex-col h-[60vh] lg:h-[80vh]">
-        <h3 class="font-semibold">ChatGPT</h3>
+    <main class="bg-black h-full py-32 pt-4">
+      <div class="midAlign text-white flex justify-center mx-auto items-center max-w-3xl flex-col h-full">
         <div class="components font-medium text-center m-4">
-          <h1 class="text-3xl lg:text-5xl font-[inter] font-semibold">
-            Get answers. Find inspiration.
-            <span class="block text-center">Be more productive.</span>
-          </h1>
-
-          <p class="font-[inter] text-sm lg:text-xl mt-6">
-            Free to use. Easy to try. Just ask and ChatGPT can
-            <span class="block"> help with writing, learning, brainstorming, and more. </span>
+          <h1 class="text-4xl lg:text-7xl font-[inter] font-semibold"> Brand guidelines </h1>
+          <p class="font-[inter] text-sm lg:text-lg mt-2 sm:mt-4"> Language and assets for using the OpenAI brand in your marketing and communications. </p>
+        </div>
+        <div class="font-medium text-center pt-8 px-4 sm:px-0 m-4 flex flex-col justify-center items-start max-w-3xl">
+          <h1 class="text-xl font-[inter] font-semibold text-left"> About </h1>
+          <p class="font-[inter] text-left text-sm lg:text-lg pt-3"
+            >The "OpenAI" name, the OpenAI logo, the "ChatGPT" and “GPT” brands, and other OpenAI trademarks, are property of OpenAI. These guidelines are
+            intended to help our partners, resellers, customers, developers, consultants, publishers, and any other third parties understand how to use and
+            display our trademarks and copyrighted work in their own assets and materials. API Developers
           </p>
         </div>
-        <div class="flex justify-center items-center flex-col gap-4 lg:flex-row mt-6 space-x-6">
-          <div class="button border-2 border-white px-6 p-2 bg-white text-black rounded-full">
-            <button class="flex flex-row space-x-4">
-              Start now
-              <img src="images/rightUpIcon.png" class="w-6 h-6" alt="" />
-            </button>
+        <div class="font-medium text-center pt-8 m-4 px-4 sm:px-0 flex flex-col justify-center items-start max-w-3xl">
+          <h1 class="text-3xl font-[inter] font-semibold text-left"> API Developers</h1>
+          <p class="font-[inter] text-left text-sm lg:text-lg pt-3"
+            >If you are an active OpenAI developer, you may truthfully identify the OpenAI technology you use. However, everything about your app, product or
+            company (including name, logo, description, slogan, tagline and screenshots) should be your own and should be free of OpenAI’s brands (including
+            products, services or model names; logos; or trademarks). Any branding should focus on your brand and shouldn’t look or sound similar to any of the
+            OpenAI brands. You should not use the OpenAI logo or brand in any way that would imply sponsorship, affiliation or endorsement.
+          </p>
+        </div>
+        <div class="font-medium m-4 flex flex-col sm:flex-row px-4 sm:px-0 gap-14">
+          <div class="partOne text-left">
+            <h1 class="text-3xl pb-4">Do:</h1>
+            <ul class="list-inside text-left space-y-4">
+              <li><span>&#x2713;</span>App Name: Meowlytics</li>
+              <li><span>&#x2713;</span>App Tagline: AI Analytics Platform</li>
+            </ul>
           </div>
-          <div class="text cursor-pointer">
-            <p class="hover:border-b-2 border-b-2 border-transparent hover:border-gray-200 transition-all duration-500 ease-out"> Download the app > </p>
+          <div class="partTwo text-left">
+            <h1 class="text-3xl pb-4">Don't:</h1>
+            <ul class="list-inside text-left space-y-4">
+              <li><span>&#10060;</span>App Name: MeOwpenAI</li>
+              <li><span>&#10060;</span>App Tagline: Built using OpenAI API</li>
+            </ul>
+          </div>
+        </div>
+        <div class="font-medium pl-8 sm:pl-4 pt-10 gap-10 max-w-3xl flex flex-col">
+          <h1 class="text-3xl pb-4">Models</h1>
+          <div class="paragraphs space-y-4 text-white">
+            <p>If you must refer to specific models, please use the proper model names or date-based versions of models when referring to OpenAI models.</p>
+            <p>We do not permit the use of OpenAI models or “GPT” in product or app names because it confuses end users.</p>
+          </div>
+        </div>
+
+        <div class="pl-8 sm:pl-4 py-10 gap-10 flex flex-col sm:flex-row">
+          <div class="partOne text-left flex-1">
+            <h1 class="text-3xl pb-4 font-medium">Do:</h1>
+            <ul class="text-left space-y-4">
+              <li><span class="pr-4">&#x2713;</span>Identify and refer to the appropriate model names: GPT-3, GPT-4, DALL·E 3</li>
+              <li><span class="pr-4">&#x2713;</span>Refer to date-based versions of models if needed: GPT-4 Nov 6 version</li>
+            </ul>
+          </div>
+          <div class="partTwo text-left flex-1">
+            <h1 class="text-3xl pb-4 font-medium">Don't:</h1>
+            <ul class="text-left space-y-6">
+              <li><span>&#10060;</span>Use OpenAI models in product or app names: GPT4Meow, MeowGPT</li>
+              <li><span>&#10060;</span>Use model names incorrectly: Chat GPT, ChatGPT4, GPTChat</li>
+              <li><span>&#10060;</span>Use the model classes: Ada, Babbage, Davinci</li>
+              <li><span>&#10060;</span>Use specific names: gpt-3.5-turbo-0125</li>
+              <li><span>&#10060;</span>Use “GPT” generically without identifying the specific model: GPT-powered</li>
+            </ul>
+          </div>
+        </div>
+        <p class="pl-8 sm:pl-4"
+          ><span class="font-bold">Notifying users.</span> If your product closely resembles an OpenAI product (such as ChatGPT), please make a clear indication
+          to users that your product is independently developed and not affiliated, endorsed, or sponsored by OpenAI. Please consider your use of OpenAI’s
+          product names, your own product copy, surrounding copy (e.g., app description), and any/all other attributes in this regard. It should be clear to
+          your users that your application is separate and distinct from OpenAI’s own products and services.
+        </p>
+        <div class="text-white pl-8 sm:pl-4 px-4 py-16">
+          <h1 class="text-3xl font-bold py-4">GPTs in ChatGPT</h1>
+          <div class="paragraphsSecondary space-y-4 text-lg">
+            <p>
+              GPTs—custom versions of ChatGPT that you can create for a specific purpose with instructions, expanded knowledge, and custom actions—are available
+              to ChatGPT users.</p
+            >
+            <p
+              >GPTs should have a short name appropriate for display in ChatGPT’s sidebar. Choose a name appropriate for an app or service, not the title of a
+              document or video. Having a GPT’s name end with “GPT” is discouraged, but not prohibited.</p
+            >
+            <p
+              >If the GPT is part of an existing service and provides all or a subset of the same functionality, it’s recommended the GPT be named the same. For
+              example if the service is called “Meowlytics” then the GPT should also be called “Meowlytics”. If instead the GPT is providing support for the
+              service, then consider appending to the name, e.g., “Meowlytics API Helper”.</p
+            >
+            <p
+              >A GPT may not use another organization’s trademark in its name or logo unless they are authorized to do so. Builders must verify their domain in
+              order to use many common trademarks and OpenAI may reactively enforce this for others if reported. Additionally names referencing public figures,
+              profanity, and harmful topics are prohibited. If a GPT makes use of third-party services, for example as part of its actions, these may be
+              mentioned in the description.</p
+            >
+            <div class="smallPart">
+              <h1 class="text-white font-medium text-3xl py-4">Non-partnerships</h1>
+              OpenAI has official partnerships and specific language about these partnerships, as well as non-partnership language guidance. If you are not an
+              official partner, please don’t use “collaborated with,” “worked with,” or “partnered with,” in any form.
+            </div>
+            <div id="usageTerms" class="usage text-white">
+              <h1 class="text-3xl font-bold py-4">Usage terms</h1>
+              <p class="py-4"
+                >The term “Marks” includes anything we use to identify our goods or services, including our names, logos, icons, and design elements. By using
+                OpenAI’s Marks, you agree that we own them and that any goodwill generated by your use benefits us. Your permission to use our Marks is limited
+                in the following ways:</p
+              >
+              <ul class="list-inside space-y-4 list-disc">
+                <li>You can only use our Marks as allowed by these brand guidelines.</li>
+                <li>The permission we grant is non-exclusive (we can give it to others) and non-transferrable (you cannot give it to others). </li>
+                <li>You should not feature our Marks more prominently than your own company’s name or marks.</li>
+                <li>We may update the guide, and you must follow changes within a reasonable time.</li>
+                <li>We can review your use of our Marks and require changes if needed.</li>
+                <li>We may terminate your permission to use our Marks at any time, and you must stop using them promptly.</li>
+              </ul>
+              <div class="paras space-y-4 pt-8">
+                <p>
+                  Please ensure your app follows all OpenAI usage policies⁠. If your project leverages our APIs or models (e.g. GPT-4 or DALL·E 3). You may
+                  choose to reference a specific model but be precise and accurate.</p
+                >
+                <p
+                  >We do not permit model names in app titles because there is concern that it confuses end users and it also triggers our enforcement
+                  mechanisms. GPTs are custom versions of ChatGPT, so it’s important that you do not reference just GPT in your app descriptions (we do not
+                  permit our GPT brand to be used in app, product, developer or company names).</p
+                >
+              </div>
+            </div>
+            <div class="Logos py-10">
+              <h1 class="text-3xl pb-4">Logos</h1>
+              <p>By using our logos, you agree to our <span class="underline"> Marks usage terms⁠.</span> </p>
+            </div>
+            <div class="contact">
+              <h1 class="text-white text-3xl">Contact</h1>
+              <div class="space-y-4 pt-4">
+                <p>For legal inquiries, please contact legal@openai.com⁠.</p>
+                <p
+                  >For everything else, including requesting permission to use our logos, questions about these guidelines, or if your communications go beyond
+                  the cases outlined above, please contact partnercomms@openai.com⁠.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
     <!-- Hero Section -->
-    <!-- box section -->
-    <section class="h-[60vh] bg-black overflow-hidden flex flex-col gap-4 group">
-      <div id="row1" class="relative flex justify-start items-center w-max animate-slide-right pause-animation"></div>
-      <div id="row2" class="relative flex justify-start items-center w-max animate-slide-left pause-animation"></div>
-      <div id="row3" class="relative flex justify-start items-center w-max animate-slide-right pause-animation"></div>
-    </section>
 
-    <!-- box section -->
-    <!-- Ideas section -->
-    <section>
-      <div class="IdeasContainer bg-black text-white"></div>
-      <div class="remainingBoxes px-4 sm:px-4 md:px-6 bg-black">
-        <h1 class="text-center text-3xl text-balance sm:text-4xl font-[inter] font-medium text-white pt-24 pb-16"> Explore more features in ChatGPT </h1>
-      </div>
-    </section>
-    <!-- Ideas section -->
-    <!-- Pricing section -->
-    <section>
-      <div class="bg-black pb-28">
-        <div class="pricingUpperContent flex justify-center text-center flex-col">
-          <h1 class="text-center text-2xl sm:text-3xl text-balance mb-8 font-[inter] font-medium text-white pt-24"> Get started with Chat GPT today</h1>
-          <p>
-            <a href="#" class="text-white text-lg hover:border-b">View pricing Plans ></a>
-          </p>
-        </div>
-        <div id="pricingBoxes" class="pricingBoxes px-6 sm:px-6 lg:px-36 flex flex-col sm:flex-col lg:flex-row gap-4 w-full mt-14 p-6"></div>
-      </div>
-    </section>
-    <!-- Pricing section -->
-    <!-- JoinGPT section -->
-    <div class="joinGPTContainer bg-black w-full px-10 text-white h-[60vh] pb-36 flex justify-center items-center">
-      <div class="joinGPTBox w-full sm:w-11/12 lg:w-11/12 max-w-5xl bg-[#1a1a1a] rounded-lg h-80 flex justify-center items-center">
-        <div class="joinGPTContent flex justify-center items-center flex-col font-[inter] text-center">
-          <h1 class="text-3xl mb-4 font-medium text-balance">Join hundreds of millions of <span class="block">users and try ChatGPT today.</span></h1>
-          <div class="button border-2 border-white px-6 p-2 bg-white text-black rounded-full">
-            <button class="flex flex-row space-x-4 text-sm font-medium">
-              Try ChatGPT
-              <img src="images/rightUpIcon.png" class="w-4 h-4" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- JoinGPT section -->
     <!-- Footer section -->
     <footer>
       <div
@@ -309,9 +351,7 @@
             <li><a href="index.html">For Everyone</a></li>
             <li><a href="components/team.html">For Teams</a></li>
             <li><a href="components/enterprise/enterprise.js">For Enterprises</a></li>
-            <li class="flex flex-row items-center">
-              <a href="https://chatgpt.com/">ChatGPT Login</a><img src="images/rightUpIcon.png" class="w-4 h-4" alt="" />
-            </li>
+            <li class="flex flex-row items-center"> <a href="https://chatgpt.com/">ChatGPT Login</a> </li>
             <li><a href="links/download.html">Download</a></li>
           </ul>
           <div class="flex flex-col pt-10 space-y-4">
@@ -320,11 +360,9 @@
               <li><a href="">Platform Overview</a></li>
               <li><a href="/components/pricing/pricing.html">Pricing</a></li>
               <li class="flex flex-row items-center">
-                <a href="https://platform.openai.com/docs/concepts">Documentation</a> <img src="images/rightUpIcon.png" class="w-4 h-4" alt="" />
+                <a href="https://platform.openai.com/docs/concepts">Documentation</a>
               </li>
-              <li class="flex flex-row items-center">
-                <a href="https://platform.openai.com/docs/overview">API login</a> <img src="images/rightUpIcon.png" class="w-4 h-4" alt="" />
-              </li>
+              <li class="flex flex-row items-center"> <a href="https://platform.openai.com/docs/overview">API login</a> </li>
             </ul>
           </div>
           <div class="flex flex-col pt-10 space-y-4">
@@ -384,6 +422,6 @@
       </div>
     </footer>
     <!-- Footer section -->
-    <script src="script.js"></script>
+    <script src="links.js"></script>
   </body>
 </html>
