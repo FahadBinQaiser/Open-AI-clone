@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OurCharter | ChatGPT</title>
+    <link rel="shortcut icon" href="/images/favicon_io/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="selection:bg-white selection:text-black">
+    <!-- Navbar -->
+    <nav>
+      <div class="navbar flex justify-between items-center h-12 bg-black px-4 sm:px-4 md:px-16 lg:px-36">
+        <!-- Left Side with responsiveness -->
+
+        <div class="leftside flex items-center space-x-2">
+          <img src="/images/logo.png" alt="Open AI logo" class="w-8 h-8" />
+          <h1 class="leftHeading text-white text-lg font-medium">OpenAI</h1>
+        </div>
+
+        <div class="flex items-center">
+          <button id="menuToggle" class="block sm:hidden text-white focus:outline-none">
+            <span class="block w-6 h-0.5 bg-white mb-1 transition-transform duration-300"></span>
+            <span class="block w-6 h-0.5 bg-white mb-1 transition-transform duration-300"></span>
+            <span class="block w-6 h-0.5 bg-white transition-transform duration-300"></span>
+          </button>
+
+          <div
+            id="menuItems"
+            class="hidden h-[90vh] duration-200 transition-opacity sm:flex flex-col sm:flex-row items-center backdrop-blur-2xl sm:backdrop-blur-0 sm:bg-transparent w-full sm:w-full space-y-4 sm:space-y-0 sm:space-x-8 pr-4 sm:pr-0 absolute sm:static top-12 left-0 sm:top-0"
+          >
+            <ul
+              class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-white justify-start items-start w-full p-12 text-4xl sm:text-[15px] font-semibold pr-40 sm:translate-y-0"
+            >
+              <li id="linkPrimary" class="nav-item hover:cursor-pointer transition-colors duration-500 text-white group relative">
+                Research
+                <div
+                  id="dropDownLinkPrimary"
+                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 left-0 sm:-left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen flex flex-col"
+                >
+                  <section>
+                    <div class="flex flex-row justify-between gap-6 pt-4 text-white text-sm font-[inter] h-auto">
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">Our Research</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Overview</a></li>
+                          <li><a href="">Index</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">Latest Achievements</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">OpenAI o1</a></li>
+                          <li><a href="">OpenAI o1-mini</a></li>
+                          <li><a href="">GPT-4</a></li>
+                          <li><a href="">GPT-4o mini</a></li>
+                          <li><a href="">DALL·E 3</a></li>
+                          <li><a href="">Sora</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4 w-52 h-24">
+                        <img src="/images/o1-research.webp" class="rounded-lg object-cover size-full" alt="OpenAI o1 Research Image" />
+                        <h3>OpenAI o1 Hub</h3>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </li>
+
+              <li id="linkSecondary" class="nav-item hover:cursor-pointer transition-colors duration-500 text-white group relative">
+                Products
+                <div
+                  id="dropDownLinkSecondary"
+                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 rounded-lg -left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen flex flex-col"
+                >
+                  <section>
+                    <div class="flex flex-row justify-between gap-6 pt-4 text-white text-sm font-[inter] h-auto">
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">ChatGPT</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">For Everyone</a></li>
+                          <li><a href="">For Teams</a></li>
+                          <li><a href="">For Enterprises</a></li>
+                          <li class="flex flex-row items-center"> <a href="">ChatGPT Login</a><img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" /> </li>
+                          <li><a href="">Download</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">API</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Platform Overview</a></li>
+                          <li><a href="">Pricing</a></li>
+                          <li class="flex flex-row items-center">
+                            <a href="">Documentation</a>
+                            <img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" />
+                          </li>
+                          <li class="flex flex-row items-center"> <a href="">API login</a> <img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" /> </li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">Sora</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Overview</a></li>
+                          <li><a href="">Features</a></li>
+                          <li><a href="">Pricing</a></li>
+                          <li class="flex flex-row items-center"> <a href="">Help center</a><img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" /> </li>
+                          <li class="flex flex-row items-center"><a href="">Sora login</a><img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" /> </li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">Explore more</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Open AI for business</a></li>
+                          <li><a href="">Stories</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4 w-52 h-24">
+                        <video autoplay muted loop playsinline class="rounded-lg">
+                          <source src="/images/ProductsVideo.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                        <h3>OpenAI o1 Hub</h3>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </li>
+              <li id="link3" class="nav-item cursor-pointer transition-colors duration-500 text-white">Safety</li>
+              <li id="linkExternal" class="nav-item hover:cursor-pointer transition-colors duration-500 text-white group relative">
+                Company
+                <div
+                  id="dropDownLinkExternal"
+                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 rounded-lg -left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen flex flex-col"
+                >
+                  <section>
+                    <div class="flex flex-row justify-between gap-6 pt-4 text-white text-sm font-[inter] h-auto">
+                      <div class="flex flex-col space-y-4 text-white">
+                        <h1>About us</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="OurCharter.html">Our Charter</a></li>
+                          <li><a href="">Residency</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <h1>News</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Security and Privacy</a></li>
+                          <li><a href="">Careers</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4 w-52 h-24">
+                        <img src="/images/o1-research.webp" class="rounded-lg object-cover size-full" alt="" />
+                        <h3>OpenAI o1 Hub</h3>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Side (Search Icon) -->
+        <div class="rightLinks cursor-pointer hidden sm:block">
+          <img src="/images/searchIcon.png" class="w-4 h-4 hover:scale-110 hover:rotate-90 transition-transform duration-300 ease-out" alt="Search Icon" />
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <main class="bg-black h-full px-8 sm:px-20">
+      <div class="flex justify-center pt-20 max-w-4xl mx-auto items-center flex-col text-white">
+        <h1 class="text-3xl sm:text-5xl font-semibold">OpenAI Charter</h1>
+        <p class="pt-4">Our Charter describes the principles we use to execute on OpenAI’s mission. </p>
+      </div>
+      <div class="w-full max-w-3xl text-md mx-auto flex flex-col text-white pt-12">
+        <div class="w-full text-left space-y-4 pt-4">
+          <div class="para text-md space-y-4">
+            <p
+              >This document reflects the strategy we’ve refined over the past two years, including feedback from many people internal and external to OpenAI. The timeline to AGI
+              remains uncertain, but our Charter will guide us in acting in the best interests of humanity throughout its development.</p
+            >
+            <p
+              >OpenAI’s mission is to ensure that artificial general intelligence (AGI)—by which we mean highly autonomous systems that outperform humans at most economically
+              valuable work—benefits all of humanity. We will attempt to directly build safe and beneficial AGI, but will also consider our mission fulfilled if our work aids
+              others to achieve this outcome. To that end, we commit to the following principles:</p
+            >
+          </div>
+          <div class="heading pt-8">
+            <h1 class="text-4xl font-semibold">Broadly distributed benefits</h1>
+          </div>
+          <div class="para space-y-4 text-md">
+            <p
+              >We commit to use any influence we obtain over AGI’s deployment to ensure it is used for the benefit of all, and to avoid enabling uses of AI or AGI that harm
+              humanity or unduly concentrate power.</p
+            >
+            <p
+              >Our primary fiduciary duty is to humanity. We anticipate needing to marshal substantial resources to fulfill our mission, but will always diligently act to minimize
+              conflicts of interest among our employees and stakeholders that could compromise broad benefit.</p
+            >
+          </div>
+          <div class="heading pt-8">
+            <h1 class="text-4xl font-semibold">Long-term safety</h1>
+          </div>
+          <div class="para space-y-4 text-md">
+            <p>We are committed to doing the research required to make AGI safe, and to driving the broad adoption of such research across the AI community.</p>
+            <p
+              >We are concerned about late-stage AGI development becoming a competitive race without time for adequate safety precautions. Therefore, if a value-aligned,
+              safety-conscious project comes close to building AGI before we do, we commit to stop competing with and start assisting this project. We will work out specifics in
+              case-by-case agreements, but a typical triggering condition might be “a better-than-even chance of success in the next two years.”</p
+            >
+          </div>
+          <div class="heading pt-8">
+            <h1 class="text-4xl font-semibold">Technical leadership</h1>
+          </div>
+          <div class="para space-y-4 text-md">
+            <p
+              >To be effective at addressing AGI’s impact on society, OpenAI must be on the cutting edge of AI capabilities—policy and safety advocacy alone would be
+              insufficient.</p
+            >
+            <p>We believe that AI will have broad societal impact before AGI, and we’ll strive to lead in those areas that are directly aligned with our mission and expertise. </p>
+          </div>
+          <div class="heading pt-8">
+            <h1 class="text-4xl font-semibold">Cooperative orientation </h1>
+          </div>
+          <div class="para text-md space-y-4">
+            <p>We will actively cooperate with other research and policy institutions; we seek to create a global community working together to address AGI’s global challenges.</p>
+            <p
+              >We are committed to providing public goods that help society navigate the path to AGI. Today this includes publishing most of our AI research, but we expect that
+              safety and security concerns will reduce our traditional publishing in the future, while increasing the importance of sharing safety, policy, and standards
+              research.</p
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer section -->
+    <footer>
+      <div class="footerFiveRows grid grid-cols-1 pt-20 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-6 px-6 sm:px-4 xl:px-32 bg-black text-white text-sm font-[inter] h-auto">
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">Our Research</h1>
+          <ul>
+            <li><a href="">Overview</a></li>
+            <li><a href="">Index</a></li>
+          </ul>
+          <div class="flex flex-col space-y-4 pt-10">
+            <h1 class="text-[#999]">Latest Achievements</h1>
+            <ul class="space-y-2 text-[12px]">
+              <li><a href="">OpenAI o1</a></li>
+              <li><a href="">OpenAI o1-mini</a></li>
+              <li><a href="">GPT-4</a></li>
+              <li><a href="">GPT-4o mini</a></li>
+              <li><a href="">DALL·E 3</a></li>
+              <li><a href="">Sora</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">ChatGPT</h1>
+          <ul class="space-y-2 text-[12px]">
+            <li><a href="">For Everyone</a></li>
+            <li><a href="">For Teams</a></li>
+            <li><a href="">For Enterprises</a></li>
+            <li class="flex flex-row items-center"> <a href="">ChatGPT Login</a><img src="/images/rightUpIcon.png" class="w-4 h-4" alt="" /> </li>
+            <li><a href="">Download</a></li>
+          </ul>
+          <div class="flex flex-col pt-10 space-y-4">
+            <h1 class="text-[#999]">API</h1>
+            <ul class="space-y-2 text-[12px]">
+              <li><a href="">Platform Overview</a></li>
+              <li><a href="">Pricing</a></li>
+              <li class="flex flex-row items-center">
+                <a href="https://platform.openai.com/docs/concepts">Documentation</a> <img src="/images/rightUpIcon.png" class="w-4 h-4" alt="" />
+              </li>
+              <li class="flex flex-row items-center">
+                <a href="https://platform.openai.com/docs/overview">API login</a> <img src="/images/rightUpIcon.png" class="w-4 h-4" alt="" />
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col pt-10 space-y-4">
+            <h1 class="text-[#999]">Explore more</h1>
+            <ul class="space-y-2 text-[12px]">
+              <li><a href="">Open AI for business</a></li>
+              <li><a href="">Stories</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">Safety Overview</h1>
+          <ul class="text-[12px]">
+            <li><a href="">Safety Overview</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">Company</h1>
+          <ul class="space-y-2 text-[12px]">
+            <li><a href="">About us</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="OurCharter.html">Our Charter</a></li>
+            <li><a href="">Security</a></li>
+            <li><a href="">Residency</a></li>
+            <li><a href="">Careers</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">Terms & policies</h1>
+          <ul class="space-y-2 text-[12px]">
+            <li><a href="termsOfUse.html">Terms of use</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Brand guidelines</a></li>
+            <li><a href="otherPolicies.html">Other policies</a></li>
+          </ul>
+        </div>
+        <div class="footerRow flex flex-col sm:flex-col md:flex-row justify-between col-span-1 sm:col-span-1 md:col-span-5 lg:col-span-5 items-center w-full space-y-10 py-2">
+          <div class="footerContent flex justify-start flex-col sm:flex-col gap-2 pt-14 w-full">
+            <button class="rounded-md bg-[#1a1a1a] hover:bg-[#222] p-1 w-full sm:w-full md:w-32">English (US)</button>
+            <h2 class="hidden sm:justify-start sm:hidden md:flex">OpenAi &#169; 2015-2024</h2>
+          </div>
+          <div class="footerIcons flex flex-col justify-start w-full">
+            <ul class="flex flex-row justify-center sm:justify-start md:justify-center items-center space-x-10 text-md w-full">
+              <a href="https://x.com/?lang=en" aria-label="Twitter" target="_blank"><i class="fi fi-brands-twitter-alt"></i></a>
+              <a href="https://www.youtube.com/OpenAI" aria-label="Youtube" target="_blank"><i class="fi fi-brands-youtube"></i></a>
+              <a href="https://www.linkedin.com/company/openai/" aria-label="LinkedIn" target="_blank"><i class="fi fi-brands-linkedin"></i></a>
+              <a href="https://github.com/openai" target="_blank" aria-label="GitHub"><i class="fi fi-brands-github"></i></a>
+              <a href="https://www.instagram.com/openai/?hl=en" target="_blank" aria-label="Instagram"><i class="fi fi-brands-instagram"></i></a>
+              <a href="https://www.tiktok.com/@openai?lang=en" target="_blank" aria-label="TikTok"><i class="fi fi-brands-tik-tok"></i></a>
+              <a href="https://discord.com/invite/openai" target="_blank" aria-label="Discord"><i class="fi fi-brands-discord"></i></a>
+            </ul>
+            <h2 class="flex sm:flex md:hidden py-10 text-left">OpenAi &#169; 2015-2024</h2>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer section -->
+  </body>
+</html>

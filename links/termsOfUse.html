@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TermsOfUse</title>
+    <link rel="shortcut icon" href="/images/favicon_io/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="selection:bg-white selection:text-black">
+    <!-- Navbar -->
+    <nav>
+      <div class="navbar flex justify-between items-center h-12 bg-black px-4 sm:px-4 md:px-16 lg:px-36">
+        <!-- Left Side with responsiveness -->
+
+        <div class="leftside flex items-center space-x-2">
+          <img src="/images/logo.png" alt="Open AI logo" class="w-8 h-8" />
+          <h1 class="leftHeading text-white text-lg font-medium">OpenAI</h1>
+        </div>
+
+        <div class="flex items-center">
+          <button id="menuToggle" class="block sm:hidden text-white focus:outline-none">
+            <span class="block w-6 h-0.5 bg-white mb-1 transition-transform duration-300"></span>
+            <span class="block w-6 h-0.5 bg-white mb-1 transition-transform duration-300"></span>
+            <span class="block w-6 h-0.5 bg-white transition-transform duration-300"></span>
+          </button>
+
+          <div
+            id="menuItems"
+            class="hidden h-[90vh] duration-200 transition-opacity sm:flex flex-col sm:flex-row items-center backdrop-blur-2xl sm:backdrop-blur-0 sm:bg-transparent w-full sm:w-full space-y-4 sm:space-y-0 sm:space-x-8 pr-4 sm:pr-0 absolute sm:static top-12 left-0 sm:top-0"
+          >
+            <ul
+              class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-white justify-start items-start w-full p-12 text-4xl sm:text-[15px] font-semibold pr-40 sm:translate-y-0"
+            >
+              <li id="linkPrimary" class="nav-item hover:cursor-pointer transition-colors duration-500 text-white group relative">
+                Research
+                <div
+                  id="dropDownLinkPrimary"
+                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 left-0 sm:-left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen flex flex-col"
+                >
+                  <section>
+                    <div class="flex flex-row justify-between gap-6 pt-4 text-white text-sm font-[inter] h-auto">
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">Our Research</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Overview</a></li>
+                          <li><a href="">Index</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">Latest Achievements</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">OpenAI o1</a></li>
+                          <li><a href="">OpenAI o1-mini</a></li>
+                          <li><a href="">GPT-4</a></li>
+                          <li><a href="">GPT-4o mini</a></li>
+                          <li><a href="">DALL·E 3</a></li>
+                          <li><a href="">Sora</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4 w-52 h-24">
+                        <img src="/images/o1-research.webp" class="rounded-lg object-cover size-full" alt="OpenAI o1 Research Image" />
+                        <h3>OpenAI o1 Hub</h3>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </li>
+
+              <li id="linkSecondary" class="nav-item hover:cursor-pointer transition-colors duration-500 text-white group relative">
+                Products
+                <div
+                  id="dropDownLinkSecondary"
+                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 rounded-lg -left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen flex flex-col"
+                >
+                  <section>
+                    <div class="flex flex-row justify-between gap-6 pt-4 text-white text-sm font-[inter] h-auto">
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">ChatGPT</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">For Everyone</a></li>
+                          <li><a href="">For Teams</a></li>
+                          <li><a href="">For Enterprises</a></li>
+                          <li class="flex flex-row items-center"> <a href="">ChatGPT Login</a><img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" /> </li>
+                          <li><a href="">Download</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">API</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Platform Overview</a></li>
+                          <li><a href="">Pricing</a></li>
+                          <li class="flex flex-row items-center">
+                            <a href="">Documentation</a>
+                            <img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" />
+                          </li>
+                          <li class="flex flex-row items-center"> <a href="">API login</a> <img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" /> </li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">Sora</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Overview</a></li>
+                          <li><a href="">Features</a></li>
+                          <li><a href="">Pricing</a></li>
+                          <li class="flex flex-row items-center"> <a href="">Help center</a><img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" /> </li>
+                          <li class="flex flex-row items-center"><a href="">Sora login</a><img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" /> </li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">Explore more</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Open AI for business</a></li>
+                          <li><a href="">Stories</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4 w-52 h-24">
+                        <video autoplay muted loop playsinline class="rounded-lg">
+                          <source src="/images/ProductsVideo.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                        <h3>OpenAI o1 Hub</h3>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </li>
+              <li id="link3" class="nav-item cursor-pointer transition-colors duration-500 text-white">Safety</li>
+              <li id="linkExternal" class="nav-item hover:cursor-pointer transition-colors duration-500 text-white group relative">
+                Company
+                <div
+                  id="dropDownLinkExternal"
+                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 rounded-lg -left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen flex flex-col"
+                >
+                  <section>
+                    <div class="flex flex-row justify-between gap-6 pt-4 text-white text-sm font-[inter] h-auto">
+                      <div class="flex flex-col space-y-4 text-white">
+                        <h1>About us</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Our Charter</a></li>
+                          <li><a href="">Residency</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <h1>News</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Security and Privacy</a></li>
+                          <li><a href="">Careers</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4 w-52 h-24">
+                        <img src="/images/o1-research.webp" class="rounded-lg object-cover size-full" alt="" />
+                        <h3>OpenAI o1 Hub</h3>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Side (Search Icon) -->
+        <div class="rightLinks cursor-pointer hidden sm:block">
+          <img src="/images/searchIcon.png" class="w-4 h-4 hover:scale-110 hover:rotate-90 transition-transform duration-300 ease-out" alt="Search Icon" />
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <main class="bg-black h-full px-14 sm:px-20">
+      <div class="flex justify-center pt-20 items-start flex-col">
+        <!-- Language selection div -->
+        <div class="language text-sm p-4 mx-auto max-w-3xl h-10 rounded-lg w-full border border-white text-white flex justify-between items-center">
+          <h1>English ( US )</h1>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </div>
+
+        <!-- Terms of Use -->
+        <div class="TermsOfUse flex justify-center flex-col text-center w-full text-white pt-10">
+          <p class="font-medium">Updated: December 11, 2024.</p>
+          <h1 class="pt-8 text-7xl font-semibold">Europe Terms of Use</h1>
+        </div>
+
+        <!-- (Effective date) -->
+        <div class="firstHeading w-full max-w-3xl text-md mx-auto flex flex-col text-white pt-12">
+          <p>Effective: December 11, 2024 (previous version)</p>
+          <div class="w-full text-left space-y-4 pt-4">
+            <p>Thank you for using OpenAI!</p>
+            <p
+              >These Terms of Use apply if you reside in the European Economic Area (EEA), Switzerland, or UK. If you live outside of the EEA, Switzerland, or UK, these Terms of
+              Use⁠ apply to you.</p
+            >
+            <p
+              >These Terms of Use (“Terms”) apply to your use of ChatGPT, DALL·E, and OpenAI’s other services for individuals, along with any associated software applications,
+              technology and websites (“Services”), including personal, non-commercial use of our Services by consumers. You form a contract with us when you confirm that you
+              accept these Terms or when you otherwise use the Services.
+            </p>
+            <p>Our Business Terms⁠ govern use of ChatGPT Enterprise, our APIs, and our other services for businesses and developers. </p>
+            <p
+              >Our Privacy Policy⁠ explains how we collect and use personal information. Although it does not form part of these Terms, it is an important document that you should
+              read.</p
+            >
+          </div>
+          <div class="firstHeading w-full max-w-3xl text-md mx-auto flex flex-col text-white pt-12">
+            <div class="w-full text-left space-y-4 pt-4">
+              <h1 class="text-4xl font-semibold">Who we are</h1>
+              <p
+                >OpenAI is an AI research and deployment company. Our mission is to ensure that artificial general intelligence benefits all of humanity. For more information about
+                OpenAI, please visit <span class="underline">https://openai.com/about⁠.</span> Our Services are provided to you by:</p
+              >
+              <ol class="list-disc list-inside space-y-8">
+                <li
+                  >OpenAI Ireland Ltd, a company incorporated in the Republic of Ireland with its registered office at 1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street
+                  Upper, Dublin 1, D01 YC43, Ireland and company number 737350, if you are resident in the EEA or Switzerland.
+                </li>
+                <li
+                  >OpenAI, L.L.C., a Delaware company with its registered office at 1455 3rd Street, San Francisco, CA 94158, United States and company number 7063675, if you are
+                  resident in the UK.</li
+                >
+              </ol>
+            </div>
+          </div>
+          <div class="firstHeading w-full max-w-3xl text-md mx-auto flex flex-col text-white pt-12">
+            <div class="w-full text-left space-y-4 pt-4">
+              <h1 class="text-4xl font-semibold">Additional Service-specific Terms</h1>
+              <p
+                >Depending on the specific Service or features you use, additional Service-specific terms and policies may apply to your use of our Services. The key ones to be
+                aware of, and which form part of these Terms, are described below:</p
+              >
+              <ol class="list-disc list-inside space-y-2">
+                <li><span class="underline">Usage Policies:</span> these policies explain how you may use our Services and Content. </li>
+                <li><span class="underline">Service Terms:</span> these terms apply when you use certain Services or features;</li>
+                <li><span class="underline">Sharing & Publication Policy:</span> this policy sets out rules for when you share Content;</li>
+                <li><span class="underline">Service Credit Terms:</span> these terms govern the purchase and use of service credits on our Services; and </li>
+                <li><span class="underline">Brand Guidelines⁠:</span> these guidelines explain how you may use our name and logo. </li>
+              </ol>
+            </div>
+          </div>
+          <div class="firstHeading w-full max-w-3xl text-md mx-auto flex flex-col text-white pt-12">
+            <div class="w-full text-left space-y-4 pt-4">
+              <h1 class="text-4xl font-semibold">Registration and access</h1>
+              <p
+                ><b>Minimum age.</b> You must be at least 13 years old or the minimum age required in your country to consent to use the Services. If you are under 18, you must
+                have your parent or legal guardian’s permission to use the Services and ask them to read these Terms with you.
+              </p>
+              <p
+                ><b>Registration.</b> You must provide accurate and complete information to register for an account to use our Services. You may not share your account credentials
+                or make your account available to anyone else and are responsible for all activities that occur under your account. If you create an account or use the Services on
+                behalf of another person or entity, you must have the authority to accept these Terms on their behalf.
+              </p>
+            </div>
+          </div>
+          <div class="firstHeading w-full max-w-3xl text-md mx-auto flex flex-col text-white pt-12">
+            <div class="w-full text-left space-y-4 pt-4">
+              <h1 class="text-4xl font-semibold">Using our services</h1>
+              <p
+                ><b>What you can do.</b> Subject to your compliance with these Terms, you may access and use our Services. In using our Services, you must comply with all
+                applicable laws as well as the Service-specific terms and policies listed above. </p
+              ><p><b>What you cannot do. </b> You may not use our Services for any illegal, harmful, or abusive activity. For example, you are prohibited from: </p>
+              <ol class="list-disc list-inside space-y-2">
+                <li>Using our Services in a way that infringes, misappropriates or violates anyone’s rights.</li>
+                <li>Modifying, copying, leasing, selling or distributing any of our Services.</li>
+                <li
+                  >Attempting to or assisting anyone to reverse engineer, decompile or discover the source code or underlying components of our Services, including our models,
+                  algorithms, or systems (except to the extent this restriction is prohibited by applicable law).</li
+                >
+                <li>Automatically or programmatically extracting data or Output (defined below).</li>
+                <li>Representing that Output was human-generated when it was not.</li>
+                <li
+                  >Interfering with or disrupting our Services, including circumventing any rate limits or restrictions or bypassing any protective measures or safety mitigations
+                  we put on our Services.</li
+                >
+                <li>Using Output to develop models that compete with OpenAI.</li>
+              </ol>
+              <p
+                ><b>Software.</b> Our Services may allow you to download software, such as mobile applications, which may update automatically to ensure you’re using the latest
+                version. Our software may include open source software that is governed by its own licences that we’ve made available to you.</p
+              >
+              <p
+                ><b>Corporate domains.</b> If you create an account using an email address owned by an organisation (for example, your employer), that account may be added to the
+                organisation's business account with us, in which case we will provide notice to you so that you can help facilitate the transfer of your account (unless your
+                organisation has already provided notice to you that it may monitor and control your account). Once your account is transferred, the organisation’s administrator
+                will be able to control your account, including being able to access Content (defined below) and restrict or remove your access to the account.
+              </p>
+              <p
+                ><b>Third party Services.</b> Our services may include third party software, products, or services, (“Third Party Services”) and some parts of our Services, like
+                our browse feature, may include output from those services (“Third Party Output”). Third Party Services and Third Party Output are subject to their own terms, and
+                we are not responsible for them.
+              </p>
+              <p
+                ><b>Feedback.</b> We appreciate your feedback about our Services, but you agree that we may use it to provide, maintain, develop, and improve our Services, without
+                compensation to you.
+              </p>
+            </div>
+          </div>
+          <div class="firstHeading w-full max-w-3xl text-md mx-auto flex flex-col text-white pt-12">
+            <div class="w-full text-left space-y-8 pt-4">
+              <h1 class="text-4xl font-semibold">Content</h1>
+              <p
+                ><b>Your content.</b> You may provide input to the Services <b>(“Input”),</b> and receive output from the Services based on the Input <b>(“Output”).</b> Input and
+                Output are collectively “Content”. You are responsible for Content, including ensuring that it does not violate any applicable law or these Terms. You represent and
+                warrant that you have all rights, licences, and permissions needed to provide Input to our Services.</p
+              >
+              <p>
+                <b>Ownership of content.</b> As between you and OpenAI, and to the extent permitted by applicable law, you (a) retain your ownership rights in Input and (b) own the
+                Output. We hereby assign to you all our right, title, and interest, if any, in and to Output.
+              </p>
+              <p>
+                <b> Similarity of content.</b> Due to the nature of our Services and artificial intelligence generally, Output may not be unique and other users may receive similar
+                output from our Services. Our assignment above does not extend to other users’ output or any Third Party Output.
+              </p>
+              <p>
+                <b> Our use of content.</b> We can use your Content worldwide to provide, maintain, develop, and improve our Services, comply with applicable law, enforce our terms
+                and policies and keep our Services safe. If you're using ChatGPT through Apple's integrations,
+                <span class="underline">see this Help Center</span>
+                article⁠(opens in a new window) for how we handle your Content.
+              </p>
+              <p>
+                <b> Opt out.</b> If you do not want us to use your Content to train our models, you have the option to opt out by updating your account settings. Further
+                information can be found in <span class="underline">this Help Center article</span>. Please note that in some cases this may limit the ability of our Services to
+                better address your specific use case.
+              </p>
+              <p>
+                <b>Accuracy. </b> Artificial intelligence and machine learning are rapidly evolving fields of study. We are constantly working to improve our Services to make them
+                more accurate, reliable, safe, and beneficial. Given the probabilistic nature of machine learning, use of our Services may in some situations result in Output that
+                does not accurately reflect real people, places, or facts.
+              </p>
+              <p>When you use our Services you understand and agree:</p>
+              <ol class="space-y-4">
+                <li class="list-inside list-disc"
+                  >Output may not always be accurate. You should not rely on Output from our Services as a sole source of truth or factual information, or as a substitute for
+                  professional advice.
+                </li>
+                <li class="list-inside list-disc"
+                  >You must evaluate Output for accuracy and appropriateness for your use case, including using human review as appropriate, before using or sharing Output from the
+                  Services.
+                </li>
+                <li class="list-inside list-disc"
+                  >You must not use any Output relating to a person for any purpose that could have a legal or material impact on that person, such as making credit, educational,
+                  employment, housing, insurance, legal, medical, or other important decisions about them.
+                </li>
+                <li class="list-inside list-disc"
+                  >Our Services may provide incomplete, incorrect, or offensive Output that does not represent OpenAI’s views. If Output references any third party products or
+                  services, it doesn’t mean the third party endorses or is affiliated with OpenAI.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="firstHeading w-full max-w-3xl text-md mx-auto flex flex-col text-white pt-12">
+            <div class="w-full text-left space-y-4 pt-4">
+              <h1 class="text-4xl font-semibold">Our IP rights </h1>
+              <p
+                >We and our affiliates own all rights, title, and interest in and to the Services. You may only use our name and logo in accordance with our
+                <span class="underline">Brand Guidelines⁠.</span></p
+              >
+            </div>
+          </div>
+          <div class="firstHeading w-full max-w-3xl text-md mx-auto flex flex-col text-white pt-12">
+            <div class="w-full text-left space-y-4 pt-4">
+              <h1 class="text-4xl font-semibold">Paid accounts </h1>
+              <p
+                ><b>Paid subscriptions.</b> Some of our Services allow you to purchase paid subscriptions to benefit from enhanced features and functionalities
+                <b> (the “Benefits”).</b> The exact nature of the Benefits differs between Services and will be made clear to you before purchase. You can manage your paid
+                subscription from your account settings.
+              </p>
+              <p> <b>Fees:</b> All charges, including subscription fees, will be made clear to you before purchase. </p>
+              <p>
+                <b> Billing.</b> If you sign-up for a paid subscription or purchase any Services, you will provide complete and accurate billing information, including a valid
+                payment method. For paid subscriptions, we will automatically charge your payment method on each agreed-upon periodic renewal until you cancel. If your payment
+                cannot be completed, we may downgrade your account or suspend your access to our Services until payment is received.
+              </p>
+              <p>
+                <b> Service credits.</b> You can pay for some Services in advance by purchasing service credits. All service credits are subject to our
+                <span class="underline">Service credit terms⁠.</span>
+              </p>
+              <p>
+                <b>Cooling off period. </b> You are entitled to cancel your purchase and request a refund without stating the reason during the 14 days following the date of your
+                purchase <b>(the “Cooling Off Period”).</b> The refund will cover the relevant subscription fee prorated from the date you request cancellation to the end of the
+                relevant subscription period you have paid for. To cancel and request a refund please <span class="underline">contact Support</span> or fill out and send us the
+                <span class="underline"> model withdrawal form⁠,</span> or alternatively you may complete the model withdrawal form as described under
+                <b>Termination and Suspension below.</b>
+              </p>
+              <p>
+                <b>Cancellation.</b> Following the Cooling Off Period, you can cancel your paid subscription at any time by updating your account settings. You will not be charged
+                after you cancel your paid subscription. You will continue to have access to the Benefits until the end of the subscription period you have paid for, at which point
+                your cancellation will become effective. Unless we specify otherwise, you will not receive a refund or service credit for any days between the day you cancel and
+                the last day of the subscription period you have paid for.
+              </p>
+              <p>
+                <b>Changes.</b> We may change our prices from time to time. If we increase our subscription prices, we will give you at least 30 days’ notice and any price increase
+                will take effect on your next renewal so that you can cancel if you do not agree to the price increase.
+              </p>
+            </div>
+          </div>
+          <div class="firstHeading w-full max-w-3xl text-md mx-auto flex flex-col text-white pt-12">
+            <div class="w-full text-left space-y-4 pt-4">
+              <h1 class="text-4xl font-semibold">Termination and suspension </h1>
+              <p
+                ><b>EEA consumer withdrawal right. </b>If you are an EEA-based consumer, you can close your account and withdraw from these Terms within 14 days of accepting them
+                by <span class="underline">contacting Support</span> or filling out and sending us the
+                <span class="underline">model withdrawal form⁠.</span>
+              </p>
+              <p
+                ><b>OpenAI rights.</b> We may take action to suspend or terminate your access to our Services or close your account if we determine, acting reasonably and
+                objectively:
+              </p>
+              <ol class="list-inside list-disc space-y-4">
+                <li>You breached these Terms or our <span class="underline">Usage Policies⁠.</span></li>
+                <li>We must do so to comply with the law.</li>
+                <li>Your use of our Services could cause risk or harm to OpenAI, our users, or anyone else.</li>
+                <li>Your account has been inactive for over a year and you do not have a paid account. </li>
+              </ol>
+              <p
+                ><b>Notice.</b> If we terminate your account, we will make reasonable efforts to notify you in advance so you can export your Content or your data from the
+                Services, unless it is not appropriate for us to do so, we reasonably believe that continued access to your account will cause damage to OpenAI or anyone else, or
+                we are legally prohibited from doing so.</p
+              >
+              <p
+                ><b> Appeals.</b> If you believe we have suspended or terminated your account in error, you can file an appeal with us by contacting Support⁠(opens in a new
+                window).</p
+              >
+            </div>
+          </div>
+          <div class="firstHeading w-full max-w-3xl text-md mx-auto flex flex-col text-white pt-12">
+            <div class="w-full text-left space-y-4 pt-4">
+              <h1 class="text-4xl font-semibold">Business use of the Services addendum</h1>
+              <p
+                ><b>Commercial and business use. </b> If you use our Services for commercial or business use, the following terms apply. In the event of a conflict between this
+                Business Use of the Services Addendum and the rest of these Terms, this Addendum shall take precedence.</p
+              >
+              <p
+                ><b>Limitation of liability.</b> NEITHER WE NOR ANY OF OUR AFFILIATES OR LICENSORS WILL BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY
+                DAMAGES, INCLUDING DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, OR DATA OR OTHER LOSSES, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR
+                AGGREGATE LIABILITY UNDER THESE TERMS WILL NOT EXCEED ​​THE GREATER OF THE AMOUNT YOU PAID FOR THE SERVICE THAT GAVE RISE TO THE CLAIM DURING THE 12 MONTHS BEFORE
+                THE LIABILITY AROSE OR ONE HUNDRED DOLLARS ($100). THE LIMITATIONS IN THIS SECTION APPLY ONLY TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW.
+              </p>
+              <p
+                >Some countries and states do not allow the disclaimer of certain warranties or the limitation of certain damages, so some or all of the terms above may not apply
+                to you, and you may have additional rights. In that case, these Terms only limit our responsibilities to the maximum extent permissible in your country of
+                residence.</p
+              >
+              <p>OPENAI’S AFFILIATES, SUPPLIERS, LICENSORS, AND DISTRIBUTORS ARE INTENDED THIRD PARTY BENEFICIARIES OF THIS ADDENDUM. </p>
+              <p>
+                <b>Indemnity.</b> If you are a business or organisation, to the extent permitted by law, you will indemnify and hold harmless us, our affiliates, and our personnel,
+                from and against any costs, losses, liabilities, and expenses (including attorneys’ fees) from third party claims arising out of or relating to your use of the
+                Services and Content or any violation of these Terms.
+              </p>
+              <p
+                ><b>Governing law (business use).</b> California law will govern these Terms except for its conflicts of laws principles. All claims arising out of or relating to
+                these Terms will be brought exclusively in the federal or state courts of San Francisco, California.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer section -->
+    <footer>
+      <div class="footerFiveRows grid grid-cols-1 pt-20 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-6 px-6 sm:px-4 xl:px-32 bg-black text-white text-sm font-[inter] h-auto">
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">Our Research</h1>
+          <ul>
+            <li><a href="">Overview</a></li>
+            <li><a href="">Index</a></li>
+          </ul>
+          <div class="flex flex-col space-y-4 pt-10">
+            <h1 class="text-[#999]">Latest Achievements</h1>
+            <ul class="space-y-2 text-[12px]">
+              <li><a href="">OpenAI o1</a></li>
+              <li><a href="">OpenAI o1-mini</a></li>
+              <li><a href="">GPT-4</a></li>
+              <li><a href="">GPT-4o mini</a></li>
+              <li><a href="">DALL·E 3</a></li>
+              <li><a href="">Sora</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">ChatGPT</h1>
+          <ul class="space-y-2 text-[12px]">
+            <li><a href="">For Everyone</a></li>
+            <li><a href="">For Teams</a></li>
+            <li><a href="">For Enterprises</a></li>
+            <li class="flex flex-row items-center"> <a href="">ChatGPT Login</a><img src="/images/rightUpIcon.png" class="w-4 h-4" alt="" /> </li>
+            <li><a href="">Download</a></li>
+          </ul>
+          <div class="flex flex-col pt-10 space-y-4">
+            <h1 class="text-[#999]">API</h1>
+            <ul class="space-y-2 text-[12px]">
+              <li><a href="">Platform Overview</a></li>
+              <li><a href="">Pricing</a></li>
+              <li class="flex flex-row items-center">
+                <a href="https://platform.openai.com/docs/concepts">Documentation</a> <img src="/images/rightUpIcon.png" class="w-4 h-4" alt="" />
+              </li>
+              <li class="flex flex-row items-center">
+                <a href="https://platform.openai.com/docs/overview">API login</a> <img src="/images/rightUpIcon.png" class="w-4 h-4" alt="" />
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col pt-10 space-y-4">
+            <h1 class="text-[#999]">Explore more</h1>
+            <ul class="space-y-2 text-[12px]">
+              <li><a href="">Open AI for business</a></li>
+              <li><a href="">Stories</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">Safety Overview</h1>
+          <ul class="text-[12px]">
+            <li><a href="">Safety Overview</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">Company</h1>
+          <ul class="space-y-2 text-[12px]">
+            <li><a href="">About us</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="OurCharter.html">Our Charter</a></li>
+            <li><a href="">Security</a></li>
+            <li><a href="">Residency</a></li>
+            <li><a href="">Careers</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">Terms & policies</h1>
+          <ul class="space-y-2 text-[12px]">
+            <li><a href="termsOfUse.html">Terms of use</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Brand guidelines</a></li>
+            <li><a href="otherPolicies.html">Other policies</a></li>
+          </ul>
+        </div>
+        <div class="footerRow flex flex-col sm:flex-col md:flex-row justify-between col-span-1 sm:col-span-1 md:col-span-5 lg:col-span-5 items-center w-full space-y-10 py-2">
+          <div class="footerContent flex justify-start flex-col sm:flex-col gap-2 pt-14 w-full">
+            <button class="rounded-md bg-[#1a1a1a] hover:bg-[#222] p-1 w-full sm:w-full md:w-32">English (US)</button>
+            <h2 class="hidden sm:justify-start sm:hidden md:flex">OpenAi &#169; 2015-2024</h2>
+          </div>
+          <div class="footerIcons flex flex-col justify-start w-full">
+            <ul class="flex flex-row justify-center sm:justify-start md:justify-center items-center space-x-10 text-md w-full">
+              <a href="https://x.com/?lang=en" aria-label="Twitter" target="_blank"><i class="fi fi-brands-twitter-alt"></i></a>
+              <a href="https://www.youtube.com/OpenAI" aria-label="Youtube" target="_blank"><i class="fi fi-brands-youtube"></i></a>
+              <a href="https://www.linkedin.com/company/openai/" aria-label="LinkedIn" target="_blank"><i class="fi fi-brands-linkedin"></i></a>
+              <a href="https://github.com/openai" target="_blank" aria-label="GitHub"><i class="fi fi-brands-github"></i></a>
+              <a href="https://www.instagram.com/openai/?hl=en" target="_blank" aria-label="Instagram"><i class="fi fi-brands-instagram"></i></a>
+              <a href="https://www.tiktok.com/@openai?lang=en" target="_blank" aria-label="TikTok"><i class="fi fi-brands-tik-tok"></i></a>
+              <a href="https://discord.com/invite/openai" target="_blank" aria-label="Discord"><i class="fi fi-brands-discord"></i></a>
+            </ul>
+            <h2 class="flex sm:flex md:hidden py-10 text-left">OpenAi &#169; 2015-2024</h2>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer section -->
+    <script src="links.js"></script>
+  </body>
+</html>
