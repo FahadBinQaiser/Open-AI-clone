@@ -1,9 +1,0 @@
-.sixBoxesRow ul {
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.sixBoxesRow ul::-webkit-scrollbar {
-  display: none;
-}
