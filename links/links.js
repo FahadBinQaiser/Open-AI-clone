@@ -66,14 +66,18 @@ function enableScroll() {
   const totalBoxes = document.querySelectorAll('.carousel-box').length;
   
   function setCarouselProperties() {
-    if (window.innerWidth < 768) {
-      boxWidth = 350 + 16;
+    if (window.innerWidth < 640) {
+      boxWidth = 200 + 16;
       visibleBoxes = 1;
-    } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+    }else if (window.innerWidth >= 640 && window.innerWidth < 768) {
+      boxWidth = 230 + 16;
+      visibleBoxes = 2;
+    }
+     else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
       boxWidth = 350 + 16;
       visibleBoxes = 2;
     } else {
-      boxWidth = 290 + 16;
+      boxWidth = 300 + 16;
       visibleBoxes = 6;
     }
   }
@@ -134,7 +138,7 @@ function setCarouselProperties1() {
     visibleBoxes1 = 2; 
   } else {
     boxWidth1 = 350 + 16;
-    visibleBoxes1 = 2;  
+    visibleBoxes1 = 3;  
   }
 
   carousel1.style.transition = 'transform 0.2s ease-in-out';  
