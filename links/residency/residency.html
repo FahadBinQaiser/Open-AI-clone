@@ -39,7 +39,7 @@
 
           <div
             id="menuItems"
-            class="hidden h-[90vh] duration-200 transition-opacity sm:flex flex-col sm:flex-row items-center backdrop-blur-2xl sm:backdrop-blur-0 sm:bg-transparent w-full sm:w-full space-y-4 sm:space-y-0 sm:space-x-8 pr-4 sm:pr-0 absolute sm:static top-12 left-0 sm:top-0"
+            class="hidden h-full duration-200 transition-opacity sm:flex flex-col sm:flex-row items-center backdrop-blur-2xl sm:backdrop-blur-0 sm:bg-transparent w-full sm:w-full space-y-4 sm:space-y-0 sm:space-x-8 pr-4 sm:pr-0 absolute sm:static top-12 left-0 sm:top-0"
           >
             <ul
               class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-white justify-start items-start w-full p-12 text-4xl sm:text-[15px] font-semibold pr-40 sm:translate-y-0"
@@ -185,10 +185,12 @@
     </nav>
     <!-- Navbar -->
     <!-- Hero Section -->
-    <main class="bg-black h-full">
-      <div class="flex items-center flex-col text-white max-w-5xl mx-auto py-20 pt-4 border-t border-t-gray-700">
+    <main class="bg-black h-full px-4">
+      <div class="flex items-center flex-col text-white max-w-5xl mx-auto py-20 pt-4">
         <h1 class="pt-20 text-4xl font-bold pb-4">OpenAI residency</h1>
-        <p>Our 6-month program is a bridge for brilliant technical <spna class="sm:block">researchers from diverse fields to transition into AI.</spna> </p>
+        <p class="text-center sm:text-left"
+          >Our 6-month program is a bridge for brilliant technical <spna class="sm:block">researchers from diverse fields to transition into AI.</spna>
+        </p>
         <div class="firstImage pt-10">
           <img src="/links/residency/ResidencyLinkImages/Box1.webp" class="rounded-xl" alt="" />
         </div>
@@ -199,7 +201,7 @@
             and knowledge to transition their careers into the AI & ML space.</p
           >
         </div>
-        <div class="quotes text-3xl text-balance text-center">
+        <div class="quotes text-2xl sm:text-3xl text-balance text-center">
           <h1
             >“This program is an excellent way for people who are curious, passionate, and skilled to sharpen their focus on AI and machine learning—and to help
             us invent the future.”</h1
@@ -210,7 +212,7 @@
           </div>
         </div>
         <div class="lookingFor flex py-20 space-y-4 flex-col text-left mx-auto max-w-xl">
-          <h1 class="text-left text-4xl py-4 font-semibold">Who we’re looking for</h1>
+          <h1 class="text-left text-3xl sm:text-4xl py-4 font-semibold">Who we’re looking for</h1>
           <p
             >The program is ideal for researchers specializing in fields outside of deep learning like mathematics, physics, or neuroscience. The program can
             also work well for exceptionally talented software engineers who seek to transition into full-time Research based positions in the field of AI.</p
@@ -221,9 +223,9 @@
             experience in our work.</p
           >
         </div>
-        <div class="Box flex flex-row sm:flex-row md:flex-row px-8 lg:flex-row overflow-hidden items-center max-w-5xl mx-auto justify-center text-white">
+        <div class="Box flex flex-col sm:flex-row md:flex-row px-8 lg:flex-row items-center max-w-5xl mx-auto justify-center text-white">
           <div
-            class="mx-6 sm:mx-0 w-[500px] h-[500px] relative mt-0 bg-[#1a1a1a] rounded-tl-xl rounded-bl-xl bg-opacity-80 flex justify-center items-start px-6 sm:px-14 flex-col space-y-4"
+            class="h-full w-full p-10 sm:w-[500px] sm:h-[500px] relative mt-0 bg-[#1a1a1a] rounded-tl-xl rounded-tr-xl sm:rounded-tr-none rounded-bl-none sm:rounded-bl-xl bg-opacity-80 flex justify-center items-start flex-col space-y-4"
           >
             <h1 class="text-xl"
               >OpenAI Residency was more than a program—it was a crucible of growth, blending academic rigor with nurturing mentorship, and teaching me to be
@@ -231,10 +233,10 @@
             >
             <p><span class="font-bold">Tyna Eloundou</span> Former OpenAI Resident</p>
           </div>
-          <div class="w-[500px] h-[500px]">
+          <div class="h-full w-full sm:w-[500px] sm:h-[500px]">
             <img
               src="/links/residency/ResidencyLinkImages/girlStaring.webp"
-              class="rounded-tr-xl rounded-br-xl w-full h-full object-cover sm:object-fill"
+              class="rounded-tr-none sm:rounded-tr-xl rounded-br-xl rounded-bl-xl sm:rounded-bl-none w-full h-full object-cover sm:object-fill"
               alt="Team Workspace"
             />
           </div>
@@ -245,7 +247,7 @@
             <div class="flex justify-center items-center flex-col max-w-3xl mx-auto">
               <h1 class="text-2xl text-white font-bold py-8">FAQ</h1>
               <div class="faqContainer w-full text-white pb-20">
-                <div class="row flex flex-col space-y-6 bg-[#1a1a1a] relative rounded-xl p-16" id="faqContainer"> </div>
+                <div class="row flex flex-col space-y-6 bg-[#1a1a1a] relative rounded-xl p-4 sm:p-16" id="faqContainer"> </div>
               </div>
             </div>
           </div>
@@ -312,7 +314,18 @@
       </div>
     </main>
     <!-- Hero Section -->
-
+    <!-- JoinGPT section -->
+    <div class="joinGPTContainer bg-black w-full px-10 text-white h-[60vh] pb-36 flex justify-center items-center">
+      <div class="joinGPTBox w-full sm:w-11/12 lg:w-11/12 max-w-5xl bg-[#1a1a1a] rounded-lg h-80 flex justify-center items-center">
+        <div class="joinGPTContent flex justify-center items-center flex-col font-[inter] text-center">
+          <h1 class="text-3xl mb-4 font-medium text-balance">Join us in shaping the future of technology.</h1>
+          <div class="button border-2 border-white px-6 p-2 bg-white text-black rounded-full">
+            <button class="flex flex-row space-x-4 text-sm font-medium"> View all open roles </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JoinGPT section -->
     <!-- Footer section -->
     <footer>
       <div
@@ -343,7 +356,7 @@
             <li><a href="/components/team.html">For Teams</a></li>
             <li><a href="/components/enterprise/enterprise.html">For Enterprises</a></li>
             <li class="flex flex-row items-center">
-              <a href="https://chatgpt.com/">ChatGPT Login</a><img src="images/rightUpIcon.png" class="w-4 h-4" alt="" />
+              <a href="https://chatgpt.com/">ChatGPT Login</a>
             </li>
             <li><a href="links/download.html">Download</a></li>
           </ul>
@@ -353,10 +366,10 @@
               <li><a href="">Platform Overview</a></li>
               <li><a href="/components/pricing/pricing.html">Pricing</a></li>
               <li class="flex flex-row items-center">
-                <a href="https://platform.openai.com/docs/concepts">Documentation</a> <img src="images/rightUpIcon.png" class="w-4 h-4" alt="" />
+                <a href="https://platform.openai.com/docs/concepts">Documentation</a>
               </li>
               <li class="flex flex-row items-center">
-                <a href="https://platform.openai.com/docs/overview">API login</a> <img src="images/rightUpIcon.png" class="w-4 h-4" alt="" />
+                <a href="https://platform.openai.com/docs/overview">API login</a>
               </li>
             </ul>
           </div>

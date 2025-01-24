@@ -1,3 +1,37 @@
+const menuToggle = document.getElementById("menuToggle");
+  const menuItems = document.getElementById("menuItems");
+  const spans = menuToggle.querySelectorAll("span");
+  let scrollPosition = 0;
+  menuToggle.addEventListener("click", () => {
+    menuItems.classList.toggle("hidden");
+    menuItems.classList.toggle("flex");
+
+    spans[0].classList.toggle("rotate-45");
+    spans[0].classList.toggle("translate-y-2");
+    spans[1].classList.toggle("opacity-0");
+    spans[2].classList.toggle("-rotate-45");
+    spans[2].classList.toggle("-translate-y-2");
+    if (menuItems.classList.contains("flex")) {
+      disableScroll();
+    } else {
+      enableScroll();
+    } 
+  });
+
+
+function disableScroll() {
+  scrollPosition = window.scrollY;
+  document.body.style.position = "fixed";
+  document.body.style.top = `${scrollPosition}px`;
+  document.body.style.width = "100%";
+}
+
+function enableScroll() {
+  document.body.style.position = "";
+  document.body.style.top = "";
+  window.scrollTo(0, scrollPosition);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const faqData = [
       {
@@ -41,14 +75,17 @@ document.addEventListener('DOMContentLoaded', function () {
       faqItem.classList.add('faq-item', 'pb-2', 'border-b', 'border-b-[#333]');
       faqItem.innerHTML = `
         <input type="checkbox" id="faq${index + 1}" class="peer hidden" />
-        <label for="faq${index + 1}" class="flex justify-between items-center cursor-pointer">
+        <label for="faq${index + 1}" class="flex w-[80%] justify-between items-center cursor-pointer">
           <h1>${faq.question}</h1>
-          <span class="absolute right-16">+</span>
+          <span class="absolute right-8 sm:right-16">+</span>
         </label>
-        <div class="content overflow-hidden max-h-0 transition-all duration-500 peer-checked:max-h-[300px] peer-checked:mt-4">
+        <div class="content overflow-hidden max-h-0 pl-4 sm:pl-0 transition-all duration-500 peer-checked:max-h-[300px] peer-checked:mt-4">
           <p class="text-sm text-[#777]">${faq.answer}</p>
         </div>
       `;
+      if(index == 7){
+        faqItem.classList.remove("border-b")
+      }
       faqContainer.appendChild(faqItem);
     });
 
