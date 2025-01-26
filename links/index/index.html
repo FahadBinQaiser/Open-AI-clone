@@ -11,7 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="overview.css" />
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -40,7 +39,7 @@
 
           <div
             id="menuItems"
-            class="hidden h-full duration-200 transition-opacity sm:flex flex-col sm:flex-row items-center backdrop-blur-2xl sm:backdrop-blur-0 sm:bg-transparent w-full sm:w-full space-y-4 sm:space-y-0 sm:space-x-8 pr-4 sm:pr-0 absolute sm:static top-12 left-0 sm:top-0"
+            class="hidden h-full z-20 duration-200 transition-opacity sm:flex flex-col sm:flex-row items-center backdrop-blur-2xl sm:backdrop-blur-0 sm:bg-transparent w-full sm:w-full space-y-4 sm:space-y-0 sm:space-x-8 pr-4 sm:pr-0 absolute sm:static top-12 left-0 sm:top-0"
           >
             <ul
               class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-white justify-start items-start w-full p-12 text-4xl sm:text-[15px] font-semibold pr-40 sm:translate-y-0"
@@ -194,18 +193,10 @@
           <h1>Research</h1>
           <h1 class="text-5xl">Research</h1>
         </div>
-        <div class="grid grid-cols-3 gap-4 p-8">
-          <div class="col-span-2 row-span-2 bg-blue-500 rounded-xl text-white p-6 relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8">
+          <div class="col-span-1 md:col-span-2 h-96 row-span-1 md:row-span-2 bg-blue-500 rounded-xl text-white p-6 relative">
             <div class="absolute top-4 left-4 text-sm">Jan 23, 2025</div>
             <div class="absolute text-2xl left-4 bottom-3 font-bold">Computer-Using Agent</div>
-            <div class="absolute top-24 right-44 bg-white text-black p-4 rounded-lg shadow-lg">
-              <div>Operated for 17 seconds</div>
-              <ul class="text-sm mt-2">
-                <li>Initializing</li>
-                <li>Navigating</li>
-                <li>Selecting</li>
-              </ul>
-            </div>
           </div>
 
           <div class="bg-blue-300 rounded-xl text-white p-6">
@@ -231,18 +222,19 @@
           </div>
         </div>
       </div>
+
       <div class="mx-auto max-w-5xl px-6 w-full py-10">
         <div class="content flex flex-row justify-between items-center">
           <div class="heading py-2">
-            <h1 class="text-3xl">Browse More</h1>
+            <h1 class="text-2xl sm:text-3xl">Browse More</h1>
           </div>
-          <div class="rightSide flex flex-row space-x-8">
+          <div class="rightSide py-6 flex flex-row space-x-8">
             <p>162 articles</p>
-            <p>Filter -</p>
+            <p class="hidden sm:flex">Filter -</p>
             <p>Sort ></p>
           </div>
         </div>
-        <div class="grid grid-cols-3 gap-2">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
           <div class="box1">
             <img src="indexImages/1.webp" class="w-[450px] h-[500px] rounded-lg" alt="" />
           </div>
@@ -270,6 +262,9 @@
           <div class="box9">
             <img src="indexImages/8.webp" class="w-[450px] h-[500px] rounded-lg" alt="" />
           </div>
+        </div>
+        <div class="button py-10 flex justify-center items-center">
+          <button class="text-sm py-2 px-3 bg-white text-black rounded-3xl w-28">Load more</button>
         </div>
       </div>
     </div>
@@ -378,6 +373,6 @@
       </div>
     </footer>
     <!-- Footer section -->
-    <script src="overview.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
