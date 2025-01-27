@@ -3,19 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Open AI clone</title>
-    <link rel="shortcut icon" href="images/favicon_io/favicon.ico" type="image/x-icon" />
+    <title>Overview | ChatGPT</title>
+    <link rel="shortcut icon" href="/images/favicon_io/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
-
-    <link rel="stylesheet" href="style.css" />
-
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       .hover-gray {
@@ -23,7 +19,7 @@
       }
     </style>
   </head>
-  <body class="selection:bg-white selection:text-black">
+  <body class="selection:bg-white selection:text-black font-[inter]">
     <!-- Navbar -->
     <nav>
       <div class="navbar flex justify-between items-center h-12 bg-black px-4 sm:px-4 md:px-16 lg:px-36">
@@ -43,7 +39,7 @@
 
           <div
             id="menuItems"
-            class="hidden h-[90vh] duration-200 transition-opacity sm:flex flex-col sm:flex-row items-center backdrop-blur-2xl sm:backdrop-blur-0 sm:bg-transparent w-full sm:w-full space-y-4 sm:space-y-0 sm:space-x-8 pr-4 sm:pr-0 absolute sm:static top-12 left-0 sm:top-0"
+            class="hidden h-full z-20 duration-200 transition-opacity sm:flex flex-col sm:flex-row items-center backdrop-blur-2xl sm:backdrop-blur-0 sm:bg-transparent w-full sm:w-full space-y-4 sm:space-y-0 sm:space-x-8 pr-4 sm:pr-0 absolute sm:static top-12 left-0 sm:top-0"
           >
             <ul
               class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-white justify-start items-start w-full p-12 text-4xl sm:text-[15px] font-semibold pr-40 sm:translate-y-0"
@@ -59,7 +55,7 @@
                       <div class="flex flex-col space-y-4">
                         <h1 class="text-[#999]">Our Research</h1>
                         <ul class="space-y-4 text-md">
-                          <li><a href="/links/overview/overview.html">Overview</a></li>
+                          <li><a href="">Overview</a></li>
                           <li><a href="">Index</a></li>
                         </ul>
                       </div>
@@ -161,13 +157,13 @@
                         <h1>About us</h1>
                         <ul class="space-y-4 text-md">
                           <li><a href="">Our Charter</a></li>
-                          <li><a href="/links/residency.html">Residency</a></li>
+                          <li><a href="">Residency</a></li>
                         </ul>
                       </div>
                       <div class="flex flex-col space-y-4">
                         <h1>News</h1>
                         <ul class="space-y-4 text-md">
-                          <li><a href="/links/security/security.html">Security and Privacy</a></li>
+                          <li><a href="">Security and Privacy</a></li>
                           <li><a href="">Careers</a></li>
                         </ul>
                       </div>
@@ -190,98 +186,89 @@
       </div>
     </nav>
     <!-- Navbar -->
-    <!-- Hero Section -->
-    <main class="bg-black h-[calc(100vh-3rem)] pt-4 border-t border-t-gray-700">
-      <div class="heroSection relative flex justify-between items-center text-white overflow-x-scroll sm:overflow-hidden pb-4 px-4 sm:px-4 md:px-16 lg:px-36">
-        <div class="leftHeading">
-          <h1 class="mr-8 lg:mr-0 font-bold text-[14px] pr-8 border-r border-r-white sm:border-0 lg:text-sm">ChatGPT</h1>
+    <!-- Hero section -->
+    <div class="flex flex-col bg-black h-full text-white py-20 justify-center items-center">
+      <div class="max-w-5xl mx-auto w-full">
+        <div class="headings text-center">
+          <h1>Research</h1>
+          <h1 class="text-5xl">Research</h1>
         </div>
-        <ul class="items text-[12px] lg:text-sm font-[inter] text-gray-400 flex space-x-6 z-10">
-          <li>
-            <a href="#" class="hover:text-white text-white transition-colors duration-300 ease-in-out" aria-label="Overview">Overview</a>
-          </li>
-          <li><a href="components/team.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Team">Team</a></li>
-          <li
-            ><a href="components/enterprise/enterprise.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Enterprise"
-              >Enterprise</a
-            ></li
-          >
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Education">Education</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Pricing">Pricing</a></li>
-        </ul>
-      </div>
-
-      <div class="midAlign text-white flex justify-center items-center flex-col h-[60vh] lg:h-[80vh]">
-        <h3 class="font-semibold">ChatGPT</h3>
-        <div class="components font-medium text-center m-4">
-          <h1 class="text-3xl lg:text-5xl font-[inter] font-semibold">
-            Get answers. Find inspiration.
-            <span class="block text-center">Be more productive.</span>
-          </h1>
-
-          <p class="font-[inter] text-sm lg:text-xl mt-6">
-            Free to use. Easy to try. Just ask and ChatGPT can
-            <span class="block"> help with writing, learning, brainstorming, and more. </span>
-          </p>
-        </div>
-        <div class="flex justify-center items-center flex-col gap-4 lg:flex-row mt-6 space-x-6">
-          <div class="button border-2 border-white px-6 p-2 bg-white text-black rounded-full">
-            <button class="flex flex-row space-x-4">
-              Start now
-              <img src="images/rightUpIcon.png" class="w-6 h-6" alt="" />
-            </button>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8">
+          <div class="col-span-1 sm:col-span-2 md:col-span-2 h-96 row-span-1 md:row-span-2 bg-blue-500 rounded-xl text-white p-6 relative">
+            <div class="absolute top-4 left-4 text-sm">Jan 23, 2025</div>
+            <div class="absolute text-2xl left-4 bottom-3 font-bold">Computer-Using Agent</div>
           </div>
-          <div class="text cursor-pointer">
-            <p class="hover:border-b-2 border-b-2 border-transparent hover:border-gray-200 transition-all duration-500 ease-out"> Download the app > </p>
+
+          <div class="bg-blue-300 rounded-xl text-white p-6">
+            <div class="text-sm">Safety & Alignment • Jan 23, 2025</div>
+            <div class="mt-4 text-lg font-bold">Operator System Card</div>
+            <div class="flex mt-4 space-x-2">
+              <div class="w-8 h-8 bg-white rounded"></div>
+              <div class="w-8 h-8 bg-white rounded"></div>
+              <div class="w-8 h-8 bg-white rounded"></div>
+              <div class="w-8 h-8 bg-white rounded"></div>
+            </div>
+          </div>
+
+          <div class="bg-purple-400 rounded-xl text-white p-6">
+            <div class="text-sm">Safety & Alignment • Dec 9, 2024</div>
+            <div class="mt-4 text-lg font-bold">Sora System Card</div>
+            <div class="flex mt-4 space-x-2">
+              <div class="w-8 h-8 bg-white rounded"></div>
+              <div class="w-8 h-8 bg-white rounded"></div>
+              <div class="w-8 h-8 bg-white rounded"></div>
+              <div class="w-8 h-8 bg-white rounded"></div>
+            </div>
           </div>
         </div>
       </div>
-    </main>
-    <!-- Hero Section -->
-    <!-- box section -->
-    <section class="h-[60vh] bg-black overflow-hidden flex flex-col gap-4 group">
-      <div id="row1" class="relative flex justify-start items-center w-max animate-slide-right pause-animation"></div>
-      <div id="row2" class="relative flex justify-start items-center w-max animate-slide-left pause-animation"></div>
-      <div id="row3" class="relative flex justify-start items-center w-max animate-slide-right pause-animation"></div>
-    </section>
 
-    <!-- box section -->
-    <!-- Ideas section -->
-    <section>
-      <div class="IdeasContainer bg-black text-white"></div>
-      <div class="remainingBoxes px-4 sm:px-4 md:px-6 bg-black">
-        <h1 class="text-center text-3xl text-balance sm:text-4xl font-[inter] font-medium text-white pt-24 pb-16"> Explore more features in ChatGPT </h1>
-      </div>
-    </section>
-    <!-- Ideas section -->
-    <!-- Pricing section -->
-    <section>
-      <div class="bg-black pb-28">
-        <div class="pricingUpperContent flex justify-center text-center flex-col">
-          <h1 class="text-center text-2xl sm:text-3xl text-balance mb-8 font-[inter] font-medium text-white pt-24"> Get started with Chat GPT today</h1>
-          <p>
-            <a href="#" class="text-white text-lg hover:border-b">View pricing Plans ></a>
-          </p>
-        </div>
-        <div id="pricingBoxes" class="pricingBoxes px-6 sm:px-6 lg:px-36 flex flex-col sm:flex-col lg:flex-row gap-4 w-full mt-14 p-6"></div>
-      </div>
-    </section>
-    <!-- Pricing section -->
-    <!-- JoinGPT section -->
-    <div class="joinGPTContainer bg-black w-full px-10 text-white h-[60vh] pb-36 flex justify-center items-center">
-      <div class="joinGPTBox w-full sm:w-11/12 lg:w-11/12 max-w-5xl bg-[#1a1a1a] rounded-lg h-80 flex justify-center items-center">
-        <div class="joinGPTContent flex justify-center items-center flex-col font-[inter] text-center">
-          <h1 class="text-3xl mb-4 font-medium text-balance">Join hundreds of millions of <span class="block">users and try ChatGPT today.</span></h1>
-          <div class="button border-2 border-white px-6 p-2 bg-white text-black rounded-full">
-            <button class="flex flex-row space-x-4 text-sm font-medium">
-              Try ChatGPT
-              <img src="images/rightUpIcon.png" class="w-4 h-4" alt="" />
-            </button>
+      <div class="mx-auto max-w-5xl px-6 w-full py-10">
+        <div class="content flex flex-row justify-between items-center">
+          <div class="heading py-2">
+            <h1 class="text-2xl sm:text-3xl">Browse More</h1>
           </div>
+          <div class="rightSide py-6 flex flex-row space-x-8">
+            <p>162 articles</p>
+            <p class="hidden sm:flex">Filter -</p>
+            <p>Sort ></p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <div class="box1">
+            <img src="indexImages/1.webp" class="w-[450px] h-[500px] rounded-lg" alt="" />
+          </div>
+          <div class="box2">
+            <img src="indexImages/2.webp" class="w-[450px] h-[500px] rounded-lg" alt="" />
+          </div>
+          <div class="box3">
+            <img src="indexImages/8.webp" class="w-[450px] h-[500px] rounded-lg" alt="" />
+          </div>
+          <div class="box4">
+            <img src="indexImages/9.webp" class="w-[450px] h-[500px] rounded-lg" alt="" />
+          </div>
+          <div class="box5">
+            <img src="indexImages/4.webp" class="w-[450px] h-[500px] rounded-lg" alt="" />
+          </div>
+          <div class="box6">
+            <img src="indexImages/5.webp" class="w-[450px] h-[500px] rounded-lg" alt="" />
+          </div>
+          <div class="box7">
+            <img src="indexImages/6.webp" class="w-[450px] h-[500px] rounded-lg" alt="" />
+          </div>
+          <div class="box8">
+            <img src="indexImages/7.webp" class="w-[450px] h-[500px] rounded-lg" alt="" />
+          </div>
+          <div class="box9">
+            <img src="indexImages/8.webp" class="w-[450px] h-[500px] rounded-lg" alt="" />
+          </div>
+        </div>
+        <div class="button py-10 flex justify-center items-center">
+          <button class="text-sm py-2 px-3 bg-white text-black rounded-3xl w-28">Load more</button>
         </div>
       </div>
     </div>
-    <!-- JoinGPT section -->
+    <!-- Hero section -->
     <!-- Footer section -->
     <footer>
       <div
@@ -290,7 +277,7 @@
         <div class="flex flex-col space-y-4">
           <h1 class="text-[#999]">Our Research</h1>
           <ul>
-            <li><a href="/links/overview/overview.html">Overview</a></li>
+            <li><a href="">Overview</a></li>
             <li><a href="">Index</a></li>
           </ul>
           <div class="flex flex-col space-y-4 pt-10">
@@ -312,7 +299,7 @@
             <li><a href="/components/team.html">For Teams</a></li>
             <li><a href="/components/enterprise/enterprise.html">For Enterprises</a></li>
             <li class="flex flex-row items-center">
-              <a href="https://chatgpt.com/">ChatGPT Login</a><img src="images/rightUpIcon.png" class="w-4 h-4" alt="" />
+              <a href="https://chatgpt.com/">ChatGPT Login</a>
             </li>
             <li><a href="links/download.html">Download</a></li>
           </ul>
@@ -322,10 +309,10 @@
               <li><a href="">Platform Overview</a></li>
               <li><a href="/components/pricing/pricing.html">Pricing</a></li>
               <li class="flex flex-row items-center">
-                <a href="https://platform.openai.com/docs/concepts">Documentation</a> <img src="images/rightUpIcon.png" class="w-4 h-4" alt="" />
+                <a href="https://platform.openai.com/docs/concepts">Documentation</a>
               </li>
               <li class="flex flex-row items-center">
-                <a href="https://platform.openai.com/docs/overview">API login</a> <img src="images/rightUpIcon.png" class="w-4 h-4" alt="" />
+                <a href="https://platform.openai.com/docs/overview">API login</a>
               </li>
             </ul>
           </div>
@@ -349,8 +336,8 @@
             <li><a href="/links/about.html">About us</a></li>
             <li><a href="">News</a></li>
             <li><a href="links/OurCharter.html">Our Charter</a></li>
-            <li><a href="/links/security/security.html">Security</a></li>
-            <li><a href="/links/residency.html">Residency</a></li>
+            <li><a href="">Security</a></li>
+            <li><a href="">Residency</a></li>
             <li><a href="">Careers</a></li>
           </ul>
         </div>
@@ -386,6 +373,6 @@
       </div>
     </footer>
     <!-- Footer section -->
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
