@@ -58,3 +58,11 @@ convoSecondButton.addEventListener("click", () => {
     updateHoverStyles();
 });
 updateHoverStyles();
+
+const links = document.querySelectorAll(".goDeeper a");
+if(window.innerWidth < 600){
+  links.forEach(link => {
+      link.classList.add("hidden");
+      link.classList.remove("flex");
+    });
+}
