@@ -1,0 +1,7 @@
+#convoButtonSecond:hover:not(.bg-white) {
+  background-color: #333;
+  color: #fff;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
