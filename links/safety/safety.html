@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="safety.css" />
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -222,10 +223,10 @@
             <div class="para">We use real-world feedback to help make our AI safer and more helpful. </div>
           </div>
         </div>
-        <div class="leadingTheWay">
-          <div class="content text-center">
-            <h1>Leading the way in Safety</h1>
-            <p>We collaborate with industry leaders and policymakers on the issues that matter most.</p>
+        <div class="leadingTheWay py-16">
+          <div class="content text-center space-y-4">
+            <h1 class="text-5xl">Leading the way in Safety</h1>
+            <p>We collaborate with industry leaders and<span class="sm:block"> policymakers on the issues that matter most.</span></p>
           </div>
         </div>
 
@@ -308,6 +309,24 @@
             </div>
           </div>
         </div>
+        <div class="conversations flex justify-center items-center flex-col space-y-4">
+          <div class="contentConvo space-y-4">
+            <h1 class="text-5xl">Conversations with <span class="sm:block">OpenAI researchers</span> </h1>
+            <p class="text-center py-4"
+              >Get inside OpenAI with our series that breaks<span class="sm:block"> down a range of topics around safety and more.</span></p
+            >
+          </div>
+          <div class="buttonsLinks flex space-x-4">
+            <button id="convoButtonFirst" class="py-2 px-3 rounded-3xl text-sm w-40 bg-white text-black transition duration-500 ease-out"
+              >Where is AI going?</button
+            >
+            <button id="convoButtonSecond" class="px-4 text-sm py-2 rounded-3xl transition duration-500 ease-out">Teaching ChatGPT good behaviour</button>
+          </div>
+          <div class="imageConvo py-6">
+            <img id="imageConvoChange" src="safetyImages/twoGirls.webp" class="rounded-xl" alt="" />
+          </div>
+        </div>
+
         <div class="lookingFor flex py-20 space-y-4 flex-col text-left mx-auto max-w-xl">
           <h1 class="text-left text-3xl sm:text-4xl py-4 font-semibold">Who we’re looking for</h1>
           <p
@@ -338,18 +357,7 @@
             />
           </div>
         </div>
-        <!-- FAQ -->
-        <section>
-          <div class="faq h-full px-4">
-            <div class="flex justify-center items-center flex-col max-w-3xl mx-auto">
-              <h1 class="text-2xl text-white font-bold py-8">FAQ</h1>
-              <div class="faqContainer w-full text-white pb-20">
-                <div class="row flex flex-col space-y-6 bg-[#1a1a1a] relative rounded-xl p-4 sm:p-16" id="faqContainer"> </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- FAQ -->
+
         <div class="quotes text-2xl sm:text-3xl text-balance text-center">
           <h1
             >“A leap from biology to AI? OpenAI Residency said ‘yes,’ turning doubts into the most fundamental, impactful, and fun research I’ve ever done.”</h1
@@ -360,48 +368,6 @@
           </div>
         </div>
       </div>
-      <section>
-        <div class="joinUsAIFrontier py-16 px-4">
-          <div class="joinUsAI text-white max-w-5xl mx-auto h-full">
-            <div class="flex justify-between">
-              <h1 class="text-3xl text-white">Resident research</h1>
-              <div class="icons select-none text-xl flex flex-row gap-8">
-                <p class="cursor-pointer prevButton-1">&#60;</p>
-                <p class="cursor-pointer nextButton-1">&#62;</p>
-              </div>
-            </div>
-            <div class="carousel-wrapper overflow-hidden relative">
-              <div class="carousel carousel-1 flex gap-4 transition-transform p-0 sm:pl-52 md:pl-0 duration-300 mt-10 ease-in-out">
-                <div class="carousel-box w-full min-w-[350px] relative h-[500px]">
-                  <h1 class="text-white z-10 absolute p-4">Story</h1>
-                  <h1 class="absolute bottom-0 p-4 text-white z-20">Moderna and OpenAI partner to accelerate the development of life-saving treatments</h1>
-                  <img src="ResidencyLinkImages/carousel/1.webp" class="transition duration-500 rounded-lg w-full h-full object-cover" alt="" />
-                </div>
-
-                <div class="carousel-box w-full min-w-[350px] relative h-[500px] bg-black">
-                  <h1 class="text-white z-10 absolute p-4">Product . Nov 30, 2022.</h1>
-                  <img src="ResidencyLinkImages/carousel/2.webp" class="transition duration-500 rounded-lg w-full h-full object-cover" alt="" />
-                </div>
-
-                <div class="carousel-box w-full min-w-[350px] relative h-[500px]">
-                  <h1 class="text-white z-10 absolute p-4">Product . Sep 28, 2022.</h1>
-
-                  <h1 class="absolute bottom-0 w-full p-4 text-white z-20">DALL-E now available without waitlist</h1>
-
-                  <img src="ResidencyLinkImages/carousel/3.webp" class="rounded-lg w-full h-full object-cover" alt="" />
-                </div>
-
-                <div class="carousel-box w-full min-w-[350px] relative h-[500px]">
-                  <h1 class="absolute w-full p-4 text-white z-20">Product . Aug 10, 2022.</h1>
-                  <h1 class="absolute bottom-0 w-full p-4 text-white z-20">New and improved content moderation tooling</h1>
-
-                  <img src="ResidencyLinkImages/carousel/4.webp" class="rounded-lg w-full h-full object-cover" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <!-- Hero Section -->
     <!-- JoinGPT section -->

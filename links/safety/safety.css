@@ -1,0 +1,4 @@
+#convoButtonSecond:hover:not(.bg-white) {
+  background-color: #333;
+  color: #fff;
+}

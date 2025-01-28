@@ -31,3 +31,30 @@ function enableScroll() {
   document.body.style.top = "";
   window.scrollTo(0, scrollPosition);
 }
+
+const convoFirstButton = document.getElementById("convoButtonFirst");
+const convoSecondButton = document.getElementById("convoButtonSecond");
+const imageConvo = document.getElementById("imageConvoChange");
+
+const updateHoverStyles = () => {
+    if (convoSecondButton.classList.contains("bg-white", "text-black")) {
+        convoFirstButton.classList.add("hover:bg-[#333]", "hover:text-white");
+    } else {
+        convoFirstButton.classList.remove("hover:bg-[#333]", "hover:text-white");
+    }
+};
+
+convoFirstButton.addEventListener("click", () => {
+    imageConvo.src = "safetyImages/twoGirls.webp";
+    convoFirstButton.classList.add("bg-white", "text-black");
+    convoSecondButton.classList.remove("bg-white", "text-black");
+    updateHoverStyles();
+});
+
+convoSecondButton.addEventListener("click", () => {
+    imageConvo.src = "safetyImages/Box1.webp";
+    convoFirstButton.classList.remove("bg-white", "text-black");
+    convoSecondButton.classList.add("bg-white", "text-black");
+    updateHoverStyles();
+});
+updateHoverStyles();
