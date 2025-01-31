@@ -34,6 +34,23 @@
       });
     });
   });
-
+  document.addEventListener("DOMContentLoaded", () => {
+    const navItems = document.querySelectorAll(".nav-item");
+  
+    navItems.forEach((item) => {
+      const dropdown = item.querySelector(".dropdown");
+  
+      if (dropdown) {
+        item.addEventListener("mouseenter", () => {
+          dropdown.classList.add("flex");
+        });
+  
+        item.addEventListener("mouseleave", () => {
+          dropdown.classList.remove("hidden");
+        });
+      }
+    });
+  });
+  
 
 
