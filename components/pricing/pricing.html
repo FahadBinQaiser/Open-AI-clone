@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing | ChatGPT</title>
+    <link rel="shortcut icon" href="/images/favicon_io/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black font-[inter] selection:bg-white selection:text-black">
+    <!-- Navbar -->
+    <nav>
+      <div class="navbar flex justify-between items-center h-12 bg-black px-4 sm:px-4 md:px-16 lg:px-36">
+        <!-- Left Side with responsiveness -->
+
+        <div class="leftside flex items-center space-x-2">
+          <img src="/images/logo.png" alt="Open AI logo" class="w-8 h-8" />
+          <h1 class="leftHeading text-white text-lg font-medium">OpenAI</h1>
+        </div>
+
+        <div class="flex items-center">
+          <button id="menuToggle" class="block sm:hidden text-white focus:outline-none">
+            <span class="block w-6 h-0.5 bg-white mb-1 transition-transform duration-300"></span>
+            <span class="block w-6 h-0.5 bg-white mb-1 transition-transform duration-300"></span>
+            <span class="block w-6 h-0.5 bg-white transition-transform duration-300"></span>
+          </button>
+
+          <div
+            id="menuItems"
+            class="hidden h-[90vh] duration-200 transition-opacity sm:flex flex-col sm:flex-row items-center backdrop-blur-2xl sm:backdrop-blur-0 sm:bg-transparent w-full sm:w-full space-y-4 sm:space-y-0 sm:space-x-8 pr-4 sm:pr-0 absolute sm:static top-12 left-0 sm:top-0"
+          >
+            <ul
+              class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-white justify-start items-start w-full p-12 font-semibold pr-40 sm:translate-y-0 text-sm"
+            >
+              <li id="linkPrimary" class="nav-item hover:cursor-pointer transition-colors duration-500 text-white group relative">
+                Research
+                <div
+                  id="dropDownLinkPrimary"
+                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 left-0 sm:-left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen overflow-x-hidden flex flex-col"
+                >
+                  <section>
+                    <div class="flex flex-row justify-between gap-6 pt-4 text-white text-sm font-[inter]">
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">Our Research</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Overview</a></li>
+                          <li><a href="">Index</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">Latest Achievements</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">OpenAI o1</a></li>
+                          <li><a href="">OpenAI o1-mini</a></li>
+                          <li><a href="">GPT-4</a></li>
+                          <li><a href="">GPT-4o mini</a></li>
+                          <li><a href="">DALL·E 3</a></li>
+                          <li><a href="">Sora</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4 w-52 h-24">
+                        <img src="/images/o1-research.webp" class="rounded-lg object-cover size-full" alt="OpenAI o1 Research Image" />
+                        <h3>OpenAI o1 Hub</h3>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </li>
+
+              <li id="linkSecondary" class="nav-item hover:cursor-pointer transition-colors duration-500 text-white group relative">
+                Products
+                <div
+                  id="dropDownLinkSecondary"
+                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 rounded-lg -left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen overflow-x-hidden flex flex-col"
+                >
+                  <section>
+                    <div class="flex flex-row justify-between gap-6 pt-4 text-white text-sm font-[inter] h-auto">
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">ChatGPT</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="/index.html">For Everyone</a></li>
+                          <li><a href="/components/team.html">For Teams</a></li>
+                          <li><a href="components/enterprise/enterprise.html">For Enterprises</a></li>
+                          <li class="flex flex-row items-center">
+                            <a href="">ChatGPT Login</a><img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" />
+                          </li>
+                          <li><a href="/links/download.html">Download</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">API</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Platform Overview</a></li>
+                          <li><a href="">Pricing</a></li>
+                          <li class="flex flex-row items-center">
+                            <a href="">Documentation</a>
+                            <img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" />
+                          </li>
+                          <li class="flex flex-row items-center">
+                            <a href="">API login</a> <img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" />
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">Sora</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Overview</a></li>
+                          <li><a href="">Features</a></li>
+                          <li><a href="">Pricing</a></li>
+                          <li class="flex flex-row items-center">
+                            <a href="">Help center</a><img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" />
+                          </li>
+                          <li class="flex flex-row items-center"><a href="">Sora login</a><img src="/images/rightUpIcon.png" class="w-4 h-4" alt="Icon" /> </li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <h1 class="text-[#999]">Explore more</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Open AI for business</a></li>
+                          <li><a href="">Stories</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4 w-52 h-24">
+                        <video autoplay muted loop playsinline class="rounded-lg">
+                          <source src="images/ProductsVideo.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                        <h3>OpenAI o1 Hub</h3>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </li>
+              <li id="link3" class="nav-item cursor-pointer transition-colors duration-500 text-white">Safety</li>
+              <li id="linkExternal" class="nav-item hover:cursor-pointer transition-colors duration-500 text-white group relative">
+                Company
+                <div
+                  id="dropDownLinkExternal"
+                  class="dropdown opacity-0 cursor-default transform scale-y-0 bg-[#222] origin-top top-24 rounded-lg -left-[90%] fixed pt-8 px-36 backdrop-blur-3xl h-[calc(100vh-9vh)] group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-700 ease-in-out z-10 w-screen overflow-x-hidden flex flex-col"
+                >
+                  <section>
+                    <div class="flex flex-row justify-between gap-6 pt-4 text-white text-sm font-[inter] h-auto">
+                      <div class="flex flex-col space-y-4 text-white">
+                        <h1>About us</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="/links/OurCharter.html">Our Charter</a></li>
+                          <li><a href="">Residency</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <h1>News</h1>
+                        <ul class="space-y-4 text-md">
+                          <li><a href="">Security and Privacy</a></li>
+                          <li><a href="">Careers</a></li>
+                        </ul>
+                      </div>
+                      <div class="flex flex-col space-y-4 w-52 h-24">
+                        <img src="/images/o1-research.webp" class="rounded-lg object-cover size-full" alt="" />
+                        <h3>OpenAI o1 Hub</h3>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Side (Search Icon) -->
+        <div class="rightLinks cursor-pointer hidden sm:block">
+          <img src="/images/searchIcon.png" class="w-4 h-4 hover:scale-110 hover:rotate-90 transition-transform duration-300 ease-out" alt="Search Icon" />
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <!-- Hero section -->
+    <main class="bg-black h-full pt-4 border-t border-t-gray-700">
+      <div class="heroSection flex justify-between items-center text-white overflow-x-scroll sm:overflow-hidden pb-4 px-4 sm:px-4 md:px-16 lg:px-36">
+        <div class="leftHeading">
+          <h1 class="mr-8 lg:mr-0 font-bold text-[14px] pr-8 border-r border-r-white sm:border-0 lg:text-sm">ChatGPT</h1>
+        </div>
+        <ul class="items text-[12px] lg:text-sm font-[inter] text-gray-400 flex space-x-6">
+          <li>
+            <a href="#" class="hover:text-white text-white transition-colors duration-300 ease-in-out" aria-label="Overview">Overview</a>
+          </li>
+          <li><a href="/components/team.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Team">Team</a></li>
+          <li><a href="enterprise.html" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Enterprise">Enterprise</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Education">Education</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-300 ease-in-out" aria-label="Pricing">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="midAlign text-white flex justify-center items-center flex-col">
+        <div class="components font-medium text-center m-4">
+          <h1 class="text-balance text-4xl lg:text-6xl pt-20 font-[inter] font-medium leading-tight"> Pricing </h1>
+        </div>
+        <!-- Pricing section -->
+        <section class="font-[inter]">
+          <div class="bg-black">
+            <div id="pricingBoxes" class="pricingBoxes sm:px-6 lg:px-36 flex flex-col px-4 sm:flex-row lg:flex-row gap-4 w-full mt-14 p-4"></div>
+          </div>
+          <div class="max-w-5xl w-full h-full mb-20 px-6 mx-auto rounded-xl sm:px-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="box1 w-full bg-[#1a1a1a] space-y-4 p-8 rounded-xl">
+              <h1 class="text-lg">Team</h1>
+              <h3><span class="text-2xl">25$</span> per user / month billed annually</h3>
+              <h3><span class="text-2xl">30$</span> per user / month billed monthly</h3>
+              <p class="text-sm">Supercharge your team’s work with a secure, collaborative workspace</p>
+              <button class="border-none text-sm rounded-3xl text-md py-2 px-6 font-bold bg-white text-black">Get Team</button>
+              <ul class="space-y-4 text-sm pt-4">
+                <li
+                  ><span class="pr-4">✔</span>Higher message limits than Plus on GPT-4, GPT-4o, and tools like DALL·E, web browsing, data analysis, and more</li
+                >
+                <li><span class="pr-4">✔</span>Limited access to o1 and o1-mini </li>
+                <li><span class="pr-4">✔</span>Standard and advanced voice mode </li>
+                <li><span class="pr-4">✔</span>Create and share GPTs with your workspace </li>
+                <li><span class="pr-4">✔</span>Admin console for workspace management</li>
+                <li><span class="pr-4">✔</span>Team data excluded from training by default. <span class="underline">Learn more</span></li>
+              </ul>
+            </div>
+            <div class="box2 w-full bg-[#1a1a1a] space-y-4 p-8 rounded-xl">
+              <h1 class="text-lg">Enterprise</h1>
+              <h3>Enable your workforce with enterprise-grade AI</h3>
+              <button class="border-none rounded-3xl text-md py-2 px-6 font-bold bg-white text-black">Contact Sales</button>
+              <ul class="space-y-4 text-sm pt-4">
+                <li><span class="pr-4">✔</span>Everything in Team</li>
+                <li>
+                  <span class="pr-4">✔</span>
+                  High speed access to GPT-4, GPT-4o, GPT-4o mini, and tools like DALL·E, web browsing, data analysis, and more
+                </li>
+                <li><span class="pr-4">✔</span>Expanded context window for longer inputs </li>
+                <li><span class="pr-4">✔</span>Enterprise data excluded from training by default & custom data retention windows. Learn more </li>
+                <li><span class="pr-4">✔</span>Admin controls, domain verification, and analytics</li>
+                <li><span class="pr-4">✔</span>Enhanced support & ongoing account management </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- Pricing section -->
+      </div>
+    </main>
+    <!-- Hero section -->
+    <section class="h-full font-[inter] px-6">
+      <div class="flex justify-center flex-col items-center">
+        <h1 class="text-2xl sm:text-4xl text-balance text-center inline-block sm:block w-80 sm:w-full border-b sm:border-none pb-2 text-white font-medium">
+          Compare features <br />
+          <span class="sm:block">across plans</span>
+        </h1>
+      </div>
+      <!-- Mobile design -->
+      <div class="flex sm:hidden">
+        <ul class="text-white text-lg pt-4 flex flex-row mx-auto space-x-4">
+          <li id="free">Free</li>
+          <li id="plus">Plus</li>
+          <li id="pro">Pro</li>
+          <li id="team">Team</li>
+          <li id="enterprise">Enterprise</li>
+        </ul>
+      </div>
+      <div class="mx-auto pt-6 px-6 max-w-5xl sticky top-0 z-10 flex sm:hidden">
+        <div class="h-32 bg-[#1a1a1a] flex flex-1 flex-row gap-12 justify-end p-8 text-white">
+          <div class="Free space-y-2">
+            <h1 class="text-left" id="freeHeading">Free</h1>
+            <button class="border-none rounded-3xl text-md py-2 px-6 text-sm bg-white text-black" id="freeButton">Get Free</button>
+          </div>
+        </div>
+      </div>
+      <div class="essentialsMobile text-white flex p-6 mx-6 border-b border-b-[#333] sm:border-none mt-0 bg-[#1a1a1a] relative flex-col sm:hidden">
+        <h1 class="text-2xl">
+          Essentials
+          <label for="toggle" class="cursor-pointer w-10 h-10 text-center p-0 border-2 border-white rounded-3xl absolute right-4"> + </label>
+        </h1>
+        <input type="checkbox" id="toggle" class="peer hidden" />
+        <div class="grid grid-cols-2 pt-8 max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[300px]">
+          <label class="space-y-2 text-balance border-r border-r-[#333]">
+            <h1>Messages and interaction</h1>
+            <h1>Chat history</h1>
+            <h1>Access on web, Ios and Android</h1>
+          </label>
+          <ul class="space-y-8 text-center text-balance">
+            <li>Unlimited</li>
+            <li>Unlimited</li>
+            <li>✔</li>
+          </ul>
+        </div>
+      </div>
+      <div class="essentialsMobile text-white border-b border-b-[#333] sm:border-none p-6 mx-6 mt-0 bg-[#1a1a1a] relative flex flex-col sm:hidden">
+        <h1 class="text-2xl">
+          Model Quality
+          <label for="toggle2" class="cursor-pointer w-10 h-10 text-center p-0 border-2 border-white rounded-3xl absolute right-4"> + </label>
+        </h1>
+        <input type="checkbox" id="toggle2" class="peer hidden" />
+        <div class="grid grid-cols-2 max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[360px]">
+          <label class="flex flex-col justify-between space-y-4 py-4 text-balance border-r border-r-[#333]">
+            <h1>GPT 4o mini</h1>
+            <h1>GPT 4o</h1>
+            <h1>GPT-4 access</h1>
+            <h1>OpenAI o1</h1>
+            <h1>OpenAI o1-mini</h1>
+            <h1>OpenAI o1 pro </h1>
+            <h1>Response Times</h1>
+            <h1>Context window</h1>
+            <h1>Fast speed</h1>
+          </label>
+          <ul class="flex flex-col justify-between space-y-4 py-4 text-center text-balance">
+            <li>Unlimited</li>
+            <li>Limited</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>Limited</li>
+            <li>8k</li>
+            <li>✔</li>
+          </ul>
+        </div>
+      </div>
+      <div class="FeaturesMobile text-white p-6 mx-6 mt-0 bg-[#1a1a1a] relative flex flex-col sm:hidden">
+        <h1 class="text-2xl">
+          Features
+          <label for="toggle3" class="cursor-pointer w-10 h-10 text-center p-0 border-2 border-white rounded-3xl absolute right-4"> + </label>
+        </h1>
+        <input type="checkbox" id="toggle3" class="peer hidden" />
+        <div class="grid grid-cols-2 gap-6 text-sm max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[1000px]">
+          <div class="text-white h-full space-y-8 py-10 border-r border-[#333]">
+            <ul class="space-y-8">
+              <li>Advance Voice</li>
+              <li>Advanced voice with video</li>
+              <li>Standard voice</li>
+              <li>Memory</li>
+              <li>Browse</li>
+              <li>Data analysis</li>
+              <li>Vision</li>
+              <li>File uploads</li>
+              <li>Discover & use GPTs</li>
+              <li>Create & share GPTs</li>
+              <li>Share GPTs with your workspace</li>
+              <li>Opportunities to test new features</li>
+              <li>Image generation</li>
+              <li>Interactive tables and charts</li>
+              <li>Sora</li>
+            </ul>
+          </div>
+          <ul class="space-y-10 pl-4 text-center py-10">
+            <li>Limited</li>
+            <li>.</li>
+            <li>✔</li>
+            <li>.</li>
+            <li>Limited</li>
+            <li>Limited</li>
+            <li>Limited</li>
+            <li>Limited</li>
+            <li>Limited</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+            <li>Limited</li>
+            <li>.</li>
+            <li>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="PrivacyMobile text-white p-6 mx-6 mt-0 bg-[#1a1a1a] relative flex flex-col sm:hidden">
+        <h1 class="text-2xl">
+          Privacy
+          <label for="toggle4" class="cursor-pointer w-10 h-10 text-center p-0 border-2 border-white rounded-3xl absolute right-4"> + </label>
+        </h1>
+        <input type="checkbox" id="toggle4" class="peer hidden" />
+        <div class="grid grid-cols-2 gap-6 text-sm max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[1000px]">
+          <div class="contentLeft py-8 border-r-2 border-r-[#333]">
+            <h1 class="text-sm font-medium">Content is used to train our models</h1>
+          </div>
+          <div class="contentRight">
+            <h1
+              >Opt Out available <br /><a href=" https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance"
+                ><span class="underline"> Learn more</span></a
+              ></h1
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Mobile design -->
+      <!-- Desktop design -->
+      <div class="mx-auto pt-6 max-w-5xl sticky top-0 hidden sm:flex text-sm">
+        <div class="h-32 bg-[#1a1a1a] flex flex-1 flex-row gap-5 md:gap-12 justify-end p-8 text-white">
+          <div class="Free space-y-2">
+            <h1 class="text-left">Free</h1>
+            <button class="border-none rounded-3xl text-md py-2 px-4 text-sm bg-white text-black">Get Free</button>
+          </div>
+          <div class="Plus space-y-2">
+            <h1 class="text-left">Plus</h1>
+            <button class="border-none rounded-3xl text-md py-2 px-4 text-sm bg-white text-black">Get Plus</button>
+          </div>
+          <div class="Pro space-y-2">
+            <h1 class="text-left">Pro</h1>
+            <button class="border-none rounded-3xl text-md py-2 px-4 text-sm bg-white text-black">Get Pro</button>
+          </div>
+          <div class="Team space-y-2">
+            <h1 class="text-left">Team</h1>
+            <button class="border-none rounded-3xl text-md py-2 px-4 text-sm bg-white text-black">Get Team</button>
+          </div>
+          <div class="Enterprise space-y-2">
+            <h1 class="text-left">Enterprise</h1>
+            <button class="border-none rounded-3xl text-md py-2 px-4 text-sm bg-white text-black">Contact sales</button>
+          </div>
+        </div>
+      </div>
+      <div id="essentials" class="mx-auto max-w-5xl pt-4 hidden sm:block text-sm">
+        <div class="bg-[#1a1a1a] rounded-lg p-10 md:p-20">
+          <h1 class="text-xl font-semibold text-white mb-6">Essentials</h1>
+          <div class="flex flex-1 flex-row gap-6 md:gap-16 justify-center py-6">
+            <div class="text-white space-y-4 flex justify-between pr-4 flex-col items-center border-r border-[#333]">
+              <p>Messages and interactions</p>
+              <p>Chat history</p>
+              <p>Access on web, iOS, Android</p>
+            </div>
+            <div class="text-white text-center flex justify-between pr-4 flex-col items-center space-y-10 border-r border-[#333]">
+              <p>Unlimited</p>
+              <p>Unlimited</p>
+              <p>&#10003;</p>
+            </div>
+            <div class="text-white text-center flex justify-between pr-4 flex-col items-center space-y-10 border-r border-[#333]">
+              <p>Unlimited</p>
+              <p>Unlimited</p>
+              <p>&#10003;</p>
+            </div>
+            <div class="text-white text-center flex justify-between pr-4 flex-col items-center space-y-10 border-r border-[#333]">
+              <p>Unlimited</p>
+              <p>Unlimited</p>
+              <p>&#10003;</p>
+            </div>
+            <div class="text-white text-center flex justify-between pr-4 flex-col items-center space-y-10 border-r border-[#333]">
+              <p>Unlimited</p>
+              <p>Unlimited</p>
+              <p>&#10003;</p>
+            </div>
+            <div class="text-white text-center flex justify-between pr-4 flex-col items-center space-y-10">
+              <p>Unlimited</p>
+              <p>Unlimited</p>
+              <p>&#10003;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="model-quality-section" class="mx-auto max-w-5xl overflow-hidden pt-4 hidden sm:block">
+        <div class="bg-[#1a1a1a] rounded-lg p-10 md:p-20">
+          <h1 class="text-xl font-semibold text-white mb-12">Model Quality</h1>
+          <div class="grid grid-rows-auto">
+            <div class="flex justify-between text-white font-semibold border-r border-r-gray-700 h-20">
+              <p class="w-1/6 border-r border-gray-700">GPT-4o Mini</p>
+              <p class="w-1/6 border-r border-gray-700 text-center">Unlimited</p>
+              <p class="w-1/6 border-r border-gray-700 text-center">Unlimited</p>
+              <p class="w-1/6 border-r border-gray-700 text-center">Unlimited</p>
+              <p class="w-1/6 border-r border-gray-700 text-center">Unlimited</p>
+              <p class="w-1/6 text-center">Unlimited</p>
+            </div>
+            <ul id="dynamic-rows" class="grid grid-rows-auto text-white"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-5xl pt-4 hidden sm:block">
+        <div class="bg-[#1a1a1a] rounded-lg p-10 md:p-20">
+          <h1 class="text-xl font-semibold text-white mb-12">Features</h1>
+
+          <div id="dynamicRowsSecondary" class="grid grid-rows-auto text-white"></div>
+        </div>
+      </div>
+      <div class="mx-auto max-w-5xl pt-4 h-full pb-20 hidden sm:block">
+        <div class="bg-[#1a1a1a] rounded-lg p-10 md:p-20">
+          <h1 class="text-xl font-semibold text-white mb-6">Privacy</h1>
+          <div class="flex flex-1 flex-row gap-2 md:gap-10 justify-center py-6">
+            <div class="text-white space-y-4 flex justify-start pr-4 flex-col items-center border-r border-[#333]">
+              <h1 class="text-sm">Content is used to train our models</h1>
+            </div>
+            <div class="text-white text-left flex justify-start pr-4 flex-col items-center space-y-10 border-r border-[#333]">
+              <p>
+                Opt out available
+                <a href="https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance">
+                  <span class="underline">Learn more</span>
+                </a>
+              </p>
+            </div>
+            <div class="text-white text-left flex justify-start pr-4 flex-col items-center space-y-10 border-r border-[#333]">
+              <p>
+                Opt out available
+                <a href="https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance">
+                  <span class="underline">Learn more</span>
+                </a>
+              </p>
+            </div>
+            <div class="text-white text-left flex justify-start pr-4 flex-col items-center space-y-10 border-r border-[#333]">
+              <p>
+                Opt out available
+                <a href="https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance">
+                  <span class="underline">Learn more</span>
+                </a>
+              </p>
+            </div>
+            <div class="text-white text-left text-sm flex justify-start pr-4 flex-col items-center space-y-10 border-r border-[#333]">
+              <p>
+                No <br />
+                <a href="https://openai.com/enterprise-privacy/">
+                  <span class="underline text-[#777]">Read our privacy commitment</span>
+                </a>
+              </p>
+            </div>
+            <div class="text-white text-left text-sm flex justify-start pr-4 flex-col items-center space-y-10">
+              <p>
+                No
+                <a href="https://openai.com/enterprise-privacy/">
+                  <span class="underline text-[#777]">Read our privacy commitment</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Desktop design -->
+    <!-- FAQ -->
+    <section>
+      <div class="faq h-full px-4">
+        <div class="flex justify-center items-center flex-col max-w-3xl mx-auto">
+          <h1 class="text-2xl text-white font-bold py-8">FAQ</h1>
+          <div class="faqContainer w-full text-white pb-20">
+            <div class="row flex flex-col space-y-6 bg-[#1a1a1a] relative rounded-xl p-16" id="faqContainer"> </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ -->
+
+    <!-- Footer section -->
+    <footer>
+      <div
+        class="footerFiveRows grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-6 px-6 sm:px-4 xl:px-32 pt-4 bg-black text-white text-sm font-[inter] h-auto"
+      >
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">Our Research</h1>
+          <ul>
+            <li><a href="/links/overview/overview.html">Overview</a></li>
+            <li><a href="/links/index/index.html">Index</a></li>
+          </ul>
+          <div class="flex flex-col space-y-4 pt-10">
+            <h1 class="text-[#999]">Latest Achievements</h1>
+            <ul class="space-y-2 text-[12px]">
+              <li><a href="https://openai.com/index/learning-to-reason-with-llms/">OpenAI o1</a></li>
+              <li><a href="https://openai.com/index/openai-o1-mini-advancing-cost-efficient-reasoning/">OpenAI o1-mini</a></li>
+              <li><a href="https://openai.com/index/gpt-4/">GPT-4</a></li>
+              <li><a href="/links/Gpt4Mini.html">GPT-4o mini</a></li>
+              <li><a href="https://openai.com/index/dall-e-3/">DALL·E 3</a></li>
+              <li><a href="https://openai.com/index/sora/">Sora</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">ChatGPT</h1>
+          <ul class="space-y-2 text-[12px]">
+            <li><a href="/index.html">For Everyone</a></li>
+            <li><a href="/components/team.html">For Teams</a></li>
+            <li><a href="/components/enterprise/enterprise.html">For Enterprises</a></li>
+            <li class="flex flex-row items-center">
+              <a href="https://chatgpt.com/">ChatGPT Login</a>
+            </li>
+            <li><a href="/links/download.html">Download</a></li>
+          </ul>
+          <div class="flex flex-col pt-10 space-y-4">
+            <h1 class="text-[#999]">API</h1>
+            <ul class="space-y-2 text-[12px]">
+              <li><a href="https://platform.openai.com/docs/concepts">Platform Overview</a></li>
+              <li><a href="/components/pricing/pricing.html">Pricing</a></li>
+              <li class="flex flex-row items-center">
+                <a href="https://platform.openai.com/docs/concepts">Documentation</a>
+              </li>
+              <li class="flex flex-row items-center">
+                <a href="https://platform.openai.com/docs/overview">API login</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col pt-10 space-y-4">
+            <h1 class="text-[#999]">Explore more</h1>
+            <ul class="space-y-2 text-[12px]">
+              <li><a href="/components/enterprise/enterprise.html">Open AI for business</a></li>
+              <li><a href="/links/news/news.html">Stories</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">Safety Overview</h1>
+          <ul class="text-[12px]">
+            <li><a href="/links/safety/safety.html">Safety Overview</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">Company</h1>
+          <ul class="space-y-2 text-[12px]">
+            <li><a href="/links/about.html">About us</a></li>
+            <li><a href="/links/news/news.html">News</a></li>
+            <li><a href="/links/OurCharter.html">Our Charter</a></li>
+            <li><a href="/links/security/security.html">Security</a></li>
+            <li><a href="/links/residency/residency.html">Residency</a></li>
+            <li><a href="/links/careers/careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-[#999]">Terms & policies</h1>
+          <ul class="space-y-2 text-[12px]">
+            <li><a href="links/termsOfUse.html">Terms of use</a></li>
+            <li><a href="/links/PrivacyPolicy.html">Privacy Policy</a></li>
+            <li><a href="/links/brandGuides.html">Brand guidelines</a></li>
+            <li><a href="links/otherPolicies.html">Other policies</a></li>
+          </ul>
+        </div>
+        <div
+          class="footerRow flex flex-col sm:flex-col md:flex-row justify-between col-span-1 sm:col-span-1 md:col-span-5 lg:col-span-5 items-center w-full space-y-10 py-2"
+        >
+          <div class="footerContent flex justify-start flex-col sm:flex-col gap-2 pt-14 w-full">
+            <button class="rounded-md bg-[#1a1a1a] hover:bg-[#222] p-1 w-full sm:w-full md:w-32">English (US)</button>
+            <h2 class="hidden sm:justify-start sm:hidden md:flex">OpenAi &#169; 2015-2024</h2>
+          </div>
+          <div class="footerIcons flex flex-col justify-start w-full">
+            <ul class="flex flex-row justify-center sm:justify-start md:justify-center items-center space-x-10 text-md w-full">
+              <a href="https://x.com/?lang=en" aria-label="Twitter" target="_blank"><i class="fi fi-brands-twitter-alt"></i></a>
+              <a href="https://www.youtube.com/OpenAI" aria-label="Youtube" target="_blank"><i class="fi fi-brands-youtube"></i></a>
+              <a href="https://www.linkedin.com/company/openai/" aria-label="LinkedIn" target="_blank"><i class="fi fi-brands-linkedin"></i></a>
+              <a href="https://github.com/openai" target="_blank" aria-label="GitHub"><i class="fi fi-brands-github"></i></a>
+              <a href="https://www.instagram.com/openai/?hl=en" target="_blank" aria-label="Instagram"><i class="fi fi-brands-instagram"></i></a>
+              <a href="https://www.tiktok.com/@openai?lang=en" target="_blank" aria-label="TikTok"><i class="fi fi-brands-tik-tok"></i></a>
+              <a href="https://discord.com/invite/openai" target="_blank" aria-label="Discord"><i class="fi fi-brands-discord"></i></a>
+            </ul>
+            <h2 class="flex sm:flex md:hidden py-10 text-left">OpenAi &#169; 2015-2024</h2>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer section -->
+    <script src="pricing.js"></script>
+  </body>
+</html>
