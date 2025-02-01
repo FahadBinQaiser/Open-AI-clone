@@ -25,6 +25,9 @@
 .pause-animation:hover {
   animation-play-state: paused !important;
 }
+.nav-item {
+  transition: all 0.5s ease;
+}
 .dropdown {
   opacity: 0;
   visibility: hidden;
