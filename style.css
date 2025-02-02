@@ -25,3 +25,30 @@
 .pause-animation:hover {
   animation-play-state: paused !important;
 }
+.nav-item {
+  transition: all 0.5s ease;
+}
+.dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s 0.2s;
+}
+.nav-item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s 0.2s;
+}
+@media (min-width: 640px) {
+  .dropdown {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s 0.4s;
+  }
+  .nav-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s 0s;
+  }
+}
